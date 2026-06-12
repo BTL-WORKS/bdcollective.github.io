@@ -1,0 +1,11 @@
+# BTL WORKS — robots.txt
+# Tüm arama motorlarına izin ver
+
+User-agent: *
+Allow: /
+
+# Sitemap konumu
+Sitemap: https://btlworx.com/sitemap.xml
+
+# Crawl-delay (yavaş tarama gerekirse, şu an açık)
+# Crawl-delay: 1

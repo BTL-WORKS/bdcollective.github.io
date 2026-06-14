@@ -164,17 +164,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header class="page-header">
   <div class="wrap">
     <a href="/" class="back-link">← Ana sayfa</a>
-    <p class="eyebrow reveal">Estetik · Güzellik · Medikal Estetik</p>
-    <h1 class="page-title reveal reveal-d1">Estetik Klinik <em>Sosyal Medya Yönetimi.</em></h1>
-    <p class="page-subtitle reveal reveal-d2">Estetik kliniğin satış değeri görsel başlar; sosyal medyası ise <em>güvenle</em> başlar. Stok değil, klinik için özel; ajans değil, butik bir stüdyo.</p>
+    <p class="eyebrow">Estetik · Güzellik · Medikal Estetik</p>
+    <h1 class="page-title">Estetik Klinik <em>Sosyal Medya Yönetimi.</em></h1>
+    <p class="page-subtitle">Estetik kliniğin satış değeri görsel başlar; sosyal medyası ise <em>güvenle</em> başlar. Stok değil, klinik için özel; ajans değil, butik bir stüdyo.</p>
   </div>
 </header>
 
 <main class="page-body">
   <div class="wrap">
     <div class="page-body__grid">
-      <p class="page-body__lead reveal">Estetik sektöründe sosyal medya, sadece "güzel görsel" değil; bir hastanın seni tercih etmesini sağlayan <em>tek başına en güçlü ikna noktası</em>dır.</p>
-      <div class="page-body__text reveal reveal-d1">
+      <p class="page-body__lead">Estetik sektöründe sosyal medya, sadece "güzel görsel" değil; bir hastanın seni tercih etmesini sağlayan <em>tek başına en güçlü ikna noktası</em>dır.</p>
+      <div class="page-body__text">
         <p>Bir hasta artık önce kliniği aramaz; önce profili açar. Profilde gördüğü ton, sergilenen vakalar, hekimin nasıl konuştuğu, ekipmanın nasıl göründüğü — bu küçük detaylar randevu kararını saatler önce verir. Klinik vitrini fiziksel olarak nasıl önemliyse, dijital vitrin de o kadar önemli oldu.</p>
         <p>Ama estetik sektörü hassas bir sektör. Sağlık Bakanlığı'nın tıbbi tanıtım yönetmeliği, sosyal medya platformlarının sağlık politikası, KVKK ve hasta gizliliği — hepsi aynı anda çalışan tellerdir. Bir tek hatalı paylaşım hesabın askıya alınmasına, hatta para cezasına yol açabilir.</p>
         <p class="page-body__pull">Estetik kliniğin <em>kendi grameri</em> vardır — mevzuatın, hassasiyetin, hasta güveninin ve estetik anlayışının dili.</p>
@@ -186,8 +186,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <section class="page-list-section">
   <div class="wrap">
-    <h2 class="page-list-title reveal">Estetik klinik için <em>kapsam.</em></h2>
-    <ul class="page-list reveal reveal-d1">
+    <h2 class="page-list-title">Estetik klinik için <em>kapsam.</em></h2>
+    <ul class="page-list">
       <li>
         <span class="page-list__num">01</span>
         <span class="page-list__text">Klinik içi profesyonel çekim — sterilize tarz
@@ -411,7 +411,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   const io = new IntersectionObserver((entries) => {
     entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } });
   }, { threshold: 0.10, rootMargin: '0px 0px -40px 0px' });
-  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+  document.querySelectorAll('.').forEach((el) => io.observe(el));
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => {
     if (window.scrollY > 40) nav.classList.add('is-shrunk'); else nav.classList.remove('is-shrunk');

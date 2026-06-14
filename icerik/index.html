@@ -286,17 +286,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header class="page-header">
   <div class="wrap">
     <a href="/" class="back-link">← Ana sayfa</a>
-    <p class="eyebrow reveal">Yöntem · 02</p>
-    <h1 class="page-title reveal reveal-d1">İçerik.</h1>
-    <p class="page-subtitle reveal reveal-d2">Çekim, kurgu, metin yazımı, görsel tasarım — her kare elimizden tek tek geçer. Klinik için stok değil, özel. Her içerik klinik markasının hafızasında küçük bir taş.</p>
+    <p class="eyebrow">Yöntem · 02</p>
+    <h1 class="page-title">İçerik.</h1>
+    <p class="page-subtitle">Çekim, kurgu, metin yazımı, görsel tasarım — her kare elimizden tek tek geçer. Klinik için stok değil, özel. Her içerik klinik markasının hafızasında küçük bir taş.</p>
   </div>
 </header>
 
 <main class="page-body">
   <div class="wrap">
     <div class="page-body__grid">
-      <p class="page-body__lead reveal">Sosyal medyada en kolayı stok görsel kullanmak; en zoru gerçekten <em>o markaya ait</em> hissettiren içerik üretmek. Biz ikincisini yapıyoruz.</p>
-      <div class="page-body__text reveal reveal-d1">
+      <p class="page-body__lead">Sosyal medyada en kolayı stok görsel kullanmak; en zoru gerçekten <em>o markaya ait</em> hissettiren içerik üretmek. Biz ikincisini yapıyoruz.</p>
+      <div class="page-body__text">
         <p>Sahaya gidiyoruz: klinikte, hasta deneyiminde, ekipler arası anlarda çekiyoruz. Stüdyo değil, gerçek. Çünkü hastaya <em>"gerçek görünmek"</em> her zaman "mükemmel görünmek"ten daha güçlüdür.</p>
         <p>Bir kare bizim için sadece bir paylaşım değil; markanın hafızasında küçük bir taş döşemektir. Her ay onlarca taş döşeriz, bir yıl sonra bakınca markaya ait sağlam bir yol görünür.</p>
         <p class="page-body__pull">Stok değil, özel. <em>Klinik için tasarlanmış, klinik için çekilmiş, klinik için yazılmış.</em></p>
@@ -362,9 +362,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <section class="page-list-section">
   <div class="wrap">
-    <h2 class="page-list-title reveal">İçerikte <em>kapsam.</em></h2>
+    <h2 class="page-list-title">İçerikte <em>kapsam.</em></h2>
     <p style="font-size: 17px; color: var(--ink-soft); margin: 0 0 36px; max-width: 720px;">Klinik için BTL WORKS içerik üretimi altı temel başlığı kapsar. Her başlık ayrı bir uzmanlık alanı; ama hepsi tek bir kafanın elinden çıkar.</p>
-    <ul class="page-list reveal reveal-d1">
+    <ul class="page-list">
       <li>
         <span class="page-list__num">01</span>
         <span class="page-list__text">Klinik içi profesyonel çekim (fotoğraf + video)
@@ -644,7 +644,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   const io = new IntersectionObserver((entries) => {
     entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } });
   }, { threshold: 0.10, rootMargin: '0px 0px -40px 0px' });
-  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+  document.querySelectorAll('.').forEach((el) => io.observe(el));
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => {
     if (window.scrollY > 40) nav.classList.add('is-shrunk'); else nav.classList.remove('is-shrunk');

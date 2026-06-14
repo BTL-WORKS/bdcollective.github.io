@@ -164,17 +164,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header class="page-header">
   <div class="wrap">
     <a href="/" class="back-link">← Ana sayfa</a>
-    <p class="eyebrow reveal">Google Ads · Sağlık Sektörü</p>
-    <h1 class="page-title reveal reveal-d1">Doktor <em>Google Ads Yönetimi.</em></h1>
-    <p class="page-subtitle reveal reveal-d2">Hasta arama anına yetişin. Mevzuata uygun, ölçülebilir, ROI odaklı Google Ads kampanyaları — Search, Display, YouTube ve Performance Max.</p>
+    <p class="eyebrow">Google Ads · Sağlık Sektörü</p>
+    <h1 class="page-title">Doktor <em>Google Ads Yönetimi.</em></h1>
+    <p class="page-subtitle">Hasta arama anına yetişin. Mevzuata uygun, ölçülebilir, ROI odaklı Google Ads kampanyaları — Search, Display, YouTube ve Performance Max.</p>
   </div>
 </header>
 
 <main class="page-body">
   <div class="wrap">
     <div class="page-body__grid">
-      <p class="page-body__lead reveal">Bir hasta "İstanbul ortodonti", "Beşiktaş implant fiyat", "lazer epilasyon yakınımda" yazdığı anda Google sonuçlarında <em>sizi görmüyorsa</em>, o hasta rakibinizin sonuçlarına tıklıyor. Her gün, her saat.</p>
-      <div class="page-body__text reveal reveal-d1">
+      <p class="page-body__lead">Bir hasta "İstanbul ortodonti", "Beşiktaş implant fiyat", "lazer epilasyon yakınımda" yazdığı anda Google sonuçlarında <em>sizi görmüyorsa</em>, o hasta rakibinizin sonuçlarına tıklıyor. Her gün, her saat.</p>
+      <div class="page-body__text">
         <p>Google Ads, klinik için en yüksek niyetli trafik kanalıdır. Çünkü bir kişi bir tedaviyi aratıyorsa, o kişi <em>karar arifesinde</em>dir. Sosyal medyada gezerken keşfedilen bir hastayla, Google'da arama yapan hasta arasında randevuya dönüşüm farkı 5-10 kat olabilir.</p>
         <p>Ama Google Ads'in başarısı bütçeye değil, kuruluma bağlıdır. Yanlış anahtar kelime, yanlış hedef kitle, eksik conversion tracking, mevzuatın ihlal eden başlık — bunlar hesabı askıya aldırır, parayı boşa harcatır. Aylık binlerce TL'lik bütçeyi tek bir konfigürasyon hatası işe yaramaz hale getirebilir.</p>
         <p class="page-body__pull">Odak tıklama sayısı değil, dönüşüm: <em>her tıklamayı randevuya dönüştürmenin matematiği.</em></p>
@@ -186,8 +186,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <section class="page-list-section">
   <div class="wrap">
-    <h2 class="page-list-title reveal">Google Ads'te <em>kapsam.</em></h2>
-    <ul class="page-list reveal reveal-d1">
+    <h2 class="page-list-title">Google Ads'te <em>kapsam.</em></h2>
+    <ul class="page-list">
       <li>
         <span class="page-list__num">01</span>
         <span class="page-list__text">Search (Arama) kampanyaları
@@ -423,7 +423,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   const io = new IntersectionObserver((entries) => {
     entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } });
   }, { threshold: 0.10, rootMargin: '0px 0px -40px 0px' });
-  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+  document.querySelectorAll('.').forEach((el) => io.observe(el));
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => {
     if (window.scrollY > 40) nav.classList.add('is-shrunk'); else nav.classList.remove('is-shrunk');

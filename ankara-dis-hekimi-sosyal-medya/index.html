@@ -159,17 +159,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header class="page-header">
   <div class="wrap">
     <a href="/" class="back-link">← Ana sayfa</a>
-    <p class="eyebrow reveal">Ankara · Diş Hekimliği</p>
-    <h1 class="page-title reveal reveal-d1">Ankara Diş Hekimi <em>Sosyal Medya Ajansı.</em></h1>
-    <p class="page-subtitle reveal reveal-d2">Çankaya'dan Çayyolu'na, Kızılay'dan Bahçelievler'e — Ankara'daki diş hekimleri için butik bir stüdyo. Stok içerik değil; her kare klinikte, hasta deneyiminde, ekip portresinde çekilmiş.</p>
+    <p class="eyebrow">Ankara · Diş Hekimliği</p>
+    <h1 class="page-title">Ankara Diş Hekimi <em>Sosyal Medya Ajansı.</em></h1>
+    <p class="page-subtitle">Çankaya'dan Çayyolu'na, Kızılay'dan Bahçelievler'e — Ankara'daki diş hekimleri için butik bir stüdyo. Stok içerik değil; her kare klinikte, hasta deneyiminde, ekip portresinde çekilmiş.</p>
   </div>
 </header>
 
 <main class="page-body">
   <div class="wrap">
     <div class="page-body__grid">
-      <p class="page-body__lead reveal">Ankara'da bir diş kliniği işletmek demek; başkentin yoğun rekabetinde fark yaratmak demektir. Bir hasta artık kliniği aramadan önce <em>sosyal medya profilinize</em> bakar; profilde gördüğü ton, randevu kararını saatler önce verir.</p>
-      <div class="page-body__text reveal reveal-d1">
+      <p class="page-body__lead">Ankara'da bir diş kliniği işletmek demek; başkentin yoğun rekabetinde fark yaratmak demektir. Bir hasta artık kliniği aramadan önce <em>sosyal medya profilinize</em> bakar; profilde gördüğü ton, randevu kararını saatler önce verir.</p>
+      <div class="page-body__text">
         <p>Ankara'da onlarca diş kliniği aynı tedavileri sunar. Hangisi tercih edilir? Profilinde güven, profesyonellik ve marka kimliği bir bütün halinde görüneni. "Dijital vitrin" iyi kurgulanmadığında, kliniğin fiziksel kalitesi ne kadar yüksek olursa olsun, hasta o profili aşıp telefonu kaldırmaz.</p>
         <p>Diş hekimi içeriğinin <em>kendi grameri</em> vardır — TDB kılavuzu, hasta gizliliği, önce-sonra mevzuatı, sağlık iletişimi etiketi. Bu çerçeveye saygılı, çerçevenin içinde özgürce üreten bir stüdyo. Genel sosyal medya ajansları bunu bilmez; biz biliyoruz.</p>
         <p class="page-body__pull">Tek temas noktası: <em>tüm süreç tek elden.</em></p>
@@ -181,8 +181,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <section class="page-list-section">
   <div class="wrap">
-    <h2 class="page-list-title reveal">Ankara'da bir diş kliniği için <em>kapsam.</em></h2>
-    <ul class="page-list reveal reveal-d1">
+    <h2 class="page-list-title">Ankara'da bir diş kliniği için <em>kapsam.</em></h2>
+    <ul class="page-list">
       <li>
         <span class="page-list__num">01</span>
         <span class="page-list__text">Aylık planlı saha çekimi
@@ -398,7 +398,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   const io = new IntersectionObserver((entries) => {
     entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } });
   }, { threshold: 0.10, rootMargin: '0px 0px -40px 0px' });
-  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+  document.querySelectorAll('.').forEach((el) => io.observe(el));
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => {
     if (window.scrollY > 40) nav.classList.add('is-shrunk'); else nav.classList.remove('is-shrunk');

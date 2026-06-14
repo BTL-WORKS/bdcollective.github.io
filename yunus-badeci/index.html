@@ -144,6 +144,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .bio-hero__name em { font-style: italic; font-weight: 400; color: var(--coral); }
   .bio-hero__title { font-size: clamp(18px, 1.4vw, 22px); color: rgba(255,255,255,0.7); max-width: 580px; line-height: 1.5; margin: 0; }
 </style>
+
+<!-- Emergency force-visible override -->
+<style>
+  .page-header .eyebrow,
+  .page-header .page-title,
+  .page-header .page-subtitle,
+  .page-header h1,
+  .page-header h1 em,
+  .page-header p {
+    opacity: 1 !important;
+    visibility: visible !important;
+    color: #ffffff !important;
+    transform: none !important;
+  }
+  .page-header .page-title em {
+    color: #ff5a64 !important;
+    font-style: normal !important;
+  }
+  .page-header .page-subtitle {
+    color: rgba(255,255,255,0.78) !important;
+  }
+  .page-header .eyebrow {
+    color: rgba(255,255,255,0.78) !important;
+  }
+</style>
+
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -341,6 +367,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   window.addEventListener('scroll', () => {
     if (window.scrollY > 40) nav.classList.add('is-shrunk'); else nav.classList.remove('is-shrunk');
   }, { passive: true });
+
+  // Reveal animasyonu - elementler viewport'a girince fade-in
+  const revealEls = document.querySelectorAll('.');
+  if (revealEls.length > 0) {
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.add('is-visible');
+            io.unobserve(e.target);
+          }
+        });
+      }, { rootMargin: '0px 0px -50px 0px' });
+      revealEls.forEach(el => io.observe(el));
+    } else {
+      // Fallback: IO yoksa hepsini direkt göster
+      revealEls.forEach(el => el.classList.add('is-visible'));
+    }
+  }
 </script>
 
 </body>

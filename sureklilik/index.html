@@ -242,17 +242,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header class="page-header">
   <div class="wrap">
     <a href="/" class="back-link">← Ana sayfa</a>
-    <p class="eyebrow reveal">Yöntem · 04</p>
-    <h1 class="page-title reveal reveal-d1">Süreklilik.</h1>
-    <p class="page-subtitle reveal reveal-d2">Tek bir noktadan yönetim. Birebir ilgi. Aylık raporlar. Sürpriz yok, sadece ritim. Klinik için sosyal medya 90 günlük kampanya değildir; yıllarca sürecek bir ilişkidir.</p>
+    <p class="eyebrow">Yöntem · 04</p>
+    <h1 class="page-title">Süreklilik.</h1>
+    <p class="page-subtitle">Tek bir noktadan yönetim. Birebir ilgi. Aylık raporlar. Sürpriz yok, sadece ritim. Klinik için sosyal medya 90 günlük kampanya değildir; yıllarca sürecek bir ilişkidir.</p>
   </div>
 </header>
 
 <main class="page-body">
   <div class="wrap">
     <div class="page-body__grid">
-      <p class="page-body__lead reveal">Sosyal medya 90 günlük kampanya değildir, <em>yıllarca sürecek</em> bir ilişkidir.</p>
-      <div class="page-body__text reveal reveal-d1">
+      <p class="page-body__lead">Sosyal medya 90 günlük kampanya değildir, <em>yıllarca sürecek</em> bir ilişkidir.</p>
+      <div class="page-body__text">
         <p>Bu yüzden "projeyi teslim ettik, görüşürüz" yaklaşımı yok — her ay birlikteyiz, her hafta birbirimize değiyoruz. Aynı işin tekrarı değil; tutarlı bir ritmin sürdürülmesi.</p>
         <p>Tek temas noktası — <em>tüm süreç tek elden yönetilir.</em> Hesap yöneticisi köprüsü yok; doğrudan iletişim, hızlı geri dönüş, ortak bir dil.</p>
         <p class="page-body__pull">Yazışma, brief, reklam ayarı, rapor — <em>hepsi aynı kafadan</em> çıkar.</p>
@@ -317,9 +317,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <section class="page-list-section">
   <div class="wrap">
-    <h2 class="page-list-title reveal">Sürekli olarak <em>ne yapıyoruz.</em></h2>
+    <h2 class="page-list-title">Sürekli olarak <em>ne yapıyoruz.</em></h2>
     <p style="font-size: 17px; color: var(--ink-soft); margin: 0 0 36px; max-width: 720px;">Klinik için BTL WORKS süreklilik altı temel başlığı kapsar. Hepsi tek bir kafanın elinden geçer.</p>
-    <ul class="page-list reveal reveal-d1">
+    <ul class="page-list">
       <li>
         <span class="page-list__num">01</span>
         <span class="page-list__text">Tek temas noktası: Yunus Badeci
@@ -503,7 +503,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   const io = new IntersectionObserver((entries) => {
     entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } });
   }, { threshold: 0.10, rootMargin: '0px 0px -40px 0px' });
-  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+  document.querySelectorAll('.').forEach((el) => io.observe(el));
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => {
     if (window.scrollY > 40) nav.classList.add('is-shrunk'); else nav.classList.remove('is-shrunk');

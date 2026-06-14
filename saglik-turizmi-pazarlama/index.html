@@ -160,17 +160,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header class="page-header">
   <div class="wrap">
     <a href="/" class="back-link">← Ana sayfa</a>
-    <p class="eyebrow reveal">Sağlık Turizmi · Uluslararası</p>
-    <h1 class="page-title reveal reveal-d1">Sağlık Turizmi <em>Pazarlama Ajansı.</em></h1>
-    <p class="page-subtitle reveal reveal-d2">Türkiye'deki klinikler için yurt dışından hasta çekme stratejisi — çok dilli sosyal medya, Meta &amp; Google Ads, hedef ülke kampanyaları. Uçtan uca bir pazarlama operasyonu.</p>
+    <p class="eyebrow">Sağlık Turizmi · Uluslararası</p>
+    <h1 class="page-title">Sağlık Turizmi <em>Pazarlama Ajansı.</em></h1>
+    <p class="page-subtitle">Türkiye'deki klinikler için yurt dışından hasta çekme stratejisi — çok dilli sosyal medya, Meta &amp; Google Ads, hedef ülke kampanyaları. Uçtan uca bir pazarlama operasyonu.</p>
   </div>
 </header>
 
 <main class="page-body">
   <div class="wrap">
     <div class="page-body__grid">
-      <p class="page-body__lead reveal">Türkiye, dünyanın en büyük sağlık turizmi destinasyonlarından biri. 2025'te 1.5 milyondan fazla uluslararası hasta ülkemize geldi. Ancak bu pazar <em>kazanmak için doğru pazarlamayla erişilebilir</em> bir pazardır.</p>
-      <div class="page-body__text reveal reveal-d1">
+      <p class="page-body__lead">Türkiye, dünyanın en büyük sağlık turizmi destinasyonlarından biri. 2025'te 1.5 milyondan fazla uluslararası hasta ülkemize geldi. Ancak bu pazar <em>kazanmak için doğru pazarlamayla erişilebilir</em> bir pazardır.</p>
+      <div class="page-body__text">
         <p>İngilizce, Arapça, Almanca, Hollandaca — her dilin kendi grameri, kendi reklam kuralları, kendi hasta beklentisi vardır. Bir kreatifi sadece çevirerek başka bir pazara taşımak, yatırımı boşa harcamak demektir.</p>
         <p>Sağlık turizmi pazarlaması, standart sosyal medya yönetiminin çok ötesinde bir uzmanlık alanıdır. Hedef ülkenin sağlık reklam mevzuatı, Meta'nın sağlık politikası, Google'ın tıbbi reklam kuralları, hatta WhatsApp'taki mesajlaşma dili — her biri farklı tellerdir.</p>
         <p class="page-body__pull">Türkiye'deki klinikler için yurt dışı hasta çekme — <em>uçtan uca bir pazarlama operasyonu.</em></p>
@@ -182,8 +182,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <section class="page-list-section">
   <div class="wrap">
-    <h2 class="page-list-title reveal">Sağlık turizmi pazarlamasında <em>kapsam.</em></h2>
-    <ul class="page-list reveal reveal-d1">
+    <h2 class="page-list-title">Sağlık turizmi pazarlamasında <em>kapsam.</em></h2>
+    <ul class="page-list">
       <li>
         <span class="page-list__num">01</span>
         <span class="page-list__text">Çok dilli içerik üretimi
@@ -378,7 +378,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   const io = new IntersectionObserver((entries) => {
     entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } });
   }, { threshold: 0.10, rootMargin: '0px 0px -40px 0px' });
-  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+  document.querySelectorAll('.').forEach((el) => io.observe(el));
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => {
     if (window.scrollY > 40) nav.classList.add('is-shrunk'); else nav.classList.remove('is-shrunk');

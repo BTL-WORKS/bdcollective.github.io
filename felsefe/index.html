@@ -234,17 +234,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header class="page-header">
   <div class="wrap">
     <a href="/" class="back-link">← Ana sayfa</a>
-    <p class="eyebrow reveal">Felsefe · Manifesto</p>
-    <h1 class="page-title reveal reveal-d1">Ahtapot bir tek <em>kolla yüzmez.</em></h1>
-    <p class="page-subtitle reveal reveal-d2">Sosyal medya ve reklam birbirinden ayrılamaz. İçerik üretimi ile satış birbirinden ayrılamaz. Çekim, kurgu, müzik, caption, reklam — hepsi aynı gövdeye bağlı kollardır. Birini diğerinden koparttığın anda <em>ahtapot ölür.</em></p>
+    <p class="eyebrow">Felsefe · Manifesto</p>
+    <h1 class="page-title">Ahtapot bir tek <em>kolla yüzmez.</em></h1>
+    <p class="page-subtitle">Sosyal medya ve reklam birbirinden ayrılamaz. İçerik üretimi ile satış birbirinden ayrılamaz. Çekim, kurgu, müzik, caption, reklam — hepsi aynı gövdeye bağlı kollardır. Birini diğerinden koparttığın anda <em>ahtapot ölür.</em></p>
   </div>
 </header>
 
 <main class="page-body">
   <div class="wrap">
     <div class="page-body__grid">
-      <p class="page-body__lead reveal">Bir markanın hikayesi <em>parça parça</em> anlatılamaz. Sosyal medya bir kanal, reklam başka bir kanal, satış ayrı bir dünya değildir; hepsi aynı ses tonuna, aynı zamanlamaya, aynı niyete bağlı olduğunda işler.</p>
-      <div class="page-body__text reveal reveal-d1">
+      <p class="page-body__lead">Bir markanın hikayesi <em>parça parça</em> anlatılamaz. Sosyal medya bir kanal, reklam başka bir kanal, satış ayrı bir dünya değildir; hepsi aynı ses tonuna, aynı zamanlamaya, aynı niyete bağlı olduğunda işler.</p>
+      <div class="page-body__text">
         <p>Burada her şey <em>tek bir kafayla</em> düşünülür. Çekim sırasında o ay yayına girecek reklam kreatifi zaten plandadır. Kurgu masasında oturulduğunda videonun caption'ı zaten yazılmaya başlamıştır. Reklam yöneticisinde teklif ayarlanırken hangi içerik temasının ileri taşınacağı zaten bilinmektedir.</p>
         <p>BTL WORKS'te sosyal medya yönetimi almak; aslında bir <em>bütüncül markalama</em> almak demektir. Reklam, satış hunisinin ilk metresinden son metresine kadar zaten dahildir. İçerik, satışın yarısıdır. Çekim, marka sesinin görünür halidir. Hepsi tek bir nefes.</p>
         <p class="page-body__pull">Çünkü iyi içerik, sadece <em>güzel</em> içerik değildir. <strong>Doğru</strong> içeriktir.</p>
@@ -256,11 +256,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <section class="page-list-section">
   <div class="wrap">
-    <h2 class="page-list-title reveal">Ahtapotun <em>kolları.</em></h2>
-    <p class="page-body__lead reveal reveal-d1" style="max-width:780px; margin-bottom:48px;">
+    <h2 class="page-list-title">Ahtapotun <em>kolları.</em></h2>
+    <p class="page-body__lead" style="max-width:780px; margin-bottom:48px;">
       Her biri ayrı bir alan gibi görünür; ama hepsi aynı kafadan, aynı stratejiden, aynı marka sesinden beslenir. Birini diğerinden koparttığın anda işin yarısı boşa düşer.
     </p>
-    <ul class="page-list reveal reveal-d1">
+    <ul class="page-list">
       <li>
         <span class="page-list__num">01</span>
         <span class="page-list__text">Strateji <span style="color: var(--coral);">— ahtapotun kafası</span></span>
@@ -299,7 +299,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <section style="background: var(--black); color: var(--white); padding: 130px 36px;">
   <div class="wrap" style="max-width:880px; margin: 0 auto;">
-    <p class="eyebrow reveal" style="color: var(--coral); display:block; margin-bottom: 28px; font-size:13px; font-weight:500; letter-spacing:0.18em; text-transform:uppercase;">Neden tek elde</p>
+    <p class="eyebrow" style="color: var(--coral); display:block; margin-bottom: 28px; font-size:13px; font-weight:500; letter-spacing:0.18em; text-transform:uppercase;">Neden tek elde</p>
     <h2 style="font-size: clamp(32px, 4.2vw, 56px); font-weight:700; line-height:1.05; letter-spacing:-0.03em; color: var(--white); margin-bottom: 36px;">
       Tek bir <em style="font-style: italic; font-weight:400; color: rgba(255,255,255,0.92);">nefes,</em> bir bütün.
     </h2>
@@ -502,7 +502,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   const io = new IntersectionObserver((entries) => {
     entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } });
   }, { threshold: 0.10, rootMargin: '0px 0px -40px 0px' });
-  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+  document.querySelectorAll('.').forEach((el) => io.observe(el));
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => {
     if (window.scrollY > 40) nav.classList.add('is-shrunk'); else nav.classList.remove('is-shrunk');

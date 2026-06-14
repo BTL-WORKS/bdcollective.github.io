@@ -272,6 +272,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   .lang-switcher a.is-active { background: var(--black); color: var(--white); border-color: var(--black); }
 </style>
+
+<!-- Emergency force-visible override -->
+<style>
+  .page-header .eyebrow,
+  .page-header .page-title,
+  .page-header .page-subtitle,
+  .page-header h1,
+  .page-header h1 em,
+  .page-header p {
+    opacity: 1 !important;
+    visibility: visible !important;
+    color: #ffffff !important;
+    transform: none !important;
+  }
+  .page-header .page-title em {
+    color: #ff5a64 !important;
+    font-style: normal !important;
+  }
+  .page-header .page-subtitle {
+    color: rgba(255,255,255,0.78) !important;
+  }
+  .page-header .eyebrow {
+    color: rgba(255,255,255,0.78) !important;
+  }
+</style>
+
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -301,9 +327,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header class="page-header">
   <div class="wrap">
     <a href="/" class="back-link">← Home</a>
-    <p class="eyebrow reveal">Blog · Pillar Guide · 2026</p>
-    <h1 class="page-title reveal reveal-d1">Health Tourism Marketing <em>Mega Guide.</em></h1>
-    <p class="page-subtitle reveal reveal-d2">International patient marketing across hair transplant, dental treatment, and aesthetic surgery — multilingual content, international SEO, regulation, patient journey, budget, and measurement. Through an Istanbul × Dubai lens.</p>
+    <p class="eyebrow">Blog · Pillar Guide · 2026</p>
+    <h1 class="page-title">Health Tourism Marketing <em>Mega Guide.</em></h1>
+    <p class="page-subtitle">International patient marketing across hair transplant, dental treatment, and aesthetic surgery — multilingual content, international SEO, regulation, patient journey, budget, and measurement. Through an Istanbul × Dubai lens.</p>
     <div class="lang-switcher">
       <a href="/saglik-turizmi-pazarlama-rehberi">TR</a>
       <a href="/en/health-tourism-marketing-guide" class="is-active">EN</a>
@@ -1136,6 +1162,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   window.addEventListener('scroll', () => {
     if (window.scrollY > 40) nav.classList.add('is-shrunk'); else nav.classList.remove('is-shrunk');
   }, { passive: true });
+
+  // Reveal animasyonu - elementler viewport'a girince fade-in
+  const revealEls = document.querySelectorAll('.');
+  if (revealEls.length > 0) {
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.add('is-visible');
+            io.unobserve(e.target);
+          }
+        });
+      }, { rootMargin: '0px 0px -50px 0px' });
+      revealEls.forEach(el => io.observe(el));
+    } else {
+      // Fallback: IO yoksa hepsini direkt göster
+      revealEls.forEach(el => el.classList.add('is-visible'));
+    }
+  }
 </script>
 
 </body>

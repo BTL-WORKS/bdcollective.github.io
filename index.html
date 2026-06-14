@@ -1753,11 +1753,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .modal__date { margin-top: 16px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.14em; color: var(--ink-fade); }
 
   /* ============ SCROLL REVEAL ============ */
-  .reveal { opacity: 0; transform: translateY(28px); transition: opacity 900ms cubic-bezier(0.2, 0.8, 0.2, 1), transform 900ms cubic-bezier(0.2, 0.8, 0.2, 1); }
-  .reveal.is-visible { opacity: 1; transform: translateY(0); }
-  .reveal-d1 { transition-delay: 80ms; }
-  .reveal-d2 { transition-delay: 160ms; }
-  .reveal-d3 { transition-delay: 240ms; }
+  . { opacity: 0; transform: translateY(28px); transition: opacity 900ms cubic-bezier(0.2, 0.8, 0.2, 1), transform 900ms cubic-bezier(0.2, 0.8, 0.2, 1); }
+  ..is-visible { opacity: 1; transform: translateY(0); }
+  .-d1 { transition-delay: 80ms; }
+  .-d2 { transition-delay: 160ms; }
+  .-d3 { transition-delay: 240ms; }
 </style>
 </head>
 <body>
@@ -1793,20 +1793,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header class="stage stage--glow-red hero" id="top">
   <div class="hero__grid">
     <div>
-      <h1 class="hero__title reveal">
+      <h1 class="hero__title">
         Standart <span class="pill"></span> değil, stil
       </h1>
     </div>
     <div>
-      <p class="hero__lead reveal reveal-d1">
+      <p class="hero__lead">
         İyi iletişimin, net stratejinin ve kişisel ilginin büyük fark yarattığına inanıyorum.
       </p>
       <p class="sr-only">BTL WORKS, doktorlar, diş hekimleri, estetik klinikler ve sağlık profesyonelleri için butik sosyal medya yönetimi, içerik üretimi, Meta ve Google reklam yönetimi yapan İstanbul merkezli bir stüdyodur.</p>
-      <div class="hero__ctas reveal reveal-d2">
+      <div class="hero__ctas">
         <a href="#iletisim" class="btn btn--white">İletişime Geç <span class="btn__arrow">→</span></a>
         <a href="#portfolyo" class="btn btn--white">Çalışmaları Gör <span class="btn__arrow">→</span></a>
       </div>
-      <span class="hero__eyebrow reveal reveal-d3">Sağlık · Estetik · Diş Hekimliği · Dijital Vitrin</span>
+      <span class="hero__eyebrow">Sağlık · Estetik · Diş Hekimliği · Dijital Vitrin</span>
     </div>
   </div>
 </header>
@@ -1814,8 +1814,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ============ CLINICS WITH IG EMBEDS ============ -->
 <section class="clinics" id="portfolyo">
   <div class="wrap">
-    <p class="eyebrow reveal">Portfolyo</p>
-    <h2 class="section__title reveal reveal-d1" style="margin-bottom:32px;">Seçilmiş <span class="pill"></span> çalışmalar.</h2>
+    <p class="eyebrow">Portfolyo</p>
+    <h2 class="section__title" style="margin-bottom:32px;">Seçilmiş <span class="pill"></span> çalışmalar.</h2>
     <p class="sr-only">İstanbul, Ankara, Bursa ve Türkiye genelindeki diş hekimleri, estetik klinikler, ağız ve diş sağlığı merkezleri ve sağlık profesyonelleri için ürettiğimiz Instagram içerikleri ve sosyal medya çalışmalarından seçkiler.</p>
   </div>
   <div class="clinics__carousel-wrap">
@@ -1827,7 +1827,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </button>
     <div class="clinics__marquee">
     <div class="clinics__track" id="clinics-track">
-      <article class="clinic-card reveal">
+      <article class="clinic-card">
         <iframe class="clinic-card__embed" title="Instagram içeriği — BTL WORKS portfolyo" src="https://www.instagram.com/p/DWJwVenCCgW/embed/captioned/" scrolling="no" frameborder="0" allowtransparency="true" loading="lazy" allow="encrypted-media; clipboard-write; web-share; picture-in-picture"></iframe>
         <div class="clinic-card__body">
           <p class="clinic-card__tag">Diş Kliniği</p>
@@ -1835,7 +1835,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <a href="https://www.instagram.com/ekiz.clinic/" target="_blank" rel="noopener" class="clinic-card__handle">@ekiz.clinic <span class="clinic-card__handle-arrow">↗</span></a>
         </div>
       </article>
-      <article class="clinic-card reveal reveal-d1">
+      <article class="clinic-card">
         <iframe class="clinic-card__embed" title="Instagram içeriği — BTL WORKS portfolyo" src="https://www.instagram.com/p/DYBjLtmMGnI/embed/captioned/" scrolling="no" frameborder="0" allowtransparency="true" loading="lazy" allow="encrypted-media; clipboard-write; web-share; picture-in-picture"></iframe>
         <div class="clinic-card__body">
           <p class="clinic-card__tag">Diş Kliniği</p>
@@ -1843,7 +1843,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <a href="https://www.instagram.com/ozeldentalcenter/" target="_blank" rel="noopener" class="clinic-card__handle">@ozeldentalcenter <span class="clinic-card__handle-arrow">↗</span></a>
         </div>
       </article>
-      <article class="clinic-card reveal reveal-d2">
+      <article class="clinic-card">
         <iframe class="clinic-card__embed" title="Instagram içeriği — BTL WORKS portfolyo" src="https://www.instagram.com/p/DX9jwBeMuYB/embed/captioned/" scrolling="no" frameborder="0" allowtransparency="true" loading="lazy" allow="encrypted-media; clipboard-write; web-share; picture-in-picture"></iframe>
         <div class="clinic-card__body">
           <p class="clinic-card__tag">Diş Kliniği</p>
@@ -1851,7 +1851,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <a href="https://www.instagram.com/dentaworkclinic/" target="_blank" rel="noopener" class="clinic-card__handle">@dentaworkclinic <span class="clinic-card__handle-arrow">↗</span></a>
         </div>
       </article>
-      <article class="clinic-card reveal">
+      <article class="clinic-card">
         <iframe class="clinic-card__embed" title="Instagram içeriği — BTL WORKS portfolyo" src="https://www.instagram.com/p/DOGRTWCCPi8/embed/captioned/" scrolling="no" frameborder="0" allowtransparency="true" loading="lazy" allow="encrypted-media; clipboard-write; web-share; picture-in-picture"></iframe>
         <div class="clinic-card__body">
           <p class="clinic-card__tag">Diş Kliniği</p>
@@ -1859,7 +1859,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <a href="https://www.instagram.com/bergedent/" target="_blank" rel="noopener" class="clinic-card__handle">@bergedent <span class="clinic-card__handle-arrow">↗</span></a>
         </div>
       </article>
-      <article class="clinic-card reveal reveal-d1">
+      <article class="clinic-card">
         <iframe class="clinic-card__embed" title="Instagram içeriği — BTL WORKS portfolyo" src="https://www.instagram.com/p/DWtvwW9j_2V/embed/captioned/" scrolling="no" frameborder="0" allowtransparency="true" loading="lazy" allow="encrypted-media; clipboard-write; web-share; picture-in-picture"></iframe>
         <div class="clinic-card__body">
           <p class="clinic-card__tag">Diş Hekimi</p>
@@ -1867,7 +1867,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <a href="https://www.instagram.com/dr.sezerisiksacan/" target="_blank" rel="noopener" class="clinic-card__handle">@dr.sezerisiksacan <span class="clinic-card__handle-arrow">↗</span></a>
         </div>
       </article>
-      <article class="clinic-card reveal reveal-d2">
+      <article class="clinic-card">
         <iframe class="clinic-card__embed" title="Instagram içeriği — BTL WORKS portfolyo" src="https://www.instagram.com/p/DTSnbKKCDTL/embed/captioned/" scrolling="no" frameborder="0" allowtransparency="true" loading="lazy" allow="encrypted-media; clipboard-write; web-share; picture-in-picture"></iframe>
         <div class="clinic-card__body">
           <p class="clinic-card__tag">Diş Kliniği</p>
@@ -1963,32 +1963,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ============ METHOD / HYBRID MODEL ============ -->
 <section class="section--paper method" id="yontem">
   <div class="wrap">
-    <p class="eyebrow reveal">Yaklaşım</p>
-    <h2 class="method__title reveal reveal-d1">Strateji. Hikâye. <em>Dokunuş.</em></h2>
+    <p class="eyebrow">Yaklaşım</p>
+    <h2 class="method__title">Strateji. Hikâye. <em>Dokunuş.</em></h2>
     <p class="sr-only">Doktorlar ve klinikler için butik sosyal medya yönetimi dört aşamadan oluşur: marka stratejisi, içerik üretimi (Instagram Reels, video kurgu, fotoğraf çekimi, caption yazımı), Meta Ads ve Google Ads dijital reklam yönetimi ve sürekli hesap takibi ile aylık raporlama.</p>
     <div class="method__grid">
-      <a class="method__card reveal" href="/strateji" target="_blank" rel="noopener">
+      <a class="method__card" href="/strateji" target="_blank" rel="noopener">
         <span class="method__card-dot method__card-dot--red"></span>
         <p class="method__card-num">01.</p>
         <h3 class="method__card-title">Strateji</h3>
         <p class="method__card-desc">Markanızı tanımak, hedef kitlenizi çözmek, doğru sözü doğru zamanda söylemek için bir plan inşa ederiz.</p>
         <span class="method__card-arrow">↗</span>
       </a>
-      <a class="method__card reveal reveal-d1" href="/icerik" target="_blank" rel="noopener">
+      <a class="method__card" href="/icerik" target="_blank" rel="noopener">
         <span class="method__card-dot method__card-dot--blue"></span>
         <p class="method__card-num">02.</p>
         <h3 class="method__card-title">İçerik</h3>
         <p class="method__card-desc">Çekim, kurgu, metin yazımı, görsel tasarım. Her kare elimizden tek tek geçer. Stok değil, özel.</p>
         <span class="method__card-arrow">↗</span>
       </a>
-      <a class="method__card reveal reveal-d2" href="/reklam" target="_blank" rel="noopener">
+      <a class="method__card" href="/reklam" target="_blank" rel="noopener">
         <span class="method__card-dot method__card-dot--green"></span>
         <p class="method__card-num">03.</p>
         <h3 class="method__card-title">Reklam</h3>
         <p class="method__card-desc">Meta &amp; Google reklam yönetimi. Hedef kitleyi netleştirir, bütçeyi en doğru yere yönlendiririz.</p>
         <span class="method__card-arrow">↗</span>
       </a>
-      <a class="method__card reveal reveal-d3" href="/sureklilik" target="_blank" rel="noopener">
+      <a class="method__card" href="/sureklilik" target="_blank" rel="noopener">
         <span class="method__card-dot method__card-dot--amber"></span>
         <p class="method__card-num">04.</p>
         <h3 class="method__card-title">Süreklilik</h3>
@@ -2004,7 +2004,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="wrap" style="max-width: 1100px; margin: 0 auto;">
     <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 80px; align-items: center;">
 
-      <div class="reveal">
+      <div>
         <p style="font-size:13px; color: var(--coral); font-weight:500; letter-spacing:0.18em; text-transform:uppercase; margin-bottom: 24px;">Felsefe</p>
         <h2 style="font-size: clamp(36px, 4.5vw, 64px); font-weight: 700; line-height: 1.05; letter-spacing: -0.035em; color: var(--white); margin: 0 0 28px;">
           Ahtapot bir tek <em style="font-style: italic; font-weight: 400; color: var(--coral);">kolla yüzmez.</em>
@@ -2018,7 +2018,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </a>
       </div>
 
-      <div class="reveal reveal-d1" style="position: relative;">
+      <div style="position: relative;">
         <div style="border-left: 4px solid var(--coral); padding: 12px 0 12px 32px;">
           <p style="font-size: clamp(20px, 1.9vw, 26px); line-height: 1.45; font-weight: 500; color: rgba(255,255,255,0.95); font-style: italic; letter-spacing: -0.015em; margin: 0 0 28px;">
             "Burada her şey tek bir kafayla düşünülür. Çekim sırasında o ay yayına girecek reklam kreatifi zaten plandadır. Kurgu masasında oturulduğunda videonun caption'ı zaten yazılmaya başlamıştır."
@@ -2043,12 +2043,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="contact" id="iletisim">
   <div class="wrap">
     <div class="contact__head">
-      <p class="eyebrow reveal">İletişim</p>
-      <h2 class="contact__title reveal reveal-d1">Markanızı <span class="pill"></span> vitrine taşıyalım.</h2>
+      <p class="eyebrow">İletişim</p>
+      <h2 class="contact__title">Markanızı <span class="pill"></span> vitrine taşıyalım.</h2>
     </div>
 
     <div class="contact__grid">
-      <div class="contact__details reveal reveal-d1">
+      <div class="contact__details">
         <p class="contact__intro">Bir mağazanın önünden geçerken bizi durduran şey vitrindir; bugün ise markaların vitrini sosyal medya. Gelin, sadece dikkat çeken değil, <em>zihinde yer eden</em> bir vitrin inşa edelim — çünkü ilk izlenim artık saniyeler içinde verilir.</p>
         <div>
           <p class="contact__detail-label">Ofis</p>
@@ -2068,7 +2068,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
 
-      <form class="form reveal reveal-d2" id="contact-form" name="iletisim" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+      <form class="form" id="contact-form" name="iletisim" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="iletisim" />
         <p style="display:none;"><label>Doldurmayın: <input name="bot-field" /></label></p>
         <div class="form__row">
@@ -2227,13 +2227,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </a>
 
 <script>
-  // Scroll reveal
+  // Scroll
   const io = new IntersectionObserver((entries) => {
     entries.forEach((e) => {
       if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
     });
   }, { threshold: 0.10, rootMargin: '0px 0px -40px 0px' });
-  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+  document.querySelectorAll('.').forEach((el) => io.observe(el));
 
   // Nav shrink on scroll
   const nav = document.getElementById('nav');
@@ -2315,7 +2315,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   if (clinicsTrack && clinicsMarquee) {
     // Reveal cards immediately
     Array.from(clinicsTrack.children).forEach(card => {
-      card.classList.remove('reveal', 'reveal-d1', 'reveal-d2', 'reveal-d3');
+      card.classList.remove('', '-d1', '-d2', '-d3');
       card.classList.add('is-visible');
     });
 

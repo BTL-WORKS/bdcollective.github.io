@@ -261,17 +261,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header class="page-header">
   <div class="wrap">
     <a href="/" class="back-link">← Ana sayfa</a>
-    <p class="eyebrow reveal">Yöntem · 03</p>
-    <h1 class="page-title reveal reveal-d1">Reklam.</h1>
-    <p class="page-subtitle reveal reveal-d2">Meta Ads + Google Ads — klinik için yaratıcı testlerle, doğru hedefleme ile, mevzuata uygun mesajlarla. Reklam içerik üzerine kurulur, ayrı bir iş değildir.</p>
+    <p class="eyebrow">Yöntem · 03</p>
+    <h1 class="page-title">Reklam.</h1>
+    <p class="page-subtitle">Meta Ads + Google Ads — klinik için yaratıcı testlerle, doğru hedefleme ile, mevzuata uygun mesajlarla. Reklam içerik üzerine kurulur, ayrı bir iş değildir.</p>
   </div>
 </header>
 
 <main class="page-body">
   <div class="wrap">
     <div class="page-body__grid">
-      <p class="page-body__lead reveal">Reklam para harcamak değildir; <em>doğru sözü doğru kitleye söylemenin</em> bir yoludur. Bütçe ne kadar büyük olursa olsun, mesaj zayıfsa sonuç gelmez.</p>
-      <div class="page-body__text reveal reveal-d1">
+      <p class="page-body__lead">Reklam para harcamak değildir; <em>doğru sözü doğru kitleye söylemenin</em> bir yoludur. Bütçe ne kadar büyük olursa olsun, mesaj zayıfsa sonuç gelmez.</p>
+      <div class="page-body__text">
         <p>Meta Ads, Google Ads, TikTok Ads — her platform farklı bir hasta yolculuğunu yakalar. Google Ads zaten arayanı bulur, Meta Ads henüz aramayan ama uygun profile sahip olanı keşfettirir.</p>
         <p>BTL WORKS yaklaşımında reklam, içerik ve strateji birbirinden ayrılmaz. Reklamda kullanılan görsel hekimin sesini taşır; reklamın hedeflemesi kliniğin hasta profili üzerine kurulur; reklamın mesajı mevzuata içkin yazılır.</p>
         <p class="page-body__pull">Reklam başarısı bütçeyle değil, <em>içerik kalitesiyle ölçülür.</em></p>
@@ -340,9 +340,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <section class="page-list-section">
   <div class="wrap">
-    <h2 class="page-list-title reveal">Reklamda <em>kapsam.</em></h2>
+    <h2 class="page-list-title">Reklamda <em>kapsam.</em></h2>
     <p style="font-size: 17px; color: var(--ink-soft); margin: 0 0 36px; max-width: 720px;">Klinik için BTL WORKS reklam yönetimi altı temel başlığı kapsar. Her başlık reklamın bir katmanı; hepsi birlikte bütünlüğü oluşturur.</p>
-    <ul class="page-list reveal reveal-d1">
+    <ul class="page-list">
       <li>
         <span class="page-list__num">01</span>
         <span class="page-list__text">Meta Ads yönetimi — Facebook, Instagram
@@ -567,7 +567,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   const io = new IntersectionObserver((entries) => {
     entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } });
   }, { threshold: 0.10, rootMargin: '0px 0px -40px 0px' });
-  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+  document.querySelectorAll('.').forEach((el) => io.observe(el));
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => {
     if (window.scrollY > 40) nav.classList.add('is-shrunk'); else nav.classList.remove('is-shrunk');

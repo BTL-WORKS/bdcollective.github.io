@@ -165,17 +165,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header class="page-header">
   <div class="wrap">
     <a href="/" class="back-link">← Ana sayfa</a>
-    <p class="eyebrow reveal">İstanbul · Diş Hekimliği</p>
-    <h1 class="page-title reveal reveal-d1">İstanbul Diş Hekimi <em>Sosyal Medya Ajansı.</em></h1>
-    <p class="page-subtitle reveal reveal-d2">Seçili diş hekimleri ve diş kliniklerinin İstanbul'daki <em>dijital vitrini.</em> Stok içerik değil; her kare klinik içinde, hasta deneyiminde, ekip portresinde çekilmiş. Klasikleşmiş düzenden uzak, butik bir stüdyo.</p>
+    <p class="eyebrow">İstanbul · Diş Hekimliği</p>
+    <h1 class="page-title">İstanbul Diş Hekimi <em>Sosyal Medya Ajansı.</em></h1>
+    <p class="page-subtitle">Seçili diş hekimleri ve diş kliniklerinin İstanbul'daki <em>dijital vitrini.</em> Stok içerik değil; her kare klinik içinde, hasta deneyiminde, ekip portresinde çekilmiş. Klasikleşmiş düzenden uzak, butik bir stüdyo.</p>
   </div>
 </header>
 
 <main class="page-body">
   <div class="wrap">
     <div class="page-body__grid">
-      <p class="page-body__lead reveal">İstanbul'da diş hekimi sosyal medyası demek, sadece güzel görsel demek değildir; mevzuatla, sağlık iletişimi sorumluluğuyla ve hasta güveniyle aynı anda dans etmektir.</p>
-      <div class="page-body__text reveal reveal-d1">
+      <p class="page-body__lead">İstanbul'da diş hekimi sosyal medyası demek, sadece güzel görsel demek değildir; mevzuatla, sağlık iletişimi sorumluluğuyla ve hasta güveniyle aynı anda dans etmektir.</p>
+      <div class="page-body__text">
         <p>2025-2026'da bir hasta kliniği aramadan önce <em>sosyal medya profilinize göz atıyor.</em> İlk izlenim artık fiziksel vitrinde değil; profil grid'inizde, son üç reel'inizde, kullandığınız ses tonunda veriliyor. Bu "dijital vitrin"in iyi kurgulanmış olması, randevu telefonu için zemin hazırlar.</p>
         <p>Diş hekimi içeriğinin <em>kendi grameri</em> vardır — TDB kılavuzu, hasta gizliliği, önce-sonra mevzuatı, sağlık iletişimi etiketi. Bu çerçeveye saygılı, çerçevenin içinde özgür bir üretim.</p>
         <p class="page-body__pull">Tek temas noktası: <em>tüm süreç tek elden.</em></p>
@@ -187,8 +187,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <section class="page-list-section">
   <div class="wrap">
-    <h2 class="page-list-title reveal">İstanbul'da bir diş kliniği için <em>kapsam.</em></h2>
-    <ul class="page-list reveal reveal-d1">
+    <h2 class="page-list-title">İstanbul'da bir diş kliniği için <em>kapsam.</em></h2>
+    <ul class="page-list">
       <li>
         <span class="page-list__num">01</span>
         <span class="page-list__text">Klinik içi aylık profesyonel çekim
@@ -407,7 +407,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   const io = new IntersectionObserver((entries) => {
     entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } });
   }, { threshold: 0.10, rootMargin: '0px 0px -40px 0px' });
-  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+  document.querySelectorAll('.').forEach((el) => io.observe(el));
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => {
     if (window.scrollY > 40) nav.classList.add('is-shrunk'); else nav.classList.remove('is-shrunk');

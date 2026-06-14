@@ -158,17 +158,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header class="page-header">
   <div class="wrap">
     <a href="/" class="back-link">← Ana sayfa</a>
-    <p class="eyebrow reveal">Web Tasarımı · Klinik</p>
-    <h1 class="page-title reveal reveal-d1">Doktor <em>Web Tasarımı.</em></h1>
-    <p class="page-subtitle reveal reveal-d2">Klinikler ve sağlık profesyonelleri için modern, hızlı, SEO uyumlu web sitesi. Hasta odaklı, randevu dönüştürür, Google'da görünür.</p>
+    <p class="eyebrow">Web Tasarımı · Klinik</p>
+    <h1 class="page-title">Doktor <em>Web Tasarımı.</em></h1>
+    <p class="page-subtitle">Klinikler ve sağlık profesyonelleri için modern, hızlı, SEO uyumlu web sitesi. Hasta odaklı, randevu dönüştürür, Google'da görünür.</p>
   </div>
 </header>
 
 <main class="page-body">
   <div class="wrap">
     <div class="page-body__grid">
-      <p class="page-body__lead reveal">Sosyal medya kliniğinizin <em>dijital vitrini</em> ise, web siteniz <em>dijital ofisinizdir.</em> Hasta sitenize geldiğinde, kliniğin kapısından geçmiş gibi hisseder.</p>
-      <div class="page-body__text reveal reveal-d1">
+      <p class="page-body__lead">Sosyal medya kliniğinizin <em>dijital vitrini</em> ise, web siteniz <em>dijital ofisinizdir.</em> Hasta sitenize geldiğinde, kliniğin kapısından geçmiş gibi hisseder.</p>
+      <div class="page-body__text">
         <p>Çoğu klinik web sitesi 2010'lardan kalma görünüyor. Yavaş yükleniyor, mobilde bozuluyor, Google'da görünmüyor, randevu sürecinde hastayı kaybediyor. Hasta o siteyi 3 saniye içinde kapatıyor.</p>
         <p>Modern bir klinik websitesi 3 şey yapmalı: <em>hızlı yüklenmeli</em> (1.5 saniyenin altında), <em>Google'da görünmeli</em> (SEO temel altyapısı), <em>randevu dönüşümü sağlamalı</em> (form, WhatsApp, telefon entegre).</p>
         <p class="page-body__pull">Klinik websitesi sadece tanıtım sayfası değildir; sistematik bir satış aracıdır.</p>
@@ -180,8 +180,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <section class="page-list-section">
   <div class="wrap">
-    <h2 class="page-list-title reveal">Klinik web tasarımında <em>kapsam.</em></h2>
-    <ul class="page-list reveal reveal-d1">
+    <h2 class="page-list-title">Klinik web tasarımında <em>kapsam.</em></h2>
+    <ul class="page-list">
       <li>
         <span class="page-list__num">01</span>
         <span class="page-list__text">Modern, mobil-öncelikli tasarım
@@ -376,7 +376,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   const io = new IntersectionObserver((entries) => {
     entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } });
   }, { threshold: 0.10, rootMargin: '0px 0px -40px 0px' });
-  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+  document.querySelectorAll('.').forEach((el) => io.observe(el));
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => {
     if (window.scrollY > 40) nav.classList.add('is-shrunk'); else nav.classList.remove('is-shrunk');

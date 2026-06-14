@@ -286,17 +286,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header class="page-header">
   <div class="wrap">
     <a href="/" class="back-link">← Ana sayfa</a>
-    <p class="eyebrow reveal">Yöntem · 01</p>
-    <h1 class="page-title reveal reveal-d1">Strateji.</h1>
-    <p class="page-subtitle reveal reveal-d2">Markanızı tanımak, hedef kitlenizi çözmek, doğru sözü doğru zamanda söylemek için bir plan inşa ederiz. Klinik için sosyal medya stratejisi yazılı bir doküman değil, marka için canlı bir çerçevedir.</p>
+    <p class="eyebrow">Yöntem · 01</p>
+    <h1 class="page-title">Strateji.</h1>
+    <p class="page-subtitle">Markanızı tanımak, hedef kitlenizi çözmek, doğru sözü doğru zamanda söylemek için bir plan inşa ederiz. Klinik için sosyal medya stratejisi yazılı bir doküman değil, marka için canlı bir çerçevedir.</p>
   </div>
 </header>
 
 <main class="page-body">
   <div class="wrap">
     <div class="page-body__grid">
-      <p class="page-body__lead reveal">Strateji bizim için <em>yazılı bir doküman</em> değil; markanın hangi yöne, hangi sesle, hangi ritimde gideceğine dair beraber çizdiğimiz bir haritadır.</p>
-      <div class="page-body__text reveal reveal-d1">
+      <p class="page-body__lead">Strateji bizim için <em>yazılı bir doküman</em> değil; markanın hangi yöne, hangi sesle, hangi ritimde gideceğine dair beraber çizdiğimiz bir haritadır.</p>
+      <div class="page-body__text">
         <p>Her marka kendi vitrini önünde tek başına durur. Strateji, o vitrini hangi sokağa açacağımızı, kapıdan kimin geçeceğini ve içeride neyin sergileneceğini önceden çözmektir.</p>
         <p>Önce dinleriz: marka geçmişi, klinik içi süreç, hedefler, hasta tipi, dil tonu. Sonra çerçeveyi çizeriz — kim, kime, ne diyecek, hangi platformda, hangi sıklıkta.</p>
         <p class="page-body__pull">Bizim yaklaşımımız sayıyla başlamaz: <em>önce markanın sesini bulalım, plan kendiliğinden gelir.</em></p>
@@ -361,9 +361,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <section class="page-list-section">
   <div class="wrap">
-    <h2 class="page-list-title reveal">Stratejide <em>kapsam.</em></h2>
+    <h2 class="page-list-title">Stratejide <em>kapsam.</em></h2>
     <p style="font-size: 17px; color: var(--ink-soft); margin: 0 0 36px; max-width: 720px;">Klinik için BTL WORKS strateji süreci altı temel başlığı kapsar. Bu altı başlık birbirinden bağımsız değildir; birbiri üzerine kurulan katmanlardır.</p>
-    <ul class="page-list reveal reveal-d1">
+    <ul class="page-list">
       <li>
         <span class="page-list__num">01</span>
         <span class="page-list__text">Marka konumlandırma ve değer önerisi
@@ -579,7 +579,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   const io = new IntersectionObserver((entries) => {
     entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } });
   }, { threshold: 0.10, rootMargin: '0px 0px -40px 0px' });
-  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+  document.querySelectorAll('.').forEach((el) => io.observe(el));
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => {
     if (window.scrollY > 40) nav.classList.add('is-shrunk'); else nav.classList.remove('is-shrunk');

@@ -138,6 +138,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .step-card a { color: var(--coral); font-size: 14px; font-weight: 500; text-decoration: none; }
   .step-card a:hover { text-decoration: underline; }
 </style>
+
+<!-- Emergency force-visible override -->
+<style>
+  .page-header .eyebrow,
+  .page-header .page-title,
+  .page-header .page-subtitle,
+  .page-header h1,
+  .page-header h1 em,
+  .page-header p {
+    opacity: 1 !important;
+    visibility: visible !important;
+    color: #ffffff !important;
+    transform: none !important;
+  }
+  .page-header .page-title em {
+    color: #ff5a64 !important;
+    font-style: normal !important;
+  }
+  .page-header .page-subtitle {
+    color: rgba(255,255,255,0.78) !important;
+  }
+  .page-header .eyebrow {
+    color: rgba(255,255,255,0.78) !important;
+  }
+</style>
+
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -168,9 +194,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header class="page-header">
   <div class="wrap">
     <a href="/" class="back-link">← Ana sayfa</a>
-    <p class="eyebrow reveal">Yöntem · Genel Bakış</p>
-    <h1 class="page-title reveal reveal-d1">Metodoloji.</h1>
-    <p class="page-subtitle reveal reveal-d2">Klinik için BTL WORKS yöntemi dört adımda işler. Strateji → İçerik → Reklam → Süreklilik. Birbirinden ayrılmaz, aynı kafadan çıkar.</p>
+    <p class="eyebrow">Yöntem · Genel Bakış</p>
+    <h1 class="page-title">Metodoloji.</h1>
+    <p class="page-subtitle">Klinik için BTL WORKS yöntemi dört adımda işler. Strateji → İçerik → Reklam → Süreklilik. Birbirinden ayrılmaz, aynı kafadan çıkar.</p>
   </div>
 </header>
 
@@ -312,6 +338,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   window.addEventListener('scroll', () => {
     if (window.scrollY > 40) nav.classList.add('is-shrunk'); else nav.classList.remove('is-shrunk');
   }, { passive: true });
+
+  // Reveal animasyonu - elementler viewport'a girince fade-in
+  const revealEls = document.querySelectorAll('.');
+  if (revealEls.length > 0) {
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.add('is-visible');
+            io.unobserve(e.target);
+          }
+        });
+      }, { rootMargin: '0px 0px -50px 0px' });
+      revealEls.forEach(el => io.observe(el));
+    } else {
+      // Fallback: IO yoksa hepsini direkt göster
+      revealEls.forEach(el => el.classList.add('is-visible'));
+    }
+  }
 </script>
 
 </body>

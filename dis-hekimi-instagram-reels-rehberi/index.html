@@ -252,9 +252,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header class="page-header">
   <div class="wrap">
     <a href="/" class="back-link">← Ana sayfa</a>
-    <p class="eyebrow reveal">Blog · Sosyal Medya</p>
-    <h1 class="page-title reveal reveal-d1">Diş Hekimi Instagram Reels Rehberi <em>2026.</em></h1>
-    <p class="page-subtitle reveal reveal-d2">Hangi türler tutar, mevzuata uygun çekim nasıl yapılır, ilk 3 saniye sırrı, müzik ve kurgu temposu, caption stratejisi — klinik için pratik bir rehber.</p>
+    <p class="eyebrow">Blog · Sosyal Medya</p>
+    <h1 class="page-title">Diş Hekimi Instagram Reels Rehberi <em>2026.</em></h1>
+    <p class="page-subtitle">Hangi türler tutar, mevzuata uygun çekim nasıl yapılır, ilk 3 saniye sırrı, müzik ve kurgu temposu, caption stratejisi — klinik için pratik bir rehber.</p>
   </div>
 </header>
 
@@ -518,7 +518,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   const io = new IntersectionObserver((entries) => {
     entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } });
   }, { threshold: 0.10, rootMargin: '0px 0px -40px 0px' });
-  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+  document.querySelectorAll('.').forEach((el) => io.observe(el));
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => {
     if (window.scrollY > 40) nav.classList.add('is-shrunk'); else nav.classList.remove('is-shrunk');

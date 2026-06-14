@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-M6S4RPLF');</script>
+<!-- Google Tag Manager (deferred for performance) -->
+<script>
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+function loadGTM(){var f=document.getElementsByTagName('script')[0],j=document.createElement('script');j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id=GTM-M6S4RPLF';f.parentNode.insertBefore(j,f);}
+if(document.readyState==='complete'){setTimeout(loadGTM,1500);}else{window.addEventListener('load',function(){setTimeout(loadGTM,1500);});}
+</script>
 <!-- End Google Tag Manager -->
 
-<!-- Google Analytics 4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-H9133NYSCV"></script>
+<!-- Google Analytics 4 (deferred) -->
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-H9133NYSCV');
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-H9133NYSCV');
+function loadGA(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-H9133NYSCV';document.head.appendChild(s);}
+if(document.readyState==='complete'){setTimeout(loadGA,1500);}else{window.addEventListener('load',function(){setTimeout(loadGA,1500);});}
 </script>
 
 <meta charset="UTF-8" />
@@ -39,7 +41,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap"></noscript>
 <link rel="stylesheet" href="/sub.css" />
 
 <script type="application/ld+json">

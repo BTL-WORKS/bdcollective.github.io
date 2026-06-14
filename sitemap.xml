@@ -216,4 +216,55 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://btlworx.com/metodoloji"/>
   </url>
 
+
+  <url>
+    <loc>https://btlworx.com/en/strategy/</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://btlworx.com/strateji"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://btlworx.com/en/strategy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://btlworx.com/strateji"/>
+  </url>
+
+  <url>
+    <loc>https://btlworx.com/en/content/</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://btlworx.com/icerik"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://btlworx.com/en/content/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://btlworx.com/icerik"/>
+  </url>
+
+  <url>
+    <loc>https://btlworx.com/en/paid-media/</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://btlworx.com/reklam"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://btlworx.com/en/paid-media/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://btlworx.com/reklam"/>
+  </url>
+
+  <url>
+    <loc>https://btlworx.com/en/continuity/</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://btlworx.com/sureklilik"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://btlworx.com/en/continuity/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://btlworx.com/sureklilik"/>
+  </url>
+
+  <url>
+    <loc>https://btlworx.com/en/health-tourism-marketing/</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.92</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://btlworx.com/saglik-turizmi-pazarlama"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://btlworx.com/en/health-tourism-marketing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://btlworx.com/saglik-turizmi-pazarlama"/>
+  </url>
+
 </urlset>

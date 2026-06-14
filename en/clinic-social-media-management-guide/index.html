@@ -93,6 +93,10 @@
   .related-links li { font-size: 16px; line-height: 1.6; margin-bottom: 8px; }
   .related-links a { color: var(--black); text-decoration: none; border-bottom: 1px solid rgba(10,10,10,0.15); }
   .related-links a:hover { color: var(--coral); border-bottom-color: var(--coral); }
+
+  .lang-switcher-nav { display: inline-flex; gap: 4px; align-items: center; margin-right: 14px; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; }
+  .lang-switcher-nav a { padding: 6px 10px; color: var(--ink-soft); text-decoration: none; border-radius: 999px; font-weight: 500; }
+  .lang-switcher-nav a.is-active { background: var(--black); color: var(--white); }
 </style>
 </head>
 <body>
@@ -101,6 +105,7 @@
 <nav class="nav" id="nav">
   <a href="/en/" class="nav__logo"><span>btlworks</span></a>
   <div class="nav__menu">
+    <div class="lang-switcher-nav"><a href="/klinik-sosyal-medya-yonetimi-rehberi/">TR</a><a href="#" class="is-active">EN</a></div>
     <div class="nav__dropdown">
       <a href="/en/#approach" class="nav__dropdown-toggle">Approach</a>
       <div class="nav__dropdown-menu" role="menu">

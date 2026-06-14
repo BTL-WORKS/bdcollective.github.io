@@ -23,8 +23,8 @@ if(document.readyState==='complete'){setTimeout(loadGA,1500);}else{window.addEve
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="theme-color" content="#0a0a0a" />
-<title>Klinik Sosyal Medya Stratejisi — Doktorlar için Strateji Süreci | BTL WORKS</title>
-<meta name="description" content="Klinik ve doktorlar için sosyal medya stratejisi nasıl kurulur: marka konumlandırma, hedef kitle analizi, içerik mimarisi, reklam planı, ölçüm metrikleri. BTL WORKS butik strateji yaklaşımı." />
+<title>Klinik Sosyal Medya Stratejisi — Doktor Süreci | BTL WORKS</title>
+<meta name="description" content="Doktor ve klinikler için strateji süreci: marka tonu, hedef kitle, içerik mimarisi, mevzuat çerçevesi. Butik atölye yaklaşımı, İstanbul × Dubai." />
 <meta name="keywords" content="klinik sosyal medya stratejisi, doktor sosyal medya stratejisi, klinik marka stratejisi, sağlık pazarlama stratejisi, klinik içerik stratejisi, BTL WORKS strateji" />
 <link rel="canonical" href="https://btlworx.com/strateji" />
 <meta name="robots" content="index, follow, max-image-preview:large" />
@@ -33,7 +33,7 @@ if(document.readyState==='complete'){setTimeout(loadGA,1500);}else{window.addEve
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://btlworx.com/strateji" />
 <meta property="og:title" content="Klinik Sosyal Medya Stratejisi — BTL WORKS" />
-<meta property="og:description" content="Klinik için strateji: marka konumlandırma, hedef kitle, içerik mimarisi, reklam planı, ölçüm metrikleri." />
+<meta property="og:description" content="Doktor ve klinikler için strateji süreci: marka tonu, hedef kitle, içerik mimarisi, mevzuat çerçevesi. Butik atölye yaklaşımı, İstanbul × Dubai." />
 <meta property="og:locale" content="tr_TR" />
 <meta property="article:author" content="Yunus Badeci" />
 <meta property="article:section" content="Yöntem" />
@@ -587,7 +587,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   const io = new IntersectionObserver((entries) => {
     entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } });
   }, { threshold: 0.10, rootMargin: '0px 0px -40px 0px' });
-  document.querySelectorAll('.').forEach((el) => io.observe(el));
+  document.querySelectorAll('[data-reveal]').forEach((el) => io.observe(el));
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => {
     if (window.scrollY > 40) nav.classList.add('is-shrunk'); else nav.classList.remove('is-shrunk');

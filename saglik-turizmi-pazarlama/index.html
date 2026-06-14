@@ -24,7 +24,7 @@ if(document.readyState==='complete'){setTimeout(loadGA,1500);}else{window.addEve
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="theme-color" content="#0a0a0a" />
 <title>Sağlık Turizmi Pazarlama Ajansı — BTL WORKS | Yurt Dışı Hasta Çekme</title>
-<meta name="description" content="Sağlık turizmi pazarlaması — yurt dışından hasta çekmek isteyen klinikler için çok dilli sosyal medya, Meta &amp; Google Ads, hedef ülke kampanyaları. Körfez, Avrupa, Balkanlar." />
+<meta name="description" content="Sağlık turizmi pazarlama: çok dilli içerik, kanıt arşivi, hekim otoritesi, uluslararası hasta akışı. Klinik için butik atölye yaklaşımı." />
 <meta name="keywords" content="sağlık turizmi pazarlama, sağlık turizmi ajansı, yurt dışı hasta çekme, medikal turizm reklam, sağlık turizmi instagram, sağlık turizmi Google Ads, BTL WORKS sağlık turizmi" />
 <link rel="canonical" href="https://btlworx.com/saglik-turizmi-pazarlama" />
 <meta name="robots" content="index, follow, max-image-preview:large" />
@@ -32,7 +32,7 @@ if(document.readyState==='complete'){setTimeout(loadGA,1500);}else{window.addEve
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://btlworx.com/saglik-turizmi-pazarlama" />
 <meta property="og:title" content="Sağlık Turizmi Pazarlama Ajansı — BTL WORKS" />
-<meta property="og:description" content="Yurt dışından hasta çekmek isteyen klinikler için çok dilli pazarlama. Stüdyo değil; uçtan uca yönetim." />
+<meta property="og:description" content="Sağlık turizmi pazarlama: çok dilli içerik, kanıt arşivi, hekim otoritesi, uluslararası hasta akışı. Klinik için butik atölye yaklaşımı." />
 <meta property="og:locale" content="tr_TR" />
 
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -386,7 +386,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   const io = new IntersectionObserver((entries) => {
     entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } });
   }, { threshold: 0.10, rootMargin: '0px 0px -40px 0px' });
-  document.querySelectorAll('.').forEach((el) => io.observe(el));
+  document.querySelectorAll('[data-reveal]').forEach((el) => io.observe(el));
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => {
     if (window.scrollY > 40) nav.classList.add('is-shrunk'); else nav.classList.remove('is-shrunk');

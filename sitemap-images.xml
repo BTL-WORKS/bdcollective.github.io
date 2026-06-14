@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <url>
+    <loc>https://btlworx.com/</loc>
+    <image:image>
+      <image:loc>https://btlworx.com/yunus-portrait.jpg</image:loc>
+      <image:title>Yunus Badeci — BTL WORKS Founder</image:title>
+      <image:caption>BTL WORKS kurucusu Yunus Badeci, butik sağlık sektörü sosyal medya stüdyosu.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://btlworx.com/favicon-512.png</image:loc>
+      <image:title>BTL WORKS — Logo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://btlworx.com/og-image.jpg</image:loc>
+      <image:title>BTL WORKS — Boutique Healthcare Social Media Studio</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://btlworx.com/felsefe/</loc>
+    <image:image>
+      <image:loc>https://btlworx.com/yunus-portrait.jpg</image:loc>
+      <image:title>Yunus Badeci — BTL WORKS Founder</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://btlworx.com/en/founder/</loc>
+    <image:image>
+      <image:loc>https://btlworx.com/yunus-portrait.jpg</image:loc>
+      <image:title>Yunus Badeci — BTL WORKS Founder</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://btlworx.com/en/philosophy/</loc>
+    <image:image>
+      <image:loc>https://btlworx.com/yunus-portrait.jpg</image:loc>
+      <image:title>Yunus Badeci — BTL WORKS Founder</image:title>
+    </image:image>
+  </url>
+
+</urlset>

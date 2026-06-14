@@ -377,7 +377,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   }, { passive: true });
 
   // Reveal animasyonu - elementler viewport'a girince fade-in
-  const revealEls = document.querySelectorAll('.');
+  const revealEls = document.querySelectorAll('[data-reveal]');
   if (revealEls.length > 0) {
     if ('IntersectionObserver' in window) {
       const io = new IntersectionObserver((entries) => {

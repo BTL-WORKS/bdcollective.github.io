@@ -176,4 +176,44 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://btlworx.com/saglik-turizmi-pazarlama-rehberi"/>
   </url>
 
+  <url>
+    <loc>https://btlworx.com/en/</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://btlworx.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://btlworx.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://btlworx.com/"/>
+  </url>
+
+  <url>
+    <loc>https://btlworx.com/en/philosophy/</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://btlworx.com/felsefe"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://btlworx.com/en/philosophy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://btlworx.com/felsefe"/>
+  </url>
+
+  <url>
+    <loc>https://btlworx.com/en/founder/</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://btlworx.com/yunus-badeci"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://btlworx.com/en/founder/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://btlworx.com/yunus-badeci"/>
+  </url>
+
+  <url>
+    <loc>https://btlworx.com/en/methodology/</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://btlworx.com/metodoloji"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://btlworx.com/en/methodology/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://btlworx.com/metodoloji"/>
+  </url>
+
 </urlset>

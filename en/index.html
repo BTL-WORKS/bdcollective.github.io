@@ -1763,9 +1763,9 @@ if(document.readyState==='complete'){setTimeout(loadGA,1500);}else{window.addEve
   /* ============ SCROLL REVEAL ============ */
   . { opacity: 0; transform: translateY(28px); transition: opacity 900ms cubic-bezier(0.2, 0.8, 0.2, 1), transform 900ms cubic-bezier(0.2, 0.8, 0.2, 1); }
   ..is-visible { opacity: 1; transform: translateY(0); }
-  .-d1 { transition-delay: 80ms; }
-  .-d2 { transition-delay: 160ms; }
-  .-d3 { transition-delay: 240ms; }
+  /* .-d1 removed */
+  /* .-d2 removed */
+  /* .-d3 removed */
 
   /* Language picker dropdown */
   .lang-picker { position: relative; margin-left: 12px; }
@@ -2357,7 +2357,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   if (clinicsTrack && clinicsMarquee) {
     // Reveal cards immediately
     Array.from(clinicsTrack.children).forEach(card => {
-      card.classList.remove('', '-d1', '-d2', '-d3');
+      // reveal class cleanup removed
       card.classList.add('is-visible');
     });
 
@@ -2392,6 +2392,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       clinicsMarquee.scrollLeft = setWidth;
     });
     window.addEventListener('resize', measure);
+    // Re-measure after iframes load (Instagram embeds take time)
+    setTimeout(() => { measure(); if (setWidth > 0) clinicsMarquee.scrollLeft = setWidth; }, 1500);
+    setTimeout(() => { measure(); if (setWidth > 0 && clinicsMarquee.scrollLeft < setWidth * 0.4) clinicsMarquee.scrollLeft = setWidth; }, 3500);
+    window.addEventListener('load', () => { setTimeout(() => { measure(); if (setWidth > 0) clinicsMarquee.scrollLeft = setWidth; }, 500); });
 
     let userInteracting = false;
     function pauseAutoScroll() { /* no-op: hover/touch handles pause */ }

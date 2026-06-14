@@ -145,9 +145,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="nav" id="nav">
   <a href="/" class="nav__logo"><span>btlworks</span></a>
   <div class="nav__menu">
-    <div class="lang-switcher-nav" style="display: inline-flex; gap: 4px; align-items: center; margin-right: 14px; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;">
-      <a href="/" class="is-active" style="padding: 6px 10px; color: white; background: var(--black); text-decoration: none; border-radius: 999px; font-weight: 500;">TR</a>
-      <a href="/en/" style="padding: 6px 10px; color: var(--ink-soft); text-decoration: none; border-radius: 999px; font-weight: 500;">EN</a>
+    <div class="lang-picker">
+      <button class="lang-picker__current" aria-haspopup="true" aria-expanded="false" type="button">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        TR
+        <span class="lang-picker__arrow">▾</span>
+      </button>
+      <div class="lang-picker__menu">
+        <a href="#" class="is-active">🇹🇷 Türkçe</a>
+        <a href="/en/health-tourism-marketing/">🇬🇧 English</a>
+      </div>
     </div>
     <div class="nav__dropdown">
       <a href="index.html#yontem" class="nav__dropdown-toggle">Yöntem</a>

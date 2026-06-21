@@ -1,0 +1,53 @@
+# macOS sistem dosyaları
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Python — generator scriptleri canlı sitede olmamalı
+__pycache__/
+*.py
+*.pyc
+*.pyo
+blog_template.py
+generate_*.py
+
+# Zip ve arşivler — outputs klasöründen sürüklenen paketler
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# BTL geçici çalışma klasörleri
+btl-reklam*/
+btl-favicon*/
+btl-works-logos*/
+btl-works-posts*/
+btlworks-v*-final/
+btlworks-site-*/
+
+# Editor / IDE
+.vscode/
+.idea/
+*.sublime-*
+*~
+
+# Logs
+*.log
+npm-debug.log*
+
+# Çevre / gizli dosyalar
+.env
+.env.local
+*.pem
+*.key
+
+# Önizleme HTML'leri (production'a gitmemeli)
+*-preview.html
+preview-*.html
+
+# Backup dosyaları
+*.bak
+*.backup
+*.orig

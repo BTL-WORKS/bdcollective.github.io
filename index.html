@@ -2118,9 +2118,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
 
-      <form class="form" id="contact-form" name="iletisim" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="iletisim" />
-        <p style="display:none;"><label>Doldurmayın: <input name="bot-field" /></label></p>
+      <form class="form" id="contact-form" name="iletisim" method="POST" action="https://formspree.io/f/mbdvjgqw">
+        <input type="hidden" name="_subject" value="Yeni iletişim talebi — btlworx.com" />
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
         <div class="form__row">
           <div class="field"><input type="text" id="adi" name="adi" placeholder=" " required /><label for="adi">Adı</label></div>
           <div class="field"><input type="text" id="soyadi" name="soyadi" placeholder=" " required /><label for="soyadi">Soyadı</label></div>
@@ -2630,14 +2630,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       const waText = lines.join('\n');
       const waUrl = 'https://wa.me/905380599232?text=' + encodeURIComponent(waText);
 
-      // Submit to Netlify Forms in background (yedek kayıt için)
+      // Submit to Formspree in background (yedek kayıt — panel + e-posta)
       const formData = new FormData(contactForm);
-      const urlEncoded = new URLSearchParams();
-      formData.forEach((value, key) => { urlEncoded.append(key, value); });
-      fetch('/', {
+      fetch('https://formspree.io/f/mbdvjgqw', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: urlEncoded.toString()
+        headers: { 'Accept': 'application/json' },
+        body: formData
       }).catch(() => {});
 
       // Open WhatsApp in new tab

@@ -1,12 +1,52 @@
 # BTL WORKS — robots.txt
-# Tüm arama motorlarına izin ver
+# Sağlık sektörü için butik dijital pazarlama stüdyosu
+# https://btlworx.com
 
+# Tüm arama motorlarına izin ver
 User-agent: *
 Allow: /
 
-# Sitemap konumu
+# AI / LLM Crawler İzinleri (GEO/AEO)
+# OpenAI ChatGPT
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# Anthropic Claude
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Google Gemini / Bard
+User-agent: Google-Extended
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# Common Crawl (geniş AI eğitimi)
+User-agent: CCBot
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot-Extended
+Allow: /
+
+# Sitemap konumları
 Sitemap: https://btlworx.com/sitemap.xml
 Sitemap: https://btlworx.com/sitemap-images.xml
 
-# Crawl-delay (yavaş tarama gerekirse, şu an açık)
-# Crawl-delay: 1
+# AI ajanları için yapılandırılmış bilgi bankası (yeni standart)
+# https://llmstxt.org
+# llms.txt: https://btlworx.com/llms.txt

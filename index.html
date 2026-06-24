@@ -57,37 +57,102 @@ if(document.readyState==='complete'){setTimeout(loadGA,1500);}else{window.addEve
 {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
+  "@id": "https://btlworx.com/#organization",
   "name": "BTL WORKS",
-  "alternateName": "BTLWORKS",
-  "description": "Doktorlar ve sağlık profesyonelleri için butik sosyal medya ve reklam yönetimi stüdyosu.",
+  "alternateName": ["btl works", "BTL Works", "BTLWORKS"],
+  "description": "Sağlık sektörüne özel butik B2B sosyal medya ve dijital pazarlama stüdyosu. Klinikler, doktorlar ve sağlık markaları için sosyal medya, içerik, performans pazarlama, SEO. İstanbul × Dubai.",
   "url": "https://btlworx.com/",
-  "logo": "https://btlworx.com/og-image.jpg",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://btlworx.com/apple-touch-icon.png",
+    "width": 512,
+    "height": 512
+  },
   "image": "https://btlworx.com/og-image.jpg",
+  "slogan": "Sağlık için butik dijital stüdyo",
   "founder": {
-    "@type": "Person",
-    "name": "Yunus Badeci",
-    "jobTitle": "Kurucu, İçerik Üreticisi & Reklam Yöneticisi",
-    "sameAs": ["https://www.instagram.com/yunusbadeci/"]
+    "@id": "https://btlworx.com/yunus-badeci#person"
   },
   "foundingDate": "2022",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Esentepe, Keskin Kalem Sok. No: 17",
-    "addressLocality": "Şişli",
-    "addressRegion": "İstanbul",
-    "postalCode": "34394",
-    "addressCountry": "TR"
+  "address": [
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "Esentepe, Keskin Kalem Sok. No: 17",
+      "addressLocality": "Şişli",
+      "addressRegion": "İstanbul",
+      "postalCode": "34394",
+      "addressCountry": "TR"
+    },
+    {
+      "@type": "PostalAddress",
+      "addressLocality": "Dubai",
+      "addressCountry": "AE"
+    }
+  ],
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+90-538-059-92-32",
+      "contactType": "customer service",
+      "email": "info@btlworx.com",
+      "areaServed": ["TR", "AE"],
+      "availableLanguage": ["Turkish","English","Arabic"]
+    }
+  ],
+  "areaServed": [
+    { "@type": "Country", "name": "Türkiye" },
+    { "@type": "Country", "name": "Birleşik Arap Emirlikleri" },
+    { "@type": "City", "name": "İstanbul" },
+    { "@type": "City", "name": "Dubai" }
+  ],
+  "knowsAbout": [
+    "Sağlık sektörü pazarlama",
+    "Klinik sosyal medya yönetimi",
+    "Doktor sosyal medya",
+    "Estetik klinik pazarlama",
+    "Diş kliniği pazarlama",
+    "Sağlık turizmi pazarlama",
+    "KVKK uyumlu sağlık reklamcılığı",
+    "E-E-A-T disiplini",
+    "YMYL içerik standartları",
+    "Schema markup",
+    "Core Web Vitals",
+    "SEO sağlık sektörü",
+    "GEO/AEO AI search optimizasyonu",
+    "Meta Ads",
+    "Google Ads",
+    "Instagram Reklam Yönetimi",
+    "İçerik Üretimi"
+  ],
+  "sameAs": [
+    "https://www.instagram.com/btlworks",
+    "https://www.linkedin.com/company/btlworx"
+  ]
+}
+
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://btlworx.com/yunus-badeci#person",
+  "name": "Yunus Badeci",
+  "givenName": "Yunus",
+  "familyName": "Badeci",
+  "jobTitle": "Kurucu",
+  "worksFor": {
+    "@id": "https://btlworx.com/#organization"
   },
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+90-538-059-92-32",
-    "contactType": "customer service",
-    "email": "info@btlworx.com",
-    "availableLanguage": ["Turkish","English"]
-  },
-  "areaServed": { "@type": "Country", "name": "Türkiye" },
-  "knowsAbout": ["Sosyal Medya Yönetimi","Instagram Reklam Yönetimi","Meta Ads","Google Ads","Doktor Markalama","Sağlık İletişimi","İçerik Üretimi"],
-  "sameAs": ["https://www.instagram.com/btlworks","https://www.linkedin.com/company/btlworx"]
+  "url": "https://btlworx.com/yunus-badeci",
+  "sameAs": ["https://www.instagram.com/yunusbadeci/"],
+  "knowsAbout": [
+    "Sağlık sektörü dijital pazarlama",
+    "Klinik sosyal medya stratejisi",
+    "E-E-A-T disiplini",
+    "KVKK uyumlu sağlık reklamcılığı",
+    "Sağlık turizmi pazarlama"
+  ],
+  "nationality": { "@type": "Country", "name": "Türkiye" }
 }
 </script>
 
@@ -1822,6 +1887,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="#yontem" class="nav__dropdown-overview" role="menuitem">Tüm yöntem</a>
       </div>
     </div>
+    <div class="nav__dropdown">
+      <a href="/hizmetler" class="nav__dropdown-toggle">Hizmetler</a>
+      <div class="nav__dropdown-menu" role="menu">
+        <a href="/sosyal-medya-ajansi" role="menuitem">Sosyal Medya Ajansı</a>
+        <a href="/dijital-pazarlama-ajansi" role="menuitem">Dijital Pazarlama Ajansı</a>
+        <a href="/dijital-seo-ajansi" role="menuitem">SEO Ajansı</a>
+        <a href="/saglik-pazarlama-ajansi" role="menuitem">Sağlık Pazarlama</a>
+        <a href="/performans-pazarlama-ajansi" role="menuitem">Performans Pazarlama</a>
+        <a href="/icerik-pazarlama-ajansi" role="menuitem">İçerik Pazarlama</a>
+        <span class="nav__dropdown-divider"></span>
+        <a href="/hizmetler" class="nav__dropdown-overview" role="menuitem">Tüm hizmetler</a>
+      </div>
+    </div>
     <a href="#portfolyo" class="nav__link">Portfolyo</a>
     <a href="#iletisim" class="nav__cta">İletişim</a>
     <div class="lang-picker">
@@ -2089,6 +2167,55 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   }
 </style>
 
+<!-- ============ HİZMETLER ============ -->
+<section style="background: var(--paper); padding: 120px 36px;" id="hizmetler">
+  <div class="wrap" style="max-width: 1180px;">
+    <p style="font-size:13px; font-weight:500; letter-spacing:0.18em; text-transform:uppercase; color: var(--coral); margin-bottom:18px;">Hizmetler</p>
+    <h2 style="font-size: clamp(36px, 4.4vw, 60px); font-weight:700; line-height:1.04; letter-spacing:-0.03em; color: var(--black); max-width: 880px; margin: 0 0 24px;">
+      Klinik için <em style="font-style: italic; font-weight:400; color: var(--coral);">tam disiplin.</em>
+    </h2>
+    <p style="font-size: clamp(16px, 1.2vw, 19px); line-height:1.7; color: var(--ink-soft); max-width: 720px; margin-bottom: 50px;">Sosyal medya, içerik, performans pazarlama, SEO ve klinik web tasarımı — sağlık sektörüne özel butik disiplin. Tek elden, tek kalite çizgisinde.</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
+      <a href="/sosyal-medya-ajansi" style="display: block; padding: 28px 26px; background: var(--white); border-radius: 18px; text-decoration: none; transition: transform 240ms ease, box-shadow 240ms ease;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 10px 30px rgba(0,0,0,0.06)';" onmouseout="this.style.transform='';this.style.boxShadow='';">
+        <p style="font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--coral); margin: 0 0 10px;">01 · Flagship</p>
+        <h3 style="font-size: 20px; font-weight: 700; color: var(--black); margin: 0 0 8px; line-height: 1.25;">Sosyal Medya Ajansı</h3>
+        <p style="font-size: 14px; line-height: 1.6; color: var(--ink-soft); margin: 0;">Klinik için bütünsel sosyal medya yönetimi. Strateji + içerik + topluluk.</p>
+      </a>
+      <a href="/dijital-pazarlama-ajansi" style="display: block; padding: 28px 26px; background: var(--white); border-radius: 18px; text-decoration: none;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 10px 30px rgba(0,0,0,0.06)';" onmouseout="this.style.transform='';this.style.boxShadow='';">
+        <p style="font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--coral); margin: 0 0 10px;">02 · Bütünsel</p>
+        <h3 style="font-size: 20px; font-weight: 700; color: var(--black); margin: 0 0 8px; line-height: 1.25;">Dijital Pazarlama</h3>
+        <p style="font-size: 14px; line-height: 1.6; color: var(--ink-soft); margin: 0;">Tek elden bütünsel dijital pazarlama. Sosyal medya + içerik + reklam + SEO.</p>
+      </a>
+      <a href="/dijital-seo-ajansi" style="display: block; padding: 28px 26px; background: var(--white); border-radius: 18px; text-decoration: none;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 10px 30px rgba(0,0,0,0.06)';" onmouseout="this.style.transform='';this.style.boxShadow='';">
+        <p style="font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--coral); margin: 0 0 10px;">03 · E-E-A-T</p>
+        <h3 style="font-size: 20px; font-weight: 700; color: var(--black); margin: 0 0 8px; line-height: 1.25;">SEO Ajansı</h3>
+        <p style="font-size: 14px; line-height: 1.6; color: var(--ink-soft); margin: 0;">Google standardında teknik + içerik SEO. YMYL ve E-E-A-T disiplinli.</p>
+      </a>
+      <a href="/saglik-pazarlama-ajansi" style="display: block; padding: 28px 26px; background: var(--white); border-radius: 18px; text-decoration: none;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 10px 30px rgba(0,0,0,0.06)';" onmouseout="this.style.transform='';this.style.boxShadow='';">
+        <p style="font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--coral); margin: 0 0 10px;">04 · Geniş kapsam</p>
+        <h3 style="font-size: 20px; font-weight: 700; color: var(--black); margin: 0 0 8px; line-height: 1.25;">Sağlık Pazarlama</h3>
+        <p style="font-size: 14px; line-height: 1.6; color: var(--ink-soft); margin: 0;">Klinikten hastaneye, hekimden sağlık markasına — geniş kapsamlı pazarlama.</p>
+      </a>
+      <a href="/performans-pazarlama-ajansi" style="display: block; padding: 28px 26px; background: var(--white); border-radius: 18px; text-decoration: none;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 10px 30px rgba(0,0,0,0.06)';" onmouseout="this.style.transform='';this.style.boxShadow='';">
+        <p style="font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--coral); margin: 0 0 10px;">05 · ROAS odaklı</p>
+        <h3 style="font-size: 20px; font-weight: 700; color: var(--black); margin: 0 0 8px; line-height: 1.25;">Performans Pazarlama</h3>
+        <p style="font-size: 14px; line-height: 1.6; color: var(--ink-soft); margin: 0;">Google Ads + Meta Ads. Conversion tracking, ROAS optimizasyonu.</p>
+      </a>
+      <a href="/icerik-pazarlama-ajansi" style="display: block; padding: 28px 26px; background: var(--white); border-radius: 18px; text-decoration: none;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 10px 30px rgba(0,0,0,0.06)';" onmouseout="this.style.transform='';this.style.boxShadow='';">
+        <p style="font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--coral); margin: 0 0 10px;">06 · Uzun form</p>
+        <h3 style="font-size: 20px; font-weight: 700; color: var(--black); margin: 0 0 8px; line-height: 1.25;">İçerik Pazarlama</h3>
+        <p style="font-size: 14px; line-height: 1.6; color: var(--ink-soft); margin: 0;">Blog, Pillar guide, SEO içerik. Sektörün referans kaynağı stratejisi.</p>
+      </a>
+    </div>
+    <div style="margin-top: 40px; text-align: center;">
+      <a href="/hizmetler" style="display: inline-flex; align-items: center; gap: 12px; padding: 16px 8px 16px 28px; background: var(--black); color: var(--white); border-radius: 999px; font-size: 14px; font-weight: 600; text-decoration: none;">
+        Tüm hizmetleri incele
+        <span style="width: 36px; height: 36px; border-radius: 999px; background: var(--coral); color: var(--white); display: inline-flex; align-items: center; justify-content: center; font-size: 16px;">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- ============ CONTACT ============ -->
 <section class="contact" id="iletisim">
   <div class="wrap">
@@ -2177,8 +2304,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p class="footer__col-title">Stüdyo</p>
         <ul class="footer__list">
           <li><a href="#yontem">Yöntem</a></li>
+          <li><a href="/hizmetler">Hizmetler</a></li>
           <li><a href="#portfolyo">Portfolyo</a></li>
+          <li><a href="/yunus-badeci">Kurucu</a></li>
+          <li><a href="/felsefe">Felsefe</a></li>
           <li><a href="#iletisim">İletişim</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__col-title">Hizmetler</p>
+        <ul class="footer__list">
+          <li><a href="/sosyal-medya-ajansi">Sosyal Medya Ajansı</a></li>
+          <li><a href="/dijital-pazarlama-ajansi">Dijital Pazarlama</a></li>
+          <li><a href="/dijital-seo-ajansi">SEO Ajansı</a></li>
+          <li><a href="/saglik-pazarlama-ajansi">Sağlık Pazarlama</a></li>
+          <li><a href="/performans-pazarlama-ajansi">Performans Pazarlama</a></li>
+          <li><a href="/icerik-pazarlama-ajansi">İçerik Pazarlama</a></li>
+          <li><a href="/instagram-reklam-ajansi">Instagram Reklam</a></li>
         </ul>
       </div>
       <div>

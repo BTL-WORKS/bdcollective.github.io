@@ -1,0 +1,27 @@
+# Silinen .html dosyalarından /folder/ versiyonuna 301 redirect
+/ankara-dis-hekimi-sosyal-medya.html /ankara-dis-hekimi-sosyal-medya 301
+/bursa-dis-hekimi-sosyal-medya.html /bursa-dis-hekimi-sosyal-medya 301
+/dis-hekimi-instagram-reels-rehberi.html /dis-hekimi-instagram-reels-rehberi 301
+/dis-hekimi-web-sitesi-rehberi.html /dis-hekimi-web-sitesi-rehberi 301
+/doktor-google-ads-yonetimi.html /doktor-google-ads-yonetimi 301
+/doktor-web-tasarimi.html /doktor-web-tasarimi 301
+/estetik-klinik-hasta-guveni-sosyal-medya.html /estetik-klinik-hasta-guveni-sosyal-medya 301
+/estetik-klinik-sosyal-medya.html /estetik-klinik-sosyal-medya 301
+/felsefe.html /felsefe 301
+/icerik.html /icerik 301
+/istanbul-dis-hekimi-sosyal-medya.html /istanbul-dis-hekimi-sosyal-medya 301
+/izmir-dis-hekimi-sosyal-medya.html /izmir-dis-hekimi-sosyal-medya 301
+/klinik-dijital-pazarlama-rehberi.html /klinik-dijital-pazarlama-rehberi 301
+/klinik-reklam-butcesi-rehberi.html /klinik-reklam-butcesi-rehberi 301
+/klinik-sosyal-medya-yonetimi-rehberi.html /klinik-sosyal-medya-yonetimi-rehberi 301
+/metodoloji.html /metodoloji 301
+/reklam.html /reklam 301
+/saglik-turizmi-pazarlama-rehberi.html /saglik-turizmi-pazarlama-rehberi 301
+/saglik-turizmi-pazarlama.html /saglik-turizmi-pazarlama 301
+/strateji.html /strateji 301
+/sureklilik.html /sureklilik 301
+/tesekkurler.html /tesekkurler 301
+/yunus-badeci.html /yunus-badeci 301
+
+# www → non-www
+https://www.btlworx.com/* https://btlworx.com/:splat 301!

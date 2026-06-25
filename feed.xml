@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>BTL WORKS — Sağlık Pazarlama Blogu</title>
+    <link>https://btlworx.com/</link>
+    <atom:link href="https://btlworx.com/feed.xml" rel="self" type="application/rss+xml" />
+    <description>Sağlık sektörü dijital pazarlama, klinik sosyal medya yönetimi, doktor reklam yönetimi, KVKK uyumlu sağlık reklamcılığı ve sağlık SEO disiplini üzerine yazılar. BTL WORKS — sağlık için butik dijital stüdyo.</description>
+    <language>tr-TR</language>
+    <copyright>© 2026 BTL WORKS</copyright>
+    <managingEditor>info@btlworx.com (Yunus Badeci)</managingEditor>
+    <webMaster>info@btlworx.com (Yunus Badeci)</webMaster>
+    <generator>BTL WORKS Static Site</generator>
+    <image>
+      <url>https://btlworx.com/apple-touch-icon.png</url>
+      <title>BTL WORKS</title>
+      <link>https://btlworx.com/</link>
+      <width>512</width>
+      <height>512</height>
+    </image>
+
+    <item>
+      <title>Sağlık Sektörü Dijital Pazarlama Raporu 2026 — Trendler &amp; Disiplinler</title>
+      <link>https://btlworx.com/saglik-pazarlama-raporu-2026</link>
+      <guid isPermaLink="true">https://btlworx.com/saglik-pazarlama-raporu-2026</guid>
+      <description>2026 Türkiye sağlık sektörü dijital pazarlama trendleri: AI search çağının başlangıcı, E-E-A-T disiplininin zorunluluk haline gelmesi, KVKK uygulama yoğunluğunun artması ve sağlık turizminin büyümesi.</description>
+      <dc:creator>Yunus Badeci</dc:creator>
+      <category>Sektör Raporu</category>
+      <category>SEO</category>
+      <category>Sağlık Pazarlama</category>
+      <pubDate>Thu, 25 Jun 2026 09:00:00 +0300</pubDate>
+    </item>
+
+    <item>
+      <title>Klinik Sosyal Medya: Ajansla mı, Inhouse mu? — 7 Kriter</title>
+      <link>https://btlworx.com/klinik-sosyal-medya-ajans-mi-inhouse-mu</link>
+      <guid isPermaLink="true">https://btlworx.com/klinik-sosyal-medya-ajans-mi-inhouse-mu</guid>
+      <description>Klinik sosyal medya için ajansla mı, inhouse (klinik içi ekiple) mi çalışmalı? 7 kriter üzerinden karşılaştırma: maliyet, kalite, mevzuat, ölçeklenebilirlik, yetenek, süreklilik.</description>
+      <dc:creator>Yunus Badeci</dc:creator>
+      <category>Ajans Seçim Rehberi</category>
+      <pubDate>Wed, 24 Jun 2026 12:00:00 +0300</pubDate>
+    </item>
+
+    <item>
+      <title>En İyi Sosyal Medya Ajansı Nasıl Seçilir? — 10 Kriter</title>
+      <link>https://btlworx.com/en-iyi-sosyal-medya-ajansi</link>
+      <guid isPermaLink="true">https://btlworx.com/en-iyi-sosyal-medya-ajansi</guid>
+      <description>Klinik için doğru ajansı seçerken bakılması gereken 10 kriter ve değerlendirme rehberi.</description>
+      <dc:creator>Yunus Badeci</dc:creator>
+      <category>Ajans Seçim Rehberi</category>
+      <pubDate>Mon, 22 Jun 2026 10:00:00 +0300</pubDate>
+    </item>
+
+    <item>
+      <title>Sağlık Pazarlama Sözlüğü — 50+ Terim ve Tanım</title>
+      <link>https://btlworx.com/saglik-pazarlama-sozlugu</link>
+      <guid isPermaLink="true">https://btlworx.com/saglik-pazarlama-sozlugu</guid>
+      <description>Klinik, doktor ve sağlık markalarının dijital pazarlama dünyasında karşılaşacağı 50+ teknik terim. KVKK, E-E-A-T, ROAS, schema markup, Core Web Vitals.</description>
+      <dc:creator>Yunus Badeci</dc:creator>
+      <category>Sözlük</category>
+      <category>SEO</category>
+      <pubDate>Wed, 24 Jun 2026 14:00:00 +0300</pubDate>
+    </item>
+
+    <item>
+      <title>Doktor Instagram Paylaşım Kuralları — Mevzuat ve Uygulama Rehberi</title>
+      <link>https://btlworx.com/doktor-instagram-paylasim-kurallari/</link>
+      <guid isPermaLink="true">https://btlworx.com/doktor-instagram-paylasim-kurallari/</guid>
+      <description>Türkiye'de hekim Instagram paylaşım kuralları, Sağlık Bakanlığı tanıtım yönetmeliği, KVKK uyumu, neye dikkat edilmeli.</description>
+      <dc:creator>Yunus Badeci</dc:creator>
+      <category>Mevzuat</category>
+      <category>Instagram</category>
+      <pubDate>Tue, 17 Jun 2026 10:00:00 +0300</pubDate>
+    </item>
+
+    <item>
+      <title>Klinik Google İşletme Profili Optimizasyonu</title>
+      <link>https://btlworx.com/klinik-google-isletme-profili-optimizasyonu/</link>
+      <guid isPermaLink="true">https://btlworx.com/klinik-google-isletme-profili-optimizasyonu/</guid>
+      <description>Klinik için Google İşletme Profili (GBP) tam optimizasyon rehberi. NAP tutarlılığı, yorum yönetimi, kategori, fotoğraf, post.</description>
+      <dc:creator>Yunus Badeci</dc:creator>
+      <category>Yerel SEO</category>
+      <category>GBP</category>
+      <pubDate>Mon, 16 Jun 2026 10:00:00 +0300</pubDate>
+    </item>
+
+    <item>
+      <title>Diş Kliniği WhatsApp Business Kurulumu</title>
+      <link>https://btlworx.com/dis-klinigi-whatsapp-business-kurulumu/</link>
+      <guid isPermaLink="true">https://btlworx.com/dis-klinigi-whatsapp-business-kurulumu/</guid>
+      <description>Diş kliniği için WhatsApp Business kurulumu, otomasyon, hızlı yanıt şablonları ve hasta yolculuğu rehberi.</description>
+      <dc:creator>Yunus Badeci</dc:creator>
+      <category>WhatsApp Business</category>
+      <pubDate>Sun, 15 Jun 2026 10:00:00 +0300</pubDate>
+    </item>
+
+    <item>
+      <title>Estetik Klinik Before/After Paylaşım Rehberi</title>
+      <link>https://btlworx.com/estetik-klinik-before-after-paylasim/</link>
+      <guid isPermaLink="true">https://btlworx.com/estetik-klinik-before-after-paylasim/</guid>
+      <description>Estetik klinik için before/after paylaşım kuralları, KVKK rızası, görsel sunum, yasal sınırlar.</description>
+      <dc:creator>Yunus Badeci</dc:creator>
+      <category>Estetik</category>
+      <category>KVKK</category>
+      <pubDate>Sat, 14 Jun 2026 10:00:00 +0300</pubDate>
+    </item>
+
+    <item>
+      <title>Saç Ekimi Landing Page — Conversion Rehberi</title>
+      <link>https://btlworx.com/sac-ekimi-landing-page/</link>
+      <guid isPermaLink="true">https://btlworx.com/sac-ekimi-landing-page/</guid>
+      <description>Saç ekimi kliniği için conversion odaklı landing page tasarımı ve sağlık turizmi pazarlama disiplini.</description>
+      <dc:creator>Yunus Badeci</dc:creator>
+      <category>Sağlık Turizmi</category>
+      <category>Landing Page</category>
+      <pubDate>Fri, 13 Jun 2026 10:00:00 +0300</pubDate>
+    </item>
+
+    <item>
+      <title>Klinik Sosyal Medya Yönetimi Mega Rehberi</title>
+      <link>https://btlworx.com/klinik-sosyal-medya-yonetimi-rehberi</link>
+      <guid isPermaLink="true">https://btlworx.com/klinik-sosyal-medya-yonetimi-rehberi</guid>
+      <description>8K+ kelimelik kapsamlı klinik sosyal medya mega rehberi. Strateji, içerik, mevzuat, ölçüm, sürdürülebilirlik.</description>
+      <dc:creator>Yunus Badeci</dc:creator>
+      <category>Pillar Rehber</category>
+      <category>Sosyal Medya</category>
+      <pubDate>Sun, 07 Jun 2026 10:00:00 +0300</pubDate>
+    </item>
+
+  </channel>
+</rss>

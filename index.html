@@ -2026,26 +2026,31 @@ if(document.readyState==='complete'){setTimeout(loadGA,1500);}else{window.addEve
 .search-overlay__empty { padding:24px; color:#666; text-align:center; }
 .search-overlay__empty strong { color:#0a0a0a; display:block; margin-bottom:8px; }
 
-/* Minimal newsletter strip — felsefe ile iletisim arasinda */
-.nl-strip { background: #0a0a0a; border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); padding: 22px 0; }
-.nl-strip__wrap { max-width: 1200px; margin: 0 auto; padding: 0 36px; display: flex; align-items: center; gap: 32px; justify-content: space-between; flex-wrap: wrap; }
-.nl-strip__text { display: inline-flex; align-items: center; gap: 12px; color: rgba(255,255,255,0.55); font-size: 13px; flex: 1; min-width: 240px; }
-.nl-strip__label { color: #E94B3C; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; font-size: 11px; }
-.nl-strip__sep { opacity: 0.4; }
-.nl-strip__desc { font-size: 13px; }
-.nl-strip__form { display: inline-flex; align-items: center; gap: 8px; flex-shrink: 0; }
-.nl-strip__input { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); color: #fff; padding: 11px 16px; border-radius: 999px; font-size: 13px; font-family: inherit; outline: none; width: 240px; transition: border 180ms ease; }
+/* Newsletter strip — clients ile footer arasi, belirgin */
+.nl-strip { background: #0a0a0a; border-top: 1px solid rgba(255,255,255,0.08); border-bottom: 1px solid rgba(255,255,255,0.08); padding: 60px 0; }
+.nl-strip__wrap { max-width: 1200px; margin: 0 auto; padding: 0 36px; display: flex; align-items: center; gap: 48px; justify-content: space-between; flex-wrap: wrap; }
+.nl-strip__text { flex: 1; min-width: 280px; }
+.nl-strip__label { color: #E94B3C; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; font-size: 12px; margin: 0 0 10px; }
+.nl-strip__title { font-size: clamp(24px, 3vw, 36px); font-weight: 700; letter-spacing: -0.02em; line-height: 1.15; margin: 0 0 12px; color: #fff; }
+.nl-strip__title em { font-style: italic; color: #E94B3C; font-weight: 400; }
+.nl-strip__desc { font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.55; margin: 0; max-width: 480px; }
+.nl-strip__form { display: inline-flex; align-items: center; gap: 10px; flex-shrink: 0; }
+.nl-strip__input { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.18); color: #fff; padding: 14px 20px; border-radius: 999px; font-size: 14px; font-family: inherit; outline: none; width: 260px; transition: all 180ms ease; }
 .nl-strip__input::placeholder { color: rgba(255,255,255,0.4); }
-.nl-strip__input:focus { border-color: #E94B3C; background: rgba(255,255,255,0.08); }
-.nl-strip__btn { background: transparent; color: rgba(255,255,255,0.85); border: 1px solid rgba(255,255,255,0.2); padding: 11px 18px; border-radius: 999px; font-size: 13px; font-weight: 500; cursor: pointer; font-family: inherit; white-space: nowrap; transition: all 180ms ease; }
-.nl-strip__btn:hover { background: #E94B3C; border-color: #E94B3C; color: #fff; }
-.nl-strip__success { display: none; padding: 10px 16px; background: rgba(74,222,128,0.1); border: 1px solid rgba(74,222,128,0.25); color: #86efac; border-radius: 999px; font-size: 13px; }
+.nl-strip__input:focus { border-color: #E94B3C; background: rgba(255,255,255,0.1); }
+.nl-strip__btn { background: #fff; color: #0a0a0a; border: none; padding: 14px 26px; border-radius: 999px; font-size: 14px; font-weight: 600; cursor: pointer; font-family: inherit; white-space: nowrap; transition: all 180ms ease; }
+.nl-strip__btn:hover { background: #E94B3C; color: #fff; transform: translateX(2px); }
+.nl-strip__success { display: none; padding: 12px 20px; background: rgba(74,222,128,0.1); border: 1px solid rgba(74,222,128,0.25); color: #86efac; border-radius: 999px; font-size: 14px; }
 
-@media (max-width: 760px) {
-  .nl-strip__wrap { flex-direction: column; align-items: stretch; gap: 14px; }
-  .nl-strip__text { justify-content: center; text-align: center; }
+@media (max-width: 880px) {
+  .nl-strip { padding: 48px 0; }
+  .nl-strip__wrap { flex-direction: column; align-items: flex-start; gap: 24px; }
   .nl-strip__form { width: 100%; }
-  .nl-strip__input { flex: 1; width: auto; }
+  .nl-strip__input { flex: 1; width: auto; min-width: 0; }
+}
+@media (max-width: 580px) {
+  .nl-strip__form { flex-direction: column; align-items: stretch; }
+  .nl-strip__btn { width: 100%; }
 }
 </style>
 </head>
@@ -2343,33 +2348,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </style>
 
 
-<!-- ============ MINIMAL NEWSLETTER STRIP ============ -->
-<aside class="nl-strip" id="bulten" aria-label="Bülten aboneliği">
-  <div class="nl-strip__wrap">
-    <div class="nl-strip__text">
-      <span class="nl-strip__label">Aylık bülten</span>
-      <span class="nl-strip__sep">·</span>
-      <span class="nl-strip__desc">Sağlık pazarlama mevzuatı, sektör trendleri.</span>
-    </div>
-    <form action="https://formspree.io/f/xayodrvr" method="POST" id="homeNlForm" class="nl-strip__form">
-      <input type="email" name="email" placeholder="E-posta adresin" required class="nl-strip__input" aria-label="E-posta adresin">
-      <input type="hidden" name="_subject" value="BTL WORKS Bulten Abonelik">
-      <input type="hidden" name="_redirect" value="https://btlworx.com/?nl=ok#bulten">
-      <button type="submit" class="nl-strip__btn" aria-label="Bulten abonelik">Abone ol →</button>
-    </form>
-    <div id="homeNlSuccess" class="nl-strip__success">Teşekkürler — listeye eklendin.</div>
-  </div>
-</aside>
-
-<script>
-if (window.location.search.includes('nl=ok')) {
-  var s = document.getElementById('homeNlSuccess');
-  var f = document.getElementById('homeNlForm');
-  if (s) s.style.display = 'block';
-  if (f) f.style.display = 'none';
-}
-</script>
-
 <!-- ============ CONTACT ============ -->
 <section class="contact" id="iletisim">
   <div class="wrap">
@@ -2441,6 +2419,34 @@ if (window.location.search.includes('nl=ok')) {
     </div>
   </div>
 </section>
+
+
+<!-- ============ NEWSLETTER STRIP (clients ile footer arasi) ============ -->
+<aside class="nl-strip" id="bulten" aria-label="Bülten aboneliği">
+  <div class="nl-strip__wrap">
+    <div class="nl-strip__text">
+      <p class="nl-strip__label">Aylık Bülten</p>
+      <h2 class="nl-strip__title">Sağlık pazarlamasında <em>ne değişti?</em></h2>
+      <p class="nl-strip__desc">Mevzuat değişiklikleri, sektör trendleri, dijital pazarlama içgörüleri — ayda bir.</p>
+    </div>
+    <form action="https://formspree.io/f/xayodrvr" method="POST" id="homeNlForm" class="nl-strip__form">
+      <input type="email" name="email" placeholder="E-posta adresin" required class="nl-strip__input" aria-label="E-posta adresin">
+      <input type="hidden" name="_subject" value="BTL WORKS Bulten Abonelik">
+      <input type="hidden" name="_redirect" value="https://btlworx.com/?nl=ok#bulten">
+      <button type="submit" class="nl-strip__btn">Abone ol →</button>
+    </form>
+    <div id="homeNlSuccess" class="nl-strip__success">Teşekkürler — listeye eklendin.</div>
+  </div>
+</aside>
+
+<script>
+if (window.location.search.includes('nl=ok')) {
+  var s = document.getElementById('homeNlSuccess');
+  var f = document.getElementById('homeNlForm');
+  if (s) s.style.display = 'block';
+  if (f) f.style.display = 'none';
+}
+</script>
 
 <!-- ============ FOOTER ============ -->
 <footer class="footer">

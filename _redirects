@@ -1,6 +1,4 @@
 # Cloudflare Pages redirects
-# Old .html paths → new /folder/ structure (with trailing slash)
-
 /felsefe.html /felsefe/ 301
 /metodoloji.html /metodoloji/ 301
 /strateji.html /strateji/ 301
@@ -24,10 +22,6 @@
 /izmir-dis-hekimi-sosyal-medya.html /izmir-dis-hekimi-sosyal-medya/ 301
 /bursa-dis-hekimi-sosyal-medya.html /bursa-dis-hekimi-sosyal-medya/ 301
 /tesekkurler.html /tesekkurler/ 301
-
-# Old discontinued URL → new sector report
 /saglik-sektorunde-pazarlama /saglik-pazarlama-raporu-2026/ 301
 /saglik-sektorunde-pazarlama/ /saglik-pazarlama-raporu-2026/ 301
-
-# www → non-www
 https://www.btlworx.com/* https://btlworx.com/:splat 301!

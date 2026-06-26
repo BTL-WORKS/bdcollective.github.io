@@ -2366,6 +2366,216 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
+<!-- ============ AKILLI ARAMA ============ -->
+<section id="arama" style="background:var(--paper); padding:90px 0; border-top:1px solid rgba(10,10,10,0.06);">
+  <div class="wrap" style="max-width:1000px;">
+    <p style="font-size:12px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:var(--coral); margin:0 0 14px;">Site içinde ara</p>
+    <h2 style="font-size:clamp(36px, 5vw, 56px); font-weight:700; letter-spacing:-0.025em; margin:0 0 14px; color:var(--black);">Ne arıyorsun?</h2>
+    <p style="font-size:18px; color:var(--ink-soft); line-height:1.6; max-width:680px; margin:0 0 32px;">79 sayfada strateji, içerik, reklam, SEO, mevzuat. Yazmaya başla — akıllı arama anlamı yakalar.</p>
+
+    <div style="background:var(--white); border:1px solid rgba(10,10,10,0.1); border-radius:18px; padding:14px 22px; display:flex; gap:14px; align-items:center; box-shadow:0 8px 30px rgba(0,0,0,0.04);">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--ink-soft); flex-shrink:0;"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+      <input type="search" id="homeSearchInput" placeholder="Klinik, reklam, mevzuat, SEO, TikTok, AI..." style="flex:1; background:transparent; border:none; outline:none; font-size:18px; padding:16px 0; font-family:inherit; color:var(--black);">
+    </div>
+
+    <div id="homeSearchResults" style="margin-top:24px;"></div>
+
+    <div id="homeSearchHints" style="margin-top:24px;">
+      <p style="font-size:13px; color:var(--ink-soft); margin:0 0 12px;">Popüler aramalar:</p>
+      <div style="display:flex; flex-wrap:wrap; gap:10px;">
+        <button class="search-tag" data-q="yapay zeka">yapay zeka</button>
+        <button class="search-tag" data-q="tiktok">TikTok</button>
+        <button class="search-tag" data-q="kvkk">KVKK</button>
+        <button class="search-tag" data-q="seo">SEO</button>
+        <button class="search-tag" data-q="instagram">Instagram</button>
+        <button class="search-tag" data-q="reklam butcesi">reklam bütçesi</button>
+        <button class="search-tag" data-q="estetik">estetik klinik</button>
+        <button class="search-tag" data-q="dis hekimi">diş hekimi</button>
+        <button class="search-tag" data-q="hasta">hasta yönetimi</button>
+        <button class="search-tag" data-q="e-e-a-t">E-E-A-T</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .search-tag { background:var(--white); border:1px solid rgba(10,10,10,0.1); padding:8px 16px; border-radius:999px; font-size:13px; font-weight:500; color:var(--black); cursor:pointer; font-family:inherit; transition:all 180ms ease; }
+  .search-tag:hover { background:var(--black); color:var(--white); border-color:var(--black); }
+  .home-search-result { display:block; padding:18px 0; border-bottom:1px solid rgba(10,10,10,0.08); text-decoration:none; transition:padding 200ms ease; }
+  .home-search-result:hover { padding-left:8px; }
+  .home-search-result h3 { font-size:17px; font-weight:700; color:var(--black); margin:0 0 4px; }
+  .home-search-result .url { font-size:12px; color:var(--coral); margin:0 0 6px; }
+  .home-search-result .desc { font-size:14px; color:var(--ink-soft); margin:0; line-height:1.5; }
+  .home-search-empty { padding:24px; background:var(--white); border-radius:14px; border:1px solid rgba(10,10,10,0.06); margin-top:14px; }
+</style>
+
+<script>
+(function(){
+let idx = [];
+
+// Turkish character normalize for fuzzy match
+function normalize(s) {
+  return s.toLowerCase()
+    .replace(/ı/g,'i').replace(/i̇/g,'i')
+    .replace(/ş/g,'s').replace(/ç/g,'c')
+    .replace(/ğ/g,'g').replace(/ü/g,'u').replace(/ö/g,'o')
+    .replace(/[^a-z0-9\s]/g,' ')
+    .replace(/\s+/g,' ').trim();
+}
+
+// Fuzzy score: matches multiple terms, partial words, weighted by field
+function score(item, query) {
+  const nq = normalize(query);
+  const terms = nq.split(' ').filter(t => t.length >= 2);
+  if (!terms.length) return 0;
+
+  const nt = normalize(item.title);
+  const nd = normalize(item.description || '');
+  const nu = normalize(item.url);
+
+  let total = 0;
+  let matched = 0;
+
+  for (const term of terms) {
+    let t = 0;
+    if (nt.includes(term)) { t += 20; matched++; }
+    else if (nd.includes(term)) { t += 8; matched++; }
+    else if (nu.includes(term)) { t += 5; matched++; }
+    // partial word match
+    else {
+      const titleWords = nt.split(' ');
+      for (const w of titleWords) {
+        if (w.startsWith(term) || term.startsWith(w)) { t += 3; matched++; break; }
+      }
+    }
+    total += t;
+  }
+
+  // bonus: all terms matched
+  if (matched === terms.length) total += 10;
+  return total;
+}
+
+function suggestFallback(query) {
+  // Return related pages based on URL slug patterns
+  const nq = normalize(query);
+  const fallbackKeywords = {
+    'instagram':['/dis-hekimi-instagram-reels-rehberi/','/doktor-instagram-paylasim-kurallari/','/instagram-reklam-ajansi/'],
+    'reklam':['/klinik-reklam-butcesi-rehberi/','/instagram-reklam-ajansi/','/reklam/','/doktor-google-ads-yonetimi/'],
+    'seo':['/dijital-seo-ajansi/','/klinik-icin-google-eeat-disiplini-2026/','/klinik-google-isletme-profili-optimizasyonu/'],
+    'icerik':['/icerik/','/icerik-pazarlama-ajansi/','/dis-hekimi-instagram-reels-rehberi/'],
+    'strateji':['/strateji/','/klinik-sosyal-medya-yonetimi-rehberi/'],
+    'tiktok':['/klinik-icin-tiktok-pazarlama-2026/'],
+    'ai':['/klinik-icin-yapay-zeka-pazarlama-2026/'],
+    'yapay':['/klinik-icin-yapay-zeka-pazarlama-2026/'],
+    'kvkk':['/doktor-instagram-paylasim-kurallari/','/estetik-klinik-before-after-paylasim/','/pdf-rehberler/'],
+    'mevzuat':['/doktor-instagram-paylasim-kurallari/','/pdf-rehberler/'],
+    'sosyal':['/sosyal-medya-ajansi/','/doktor-sosyal-medya-ajansi/','/klinik-sosyal-medya-yonetimi-rehberi/'],
+    'medya':['/sosyal-medya-ajansi/','/klinik-sosyal-medya-yonetimi-rehberi/'],
+    'estetik':['/estetik-klinik-sosyal-medya/','/estetik-klinik-hasta-guveni-sosyal-medya/','/estetik-klinik-before-after-paylasim/'],
+    'dis':['/istanbul-dis-hekimi-sosyal-medya/','/dis-hekimi-instagram-reels-rehberi/','/dis-klinigi-whatsapp-business-kurulumu/'],
+    'hekim':['/dis-hekimi-instagram-reels-rehberi/','/doktor-instagram-paylasim-kurallari/'],
+    'doktor':['/doktor-sosyal-medya-ajansi/','/doktor-icin-kisisel-marka-insasi-2026/','/doktor-instagram-paylasim-kurallari/'],
+    'hasta':['/estetik-klinik-hasta-guveni-sosyal-medya/','/klinik-icin-yorum-ve-sikayet-yonetimi-2026/'],
+    'yorum':['/klinik-icin-yorum-ve-sikayet-yonetimi-2026/','/klinik-google-isletme-profili-optimizasyonu/'],
+    'sikayet':['/klinik-icin-yorum-ve-sikayet-yonetimi-2026/'],
+    'butce':['/klinik-reklam-butcesi-rehberi/','/pdf-rehberler/'],
+    'fiyat':['/sosyal-medya-ajansi-fiyatlari/'],
+    'eeat':['/klinik-icin-google-eeat-disiplini-2026/'],
+    'kpi':['/klinik-sosyal-medya-kpi-rehberi-2026/'],
+    'marka':['/doktor-icin-kisisel-marka-insasi-2026/','/strateji/'],
+    'google':['/doktor-google-ads-yonetimi/','/klinik-google-isletme-profili-optimizasyonu/'],
+    'whatsapp':['/dis-klinigi-whatsapp-business-kurulumu/'],
+    'turizm':['/saglik-turizmi-pazarlama-rehberi/','/saglik-turizmi-pazarlama/'],
+    'sac':['/sac-ekimi-landing-page/'],
+    'web':['/doktor-web-tasarimi/','/dis-hekimi-web-sitesi-rehberi/'],
+    'pdf':['/pdf-rehberler/'],
+    'bulten':['/bulten/'],
+    'rehber':['/pdf-rehberler/','/klinik-sosyal-medya-yonetimi-rehberi/','/klinik-dijital-pazarlama-rehberi/'],
+  };
+  const suggested = new Set();
+  for (const [k, urls] of Object.entries(fallbackKeywords)) {
+    if (nq.includes(k)) urls.forEach(u => suggested.add(u));
+  }
+  return [...suggested];
+}
+
+function render(query, results) {
+  const el = document.getElementById('homeSearchResults');
+  const hints = document.getElementById('homeSearchHints');
+  if (!query || query.length < 2) {
+    el.innerHTML = '';
+    hints.style.display = 'block';
+    return;
+  }
+  hints.style.display = 'none';
+
+  if (results.length === 0) {
+    // Show suggestions from fallback
+    const fallbackUrls = suggestFallback(query);
+    const fallbackItems = idx.filter(it => fallbackUrls.includes(it.url));
+    if (fallbackItems.length > 0) {
+      el.innerHTML = '<div class="home-search-empty"><p style="margin:0 0 14px; color:var(--black); font-weight:600;">"' + query + '" için tam eşleşme yok ama belki bunlara bakmak istersin:</p></div>' +
+        fallbackItems.map(it => `<a href="${it.url}" class="home-search-result"><h3>${it.title}</h3><p class="url">btlworx.com${it.url}</p><p class="desc">${it.description || ''}</p></a>`).join('');
+    } else {
+      el.innerHTML = '<div class="home-search-empty"><p style="margin:0 0 8px; color:var(--black); font-weight:600;">"' + query + '" için sonuç bulunamadı.</p><p style="margin:0; color:var(--ink-soft);">Aşağıdaki popüler aramalardan birini deneyebilir veya <a href="/sss/" style="color:var(--coral);">SSS sayfasına</a> göz atabilirsin.</p></div>';
+    }
+    return;
+  }
+
+  el.innerHTML = '<p style="font-size:13px; color:var(--ink-soft); margin:0 0 16px;">' + results.length + ' sonuç</p>' +
+    results.slice(0, 8).map(it => `<a href="${it.url}" class="home-search-result"><h3>${it.title}</h3><p class="url">btlworx.com${it.url}</p><p class="desc">${it.description || ''}</p></a>`).join('');
+}
+
+function search(q) {
+  if (!q || q.length < 2) { render(q, []); return; }
+  const scored = idx.map(it => ({...it, _s: score(it, q)})).filter(it => it._s > 0).sort((a,b) => b._s - a._s);
+  render(q, scored);
+}
+
+fetch('/search/search-index.json').then(r => r.json()).then(data => { idx = data; });
+
+document.getElementById('homeSearchInput').addEventListener('input', e => search(e.target.value));
+document.querySelectorAll('.search-tag').forEach(b => b.addEventListener('click', e => {
+  const q = e.target.dataset.q;
+  document.getElementById('homeSearchInput').value = q;
+  search(q);
+}));
+})();
+</script>
+
+<!-- ============ BÜLTEN ============ -->
+<section id="bulten" style="background:var(--white); padding:90px 0; border-top:1px solid rgba(10,10,10,0.06);">
+  <div class="wrap" style="max-width:1000px;">
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:60px; align-items:start;">
+      <div>
+        <p style="font-size:12px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:var(--coral); margin:0 0 14px;">Aylık bülten</p>
+        <h2 style="font-size:clamp(36px, 5vw, 56px); font-weight:700; letter-spacing:-0.025em; margin:0 0 18px; color:var(--black);">Sağlık pazarlamasında <em style="font-style:italic; color:var(--coral);">ne değişti?</em></h2>
+        <p style="font-size:17px; color:var(--ink-soft); line-height:1.6; margin:0 0 14px;">Ayda bir — sade, özlü, klinik için anlamlı. Mevzuat değişiklikleri, sektör trendleri, dijital pazarlama içgörüleri.</p>
+        <p style="font-size:14px; color:var(--ink-soft); margin:0;">Spam yok. Satış argümanı yok. Sadece klinik için anlamlı bilgi.</p>
+      </div>
+      <div>
+        <form action="https://formspree.io/f/xayodrvr" method="POST" id="homeNlForm" style="background:var(--paper); padding:32px; border-radius:18px; border:1px solid rgba(10,10,10,0.06);">
+          <label for="homeNlEmail" style="font-size:13px; font-weight:600; color:var(--black); display:block; margin-bottom:10px;">E-posta adresin</label>
+          <input type="email" name="email" id="homeNlEmail" placeholder="senin@e-posta-adresin.com" required style="width:100%; background:var(--white); border:1px solid rgba(10,10,10,0.12); border-radius:12px; padding:16px 18px; font-size:16px; font-family:inherit; outline:none;">
+          <input type="hidden" name="_subject" value="BTL WORKS Bulten Abonelik (Anasayfa)">
+          <input type="hidden" name="_redirect" value="https://btlworx.com/?nl=ok#bulten">
+          <button type="submit" style="width:100%; background:var(--black); color:var(--white); border:none; border-radius:12px; padding:16px 24px; font-size:15px; font-weight:600; cursor:pointer; margin-top:14px; font-family:inherit;">Bülteni almak istiyorum</button>
+          <p style="font-size:12px; color:var(--ink-soft); margin:14px 0 0; text-align:center;">KVKK uyumlu. İstediğinde çıkış yapabilirsin.</p>
+        </form>
+        <div id="homeNlSuccess" style="display:none; background:rgba(0,128,0,0.08); border:1px solid rgba(0,128,0,0.2); color:green; padding:18px; border-radius:12px; margin-top:14px; text-align:center;">Teşekkürler! E-posta listemize eklendin. İlk bülten önümüzdeki ay yayında.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+if (window.location.search.includes('nl=ok')) {
+  document.getElementById('homeNlSuccess').style.display = 'block';
+  document.getElementById('homeNlForm').style.display = 'none';
+}
+</script>
+
 <!-- ============ FOOTER ============ -->
 <footer class="footer">
   <div class="wrap">

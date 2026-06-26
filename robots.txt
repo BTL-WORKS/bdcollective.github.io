@@ -45,7 +45,6 @@ Allow: /
 
 # Sitemap konumları
 Sitemap: https://btlworx.com/sitemap.xml
-Sitemap: https://btlworx.com/sitemap-images.xml
 
 # AI ajanları için yapılandırılmış bilgi bankası (yeni standart)
 # https://llmstxt.org

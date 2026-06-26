@@ -535,4 +535,43 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+
+  <url>
+    <loc>https://btlworx.com/en/newsletter/</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://btlworx.com/klinik-icin-yapay-zeka-pazarlama-2026/</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://btlworx.com/klinik-icin-google-eeat-disiplini-2026/</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://btlworx.com/klinik-sosyal-medya-kpi-rehberi-2026/</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url><loc>https://btlworx.com/klinik-icin-tiktok-pazarlama-2026/</loc><lastmod>2026-06-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <url><loc>https://btlworx.com/klinik-icin-yorum-ve-sikayet-yonetimi-2026/</loc><lastmod>2026-06-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <url><loc>https://btlworx.com/doktor-icin-kisisel-marka-insasi-2026/</loc><lastmod>2026-06-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <url>
+    <loc>https://btlworx.com/pdf-rehberler/</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

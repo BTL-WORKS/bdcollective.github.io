@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Search — BTL WORKS</title>
+<meta name="description" content="Search BTL WORKS — healthcare digital marketing studio. Find guides on clinic social media, doctor advertising, regulation, SEO, and health tourism." />
+<meta name="robots" content="noindex, follow" />
+<link rel="canonical" href="https://btlworx.com/en/search/" />
+<link rel="alternate" hreflang="tr" href="https://btlworx.com/arama/" />
+<link rel="alternate" hreflang="en" href="https://btlworx.com/en/search/" />
+<link rel="alternate" hreflang="x-default" href="https://btlworx.com/arama/" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="https://www.googletagmanager.com">
+<link rel="dns-prefetch" href="https://www.google-analytics.com">
+<link rel="dns-prefetch" href="https://analytics.ahrefs.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="/sub.css" />
+<style>
+  body { background: var(--white); }
+  .search-page { padding: 80px 20px; min-height: 70vh; max-width: 900px; margin: 0 auto; }
+  .search-box { background: var(--paper); border: 1px solid rgba(10,10,10,0.1); border-radius: 16px; padding: 10px 20px; display: flex; gap: 14px; align-items: center; margin: 30px 0 40px; }
+  .search-box input { flex: 1; background: transparent; border: none; outline: none; font-size: 18px; padding: 14px 0; font-family: inherit; color: var(--black); }
+  .search-box svg { color: var(--ink-soft); flex-shrink: 0; }
+  .search-result { display: block; padding: 22px 0; border-bottom: 1px solid rgba(10,10,10,0.08); text-decoration: none; transition: padding 200ms ease; }
+  .search-result:hover { padding-left: 12px; }
+  .search-result__title { font-size: 19px; font-weight: 700; color: var(--black); margin: 0 0 6px; }
+  .search-result__url { font-size: 13px; color: var(--coral); margin: 0 0 10px; }
+  .search-result__desc { font-size: 15px; color: var(--ink-soft); margin: 0; line-height: 1.5; }
+  .search-empty { text-align: center; color: var(--ink-soft); padding: 60px 0; }
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <a href="/en/" class="nav__logo"><span>btl works<span style="color:#E94B3C">.</span></span></a>
+  <div class="nav__menu">
+    <a href="/en/#approach" class="nav__link">Approach</a>
+    <a href="https://wa.me/905380599232" target="_blank" rel="noopener" class="nav__cta">Contact</a>
+  </div>
+</nav>
+
+<main class="search-page">
+  <p style="font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--coral);">Site search</p>
+  <h1 style="font-size: clamp(36px, 5vw, 56px); font-weight: 700; letter-spacing: -0.02em; margin: 12px 0 0;">What are you looking for?</h1>
+  
+  <div class="search-box">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+    <input type="search" id="searchInput" placeholder="Dental clinic, healthcare marketing, SEO..." autofocus>
+  </div>
+  
+  <div id="searchResults"></div>
+</main>
+
+<script>
+let searchIndex = [];
+fetch('/search/search-index.json').then(r => r.json()).then(data => { 
+  searchIndex = data; 
+  runSearchFromURL();
+});
+
+function runSearchFromURL() {
+  const params = new URLSearchParams(window.location.search);
+  const q = params.get('q');
+  if (q) {
+    document.getElementById('searchInput').value = q;
+    performSearch(q);
+  }
+}
+
+function performSearch(query) {
+  const results = document.getElementById('searchResults');
+  if (!query || query.length < 2) { results.innerHTML = ''; return; }
+  
+  const q = query.toLowerCase().trim();
+  const matched = searchIndex.filter(item => 
+    item.title.toLowerCase().includes(q) || 
+    item.description.toLowerCase().includes(q) ||
+    item.url.toLowerCase().includes(q)
+  );
+  
+  if (matched.length === 0) {
+    results.innerHTML = '<div class="search-empty"><p>No results for "' + query + '".</p><p style="margin-top:14px;">Return to <a href="/en/" style="color:var(--coral);">homepage</a>.</p></div>';
+    return;
+  }
+  
+  results.innerHTML = '<p style="color:var(--ink-soft); margin-bottom:20px;">' + matched.length + ' results</p>' +
+    matched.map(item => 
+      '<a href="' + item.url + '" class="search-result">' +
+      '<h2 class="search-result__title">' + item.title + '</h2>' +
+      '<p class="search-result__url">btlworx.com' + item.url + '</p>' +
+      '<p class="search-result__desc">' + item.description + '</p>' +
+      '</a>'
+    ).join('');
+}
+
+document.getElementById('searchInput').addEventListener('input', e => {
+  performSearch(e.target.value);
+  const url = new URL(window.location);
+  url.searchParams.set('q', e.target.value);
+  window.history.replaceState({}, '', url);
+});
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","url":"https://btlworx.com/","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://btlworx.com/en/search/?q={search_term_string}"},"query-input":"required name=search_term_string"}}
+</script>
+
+</body>
+</html>

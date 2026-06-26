@@ -2003,9 +2003,10 @@ if(document.readyState==='complete'){setTimeout(loadGA,1500);}else{window.addEve
 }
 </script>
 <style>
-/* Nav arama butonu — site bütünlüğünde */
-.nav__search-btn { background:transparent; border:1px solid rgba(255,255,255,0.2); color:rgba(255,255,255,0.85); width:36px; height:36px; border-radius:999px; display:inline-flex; align-items:center; justify-content:center; cursor:pointer; padding:0; margin:0 4px; transition:all 180ms ease; font-family:inherit; }
-.nav__search-btn:hover { background:rgba(255,255,255,0.1); color:#fff; border-color:rgba(255,255,255,0.4); }
+/* Nav arama butonu — beyaz nav'da görünür */
+.nav__search-btn { background:transparent; border:1px solid rgba(10,10,10,0.15); color:#0a0a0a; width:38px; height:38px; border-radius:999px; display:inline-flex; align-items:center; justify-content:center; cursor:pointer; padding:0; margin:0 6px; transition:all 180ms ease; font-family:inherit; }
+.nav__search-btn:hover { background:#0a0a0a; color:#fff; border-color:#0a0a0a; }
+.nav__search-btn svg { width:16px; height:16px; }
 
 /* Arama overlay (modal) */
 .search-overlay { position:fixed; inset:0; background:rgba(10,10,10,0.85); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); z-index:9998; opacity:0; visibility:hidden; transition:all 200ms ease; }
@@ -2025,23 +2026,26 @@ if(document.readyState==='complete'){setTimeout(loadGA,1500);}else{window.addEve
 .search-overlay__empty { padding:24px; color:#666; text-align:center; }
 .search-overlay__empty strong { color:#0a0a0a; display:block; margin-bottom:8px; }
 
-/* Bülten — contact altında sade */
-.contact__newsletter { margin-top:32px; padding:24px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:14px; display:grid; grid-template-columns:1fr auto; gap:20px; align-items:center; }
-.contact__newsletter-text { flex:1; }
-.contact__newsletter-label { font-size:11px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; color:#E94B3C; margin:0 0 6px; }
-.contact__newsletter-desc { font-size:13px; color:rgba(255,255,255,0.65); margin:0; line-height:1.5; }
-.contact__newsletter-form { display:flex; gap:8px; align-items:center; flex-shrink:0; }
-.contact__newsletter-input { background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); color:#fff; padding:12px 16px; border-radius:10px; font-size:14px; font-family:inherit; outline:none; min-width:220px; transition:border 180ms ease; }
-.contact__newsletter-input::placeholder { color:rgba(255,255,255,0.4); }
-.contact__newsletter-input:focus { border-color:#E94B3C; }
-.contact__newsletter-btn { background:#E94B3C; color:#fff; border:none; padding:12px 20px; border-radius:10px; font-size:14px; font-weight:600; cursor:pointer; font-family:inherit; white-space:nowrap; transition:opacity 180ms ease; }
-.contact__newsletter-btn:hover { opacity:0.9; }
-.contact__newsletter-success { display:none; padding:14px; background:rgba(74,222,128,0.1); border:1px solid rgba(74,222,128,0.25); color:#86efac; border-radius:10px; font-size:14px; margin-top:14px; grid-column:1 / -1; text-align:center; }
+/* Minimal newsletter strip — felsefe ile iletisim arasinda */
+.nl-strip { background: #0a0a0a; border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); padding: 22px 0; }
+.nl-strip__wrap { max-width: 1200px; margin: 0 auto; padding: 0 36px; display: flex; align-items: center; gap: 32px; justify-content: space-between; flex-wrap: wrap; }
+.nl-strip__text { display: inline-flex; align-items: center; gap: 12px; color: rgba(255,255,255,0.55); font-size: 13px; flex: 1; min-width: 240px; }
+.nl-strip__label { color: #E94B3C; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; font-size: 11px; }
+.nl-strip__sep { opacity: 0.4; }
+.nl-strip__desc { font-size: 13px; }
+.nl-strip__form { display: inline-flex; align-items: center; gap: 8px; flex-shrink: 0; }
+.nl-strip__input { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); color: #fff; padding: 11px 16px; border-radius: 999px; font-size: 13px; font-family: inherit; outline: none; width: 240px; transition: border 180ms ease; }
+.nl-strip__input::placeholder { color: rgba(255,255,255,0.4); }
+.nl-strip__input:focus { border-color: #E94B3C; background: rgba(255,255,255,0.08); }
+.nl-strip__btn { background: transparent; color: rgba(255,255,255,0.85); border: 1px solid rgba(255,255,255,0.2); padding: 11px 18px; border-radius: 999px; font-size: 13px; font-weight: 500; cursor: pointer; font-family: inherit; white-space: nowrap; transition: all 180ms ease; }
+.nl-strip__btn:hover { background: #E94B3C; border-color: #E94B3C; color: #fff; }
+.nl-strip__success { display: none; padding: 10px 16px; background: rgba(74,222,128,0.1); border: 1px solid rgba(74,222,128,0.25); color: #86efac; border-radius: 999px; font-size: 13px; }
 
-@media (max-width:680px) {
-  .contact__newsletter { grid-template-columns:1fr; }
-  .contact__newsletter-form { flex-direction:column; align-items:stretch; }
-  .contact__newsletter-input { min-width:0; width:100%; }
+@media (max-width: 760px) {
+  .nl-strip__wrap { flex-direction: column; align-items: stretch; gap: 14px; }
+  .nl-strip__text { justify-content: center; text-align: center; }
+  .nl-strip__form { width: 100%; }
+  .nl-strip__input { flex: 1; width: auto; }
 }
 </style>
 </head>
@@ -2338,6 +2342,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   }
 </style>
 
+
+<!-- ============ MINIMAL NEWSLETTER STRIP ============ -->
+<aside class="nl-strip" id="bulten" aria-label="Bülten aboneliği">
+  <div class="nl-strip__wrap">
+    <div class="nl-strip__text">
+      <span class="nl-strip__label">Aylık bülten</span>
+      <span class="nl-strip__sep">·</span>
+      <span class="nl-strip__desc">Sağlık pazarlama mevzuatı, sektör trendleri.</span>
+    </div>
+    <form action="https://formspree.io/f/xayodrvr" method="POST" id="homeNlForm" class="nl-strip__form">
+      <input type="email" name="email" placeholder="E-posta adresin" required class="nl-strip__input" aria-label="E-posta adresin">
+      <input type="hidden" name="_subject" value="BTL WORKS Bulten Abonelik">
+      <input type="hidden" name="_redirect" value="https://btlworx.com/?nl=ok#bulten">
+      <button type="submit" class="nl-strip__btn" aria-label="Bulten abonelik">Abone ol →</button>
+    </form>
+    <div id="homeNlSuccess" class="nl-strip__success">Teşekkürler — listeye eklendin.</div>
+  </div>
+</aside>
+
+<script>
+if (window.location.search.includes('nl=ok')) {
+  var s = document.getElementById('homeNlSuccess');
+  var f = document.getElementById('homeNlForm');
+  if (s) s.style.display = 'block';
+  if (f) f.style.display = 'none';
+}
+</script>
+
 <!-- ============ CONTACT ============ -->
 <section class="contact" id="iletisim">
   <div class="wrap">
@@ -2385,32 +2417,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <button type="submit" class="form__submit">Gönder <span class="form__submit-arrow">→</span></button>
       </form>
-
-      <div class="contact__newsletter" id="bulten">
-        <div class="contact__newsletter-text">
-          <p class="contact__newsletter-label">Aylık bülten</p>
-          <p class="contact__newsletter-desc">Sağlık pazarlama mevzuatı, sektör trendleri, dijital pazarlama içgörüleri.</p>
-        </div>
-        <form action="https://formspree.io/f/xayodrvr" method="POST" id="homeNlForm" class="contact__newsletter-form">
-          <input type="email" name="email" placeholder="E-posta adresin" required class="contact__newsletter-input">
-          <input type="hidden" name="_subject" value="BTL WORKS Bulten Abonelik">
-          <input type="hidden" name="_redirect" value="https://btlworx.com/?nl=ok#bulten">
-          <button type="submit" class="contact__newsletter-btn">Abone ol</button>
-        </form>
-        <div id="homeNlSuccess" class="contact__newsletter-success">Teşekkürler — listeye eklendin.</div>
-      </div>
-    </div>
   </div>
 </section>
-
-<script>
-if (window.location.search.includes('nl=ok')) {
-  var s = document.getElementById('homeNlSuccess');
-  var f = document.getElementById('homeNlForm');
-  if (s) s.style.display = 'block';
-  if (f) f.style.display = 'none';
-}
-</script>
 
 <!-- ============ CLIENTS / TRUSTED BY ============ -->
 <section class="clients" aria-label="Çalıştığımız klinikler ve hekimler">

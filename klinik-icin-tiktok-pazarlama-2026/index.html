@@ -97,6 +97,18 @@ if(document.readyState==='complete'){setTimeout(loadGTM,1500);}else{window.addEv
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Klinik için TikTok'ta başlamak ne kadar sürer?","acceptedAnswer":{"@type":"Answer","text":"Bir ay içinde temel ritim oturur. İlk 30 günde haftada 3-4 Reels üretimi, içerik temaları test edilir. Algoritmanın klinik için tetiklenmesi 60-90 gün sürer."}},{"@type":"Question","name":"TikTok'ta klinik için fiyat veya kampanya paylaşabilir miyim?","acceptedAnswer":{"@type":"Answer","text":"Hayır. Sağlık Bakanlığı Tanıtım Yönetmeliği TikTok dahil tüm platformlarda geçerlidir. Fiyat, indirim, kampanya dili yasak."}},{"@type":"Question","name":"TikTok hesabı banlanırsa ne yaparım?","acceptedAnswer":{"@type":"Answer","text":"İlk uyarıda içerik kaldırılır. Tekrar ihlalde 30 günlük kısıtlama. Kalıcı ban olursa yeni hesap açmak çözüm değil — TikTok cihaz parmak izi takip eder. Önleme tek yol: mevzuat süzgeci omurgada olsun."}},{"@type":"Question","name":"TikTok klinik için Instagram'dan iyi mi?","acceptedAnswer":{"@type":"Answer","text":"Tek seçim değil — birlikte kullanılmalı. TikTok daha geniş erişim, Instagram daha derin hasta ilişkisi. BTL WORKS klinik için her iki platformu bütüncül planlar."}},{"@type":"Question","name":"Klinik için TikTok reklamı yapılır mı?","acceptedAnswer":{"@type":"Answer","text":"Yapılır ama sınırlı. TikTok Ads sağlık politikası bazı tedavi kategorilerinde reklam vermez (estetik cerrahi, tıbbi prosedür). Organik içerik öncelikli yaklaşım klinik için daha sağlıklı."}},{"@type":"Question","name":"BTL WORKS TikTok yönetimi yapıyor mu?","acceptedAnswer":{"@type":"Answer","text":"Evet. Klinik için TikTok stratejisi + içerik üretimi + algoritma optimizasyonu + analiz dahil tam paket sunulur. Mevzuat süzgeci her aşamada omurgada."}},{"@type":"Question","name":"Hekim Reels'lerde yüzünü göstermeli mi?","acceptedAnswer":{"@type":"Answer","text":"Algoritma için kritik bir avantaj. TikTok'ta kişiselleşen içerik daha yüksek izlenir. Ama hekimin tercihi son söz — yüzü göstermeden alternatif formatlar (eller, ekipman, animasyon) da mümkün."}}]}
 </script>
 
+
+<style>
+  .lang-picker { position: relative; margin-left: 12px; display: inline-block; }
+  .lang-picker__current { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; background: var(--white); color: var(--black); border: 1px solid rgba(10,10,10,0.10); border-radius: 999px; font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer; transition: all 200ms ease; }
+  .lang-picker__current:hover { background: var(--black); color: var(--white); border-color: var(--black); }
+  .lang-picker__arrow { font-size: 10px; opacity: 0.6; }
+  .lang-picker__menu { position: absolute; top: calc(100% + 8px); right: 0; background: var(--white); border: 1px solid rgba(10,10,10,0.08); border-radius: 12px; padding: 6px; min-width: 140px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); opacity: 0; visibility: hidden; transform: translateY(-4px); transition: all 180ms ease; z-index: 1000; }
+  .lang-picker:hover .lang-picker__menu, .lang-picker:focus-within .lang-picker__menu { opacity: 1; visibility: visible; transform: translateY(0); }
+  .lang-picker__menu a { display: block; padding: 9px 14px; font-size: 13px; color: var(--black); text-decoration: none; border-radius: 8px; font-weight: 500; }
+  .lang-picker__menu a:hover { background: var(--paper); }
+  .lang-picker__menu a.is-active { background: var(--black); color: var(--white); }
+</style>
 </head>
 <body>
 <nav class="nav" id="nav">
@@ -106,7 +118,8 @@ if(document.readyState==='complete'){setTimeout(loadGTM,1500);}else{window.addEv
     <a href="/hizmetler/" class="nav__link">Hizmetler</a>
     <a href="/#iletisim" class="nav__cta">İletişim</a>
   </div>
-</nav>
+
+  </nav>
 
 
 <header class="page-header">

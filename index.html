@@ -1316,19 +1316,17 @@ if(document.readyState==='complete'){setTimeout(loadGA,1500);}else{window.addEve
   }
   .clinics__marquee {
     width: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
+    overflow: hidden;
     position: relative;
-    padding: 12px 0 32px;
-    -webkit-mask-image: linear-gradient(90deg, transparent 0, black 4%, black 96%, transparent 100%);
-    mask-image: linear-gradient(90deg, transparent 0, black 4%, black 96%, transparent 100%);
-    scrollbar-width: none;
-    cursor: grab;
-    user-select: none;
-    -webkit-user-select: none;
+    padding: 0;
+    perspective: 1600px;
+    perspective-origin: center center;
+    height: 720px;
+  }
+  @media (max-width: 768px) {
+    .clinics__marquee { height: 620px; }
   }
   .clinics__marquee::-webkit-scrollbar { display: none; }
-  .clinics__marquee.is-grabbing { cursor: grabbing; }
   /* Carousel arrow buttons */
   .clinics__arrow {
     position: absolute;
@@ -1363,23 +1361,79 @@ if(document.readyState==='complete'){setTimeout(loadGA,1500);}else{window.addEve
     .clinics__arrow--next { right: 12px; }
   }
   .clinics__track {
-    display: flex;
-    gap: 24px;
-    width: max-content;
-    padding: 0 24px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
   }
   .clinic-card {
-    flex: 0 0 380px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 380px;
+    margin: -350px 0 0 -190px;
     background: var(--white);
     border: 1px solid var(--rule-light);
     border-radius: 18px;
     overflow: hidden;
-    transition: transform 380ms cubic-bezier(0.2,0.8,0.2,1), border-color 360ms, box-shadow 380ms;
     text-decoration: none;
     color: inherit;
     display: block;
+    transform-origin: center center;
+    will-change: transform, opacity;
+    transition: transform 560ms cubic-bezier(0.22, 0.8, 0.24, 1),
+                opacity 500ms cubic-bezier(0.22, 0.8, 0.24, 1),
+                box-shadow 500ms;
+    /* Default (uzak arka) — pos yoksa görünmez */
+    transform: translate3d(0, 0, -600px) scale(0.4);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 0;
   }
-  .clinic-card:hover { transform: translateY(-4px); border-color: var(--black); box-shadow: 0 16px 40px -12px rgba(0,0,0,0.18); }
+  /* Pozisyon sınıfları — data-pos özniteliği ile eşleşir */
+  .clinic-card[data-pos="0"] {
+    transform: translate3d(0, 0, 0) scale(1) rotateY(0deg);
+    opacity: 1;
+    z-index: 10;
+    pointer-events: auto;
+    box-shadow: 0 30px 70px -20px rgba(0,0,0,0.35);
+  }
+  .clinic-card[data-pos="-1"] {
+    transform: translate3d(-280px, 0, -80px) scale(0.88) rotateY(22deg);
+    opacity: 0.95;
+    z-index: 6;
+    pointer-events: auto;
+    box-shadow: 0 20px 40px -14px rgba(0,0,0,0.22);
+  }
+  .clinic-card[data-pos="1"] {
+    transform: translate3d(280px, 0, -80px) scale(0.88) rotateY(-22deg);
+    opacity: 0.95;
+    z-index: 6;
+    pointer-events: auto;
+    box-shadow: 0 20px 40px -14px rgba(0,0,0,0.22);
+  }
+  .clinic-card[data-pos="-2"] {
+    transform: translate3d(-500px, 0, -180px) scale(0.72) rotateY(32deg);
+    opacity: 0.7;
+    z-index: 3;
+    pointer-events: auto;
+  }
+  .clinic-card[data-pos="2"] {
+    transform: translate3d(500px, 0, -180px) scale(0.72) rotateY(-32deg);
+    opacity: 0.7;
+    z-index: 3;
+    pointer-events: auto;
+  }
+  @media (max-width: 768px) {
+    .clinic-card { width: 300px; margin: -300px 0 0 -150px; }
+    .clinic-card[data-pos="-1"] { transform: translate3d(-180px, 0, -80px) scale(0.85) rotateY(20deg); }
+    .clinic-card[data-pos="1"] { transform: translate3d(180px, 0, -80px) scale(0.85) rotateY(-20deg); }
+    .clinic-card[data-pos="-2"] { transform: translate3d(-320px, 0, -180px) scale(0.65) rotateY(30deg); }
+    .clinic-card[data-pos="2"] { transform: translate3d(320px, 0, -180px) scale(0.65) rotateY(-30deg); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .clinic-card { transition: none; }
+  }
   .clinic-card--plain { position: relative; }
   .clinic-card--plain::after {
     content: '↗';
@@ -1675,31 +1729,27 @@ if(document.readyState==='complete'){setTimeout(loadGA,1500);}else{window.addEve
     height: 0.50em;
   }
 
-  /* Marquee — continuous right-scroll */
+  /* Statik grid — tüm isimler tek ekranda görünür, geniş yayılım */
   .clients__marquee {
     position: relative;
     width: 100%;
-    overflow: hidden;
-    -webkit-mask-image: linear-gradient(90deg, transparent 0, black 6%, black 94%, transparent 100%);
-            mask-image: linear-gradient(90deg, transparent 0, black 6%, black 94%, transparent 100%);
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 16px;
   }
   .clients__track {
-    display: inline-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    gap: 56px;
-    white-space: nowrap;
-    padding: 26px 0;
+    gap: 12px 22px;
+    padding: 8px 0;
     list-style: none;
-    animation: clients-scroll-right 60s linear infinite;
-    width: max-content;
+    margin: 0;
   }
-  .clients__marquee.is-paused .clients__track,
-  .clients__marquee:hover .clients__track {
-    animation-play-state: paused;
-  }
-  @keyframes clients-scroll-right {
-    from { transform: translateX(0); }
-    to   { transform: translateX(-50%); }
+  @media (max-width: 768px) {
+    .clients__marquee { padding: 0 12px; }
+    .clients__track { gap: 10px 16px; }
   }
 
   .clients__item {
@@ -1707,28 +1757,37 @@ if(document.readyState==='complete'){setTimeout(loadGA,1500);}else{window.addEve
     display: inline-flex;
     align-items: center;
   }
-  .clients__item::after {
+  .clients__item:not(:last-child)::after {
     content: '·';
     color: rgba(255, 255, 255, 0.40);
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 700;
-    margin-left: 56px;
-    position: absolute;
-    right: -42px;
-    top: 50%;
-    transform: translateY(-58%);
+    margin-left: 22px;
+    line-height: 1;
+    display: inline-block;
+    position: static;
   }
   .clients__item a {
-    font-size: 21px;
+    font-size: 20px;
     font-weight: 600;
     letter-spacing: -0.018em;
     color: var(--white);
     text-decoration: none;
     transition: color 240ms;
     padding: 6px 2px;
+    white-space: nowrap;
   }
   .clients__item:hover a {
     color: var(--coral);
+  }
+  /* Bazı klinikler tıklanabilir link değil, sadece isim (mevzuat/gizlilik) */
+  .clients__item span {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -0.018em;
+    color: var(--white);
+    padding: 6px 2px;
+    white-space: nowrap;
   }
 
   /* IG-style preview card, absolutely positioned in the section */
@@ -2178,7 +2237,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="clinics" id="portfolyo">
   <div class="wrap">
     <p class="eyebrow">Portfolyo</p>
-    <h2 class="section__title" style="margin-bottom:32px;">Seçilmiş <span class="pill"></span> çalışmalar.</h2>
+    <h2 class="section__title" style="margin-bottom:20px;">Seçilmiş <span class="pill"></span> çalışmalar.</h2>
+    <p class="portfolyo-note" style="max-width:680px;margin:0 0 40px;font-size:16px;line-height:1.55;color:var(--ink-soft,#5a5a5a);font-style:italic;">
+      Bazı çalışmalar müşteri gizliliği kapsamındadır — detaylı sunum için <a href="#iletisim" style="color:var(--coral,#E94B3C);text-decoration:none;font-weight:600;font-style:normal;border-bottom:1px solid var(--coral,#E94B3C);padding-bottom:1px;">iletişime geçin →</a>
+    </p>
     <p class="sr-only">İstanbul, Ankara, Bursa ve Türkiye genelindeki diş hekimleri, estetik klinikler, ağız ve diş sağlığı merkezleri ve sağlık profesyonelleri için ürettiğimiz Instagram içerikleri ve sosyal medya çalışmalarından seçkiler.</p>
   </div>
   <div class="clinics__carousel-wrap">
@@ -2190,14 +2252,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </button>
     <div class="clinics__marquee">
     <div class="clinics__track" id="clinics-track">
-      <article class="clinic-card">
-        <iframe class="clinic-card__embed" title="Instagram içeriği — BTL WORKS portfolyo" src="https://www.instagram.com/p/DWJwVenCCgW/embed/captioned/" scrolling="no" frameborder="0" allowtransparency="true" loading="lazy" allow="encrypted-media; clipboard-write; web-share; picture-in-picture"></iframe>
-        <div class="clinic-card__body">
-          <p class="clinic-card__tag">Diş Kliniği</p>
-          <h3 class="clinic-card__name">Ekiz Clinic</h3>
-          <a href="https://www.instagram.com/ekiz.clinic/" target="_blank" rel="noopener" class="clinic-card__handle">@ekiz.clinic <span class="clinic-card__handle-arrow">↗</span></a>
-        </div>
-      </article>
       <article class="clinic-card">
         <iframe class="clinic-card__embed" title="Instagram içeriği — BTL WORKS portfolyo" src="https://www.instagram.com/p/DYBjLtmMGnI/embed/captioned/" scrolling="no" frameborder="0" allowtransparency="true" loading="lazy" allow="encrypted-media; clipboard-write; web-share; picture-in-picture"></iframe>
         <div class="clinic-card__body">
@@ -2228,54 +2282,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <p class="clinic-card__tag">Diş Hekimi</p>
           <h3 class="clinic-card__name">Dr. N. Sezer Işıksaçan</h3>
           <a href="https://www.instagram.com/dr.sezerisiksacan/" target="_blank" rel="noopener" class="clinic-card__handle">@dr.sezerisiksacan <span class="clinic-card__handle-arrow">↗</span></a>
-        </div>
-      </article>
-      <article class="clinic-card">
-        <iframe class="clinic-card__embed" title="Instagram içeriği — BTL WORKS portfolyo" src="https://www.instagram.com/p/DTSnbKKCDTL/embed/captioned/" scrolling="no" frameborder="0" allowtransparency="true" loading="lazy" allow="encrypted-media; clipboard-write; web-share; picture-in-picture"></iframe>
-        <div class="clinic-card__body">
-          <p class="clinic-card__tag">Diş Kliniği</p>
-          <h3 class="clinic-card__name">Ekiz Clinic</h3>
-          <a href="https://www.instagram.com/ekiz.clinic/" target="_blank" rel="noopener" class="clinic-card__handle">@ekiz.clinic <span class="clinic-card__handle-arrow">↗</span></a>
-        </div>
-      </article>
-      <article class="clinic-card">
-        <iframe class="clinic-card__embed" title="Instagram içeriği — BTL WORKS portfolyo" src="https://www.instagram.com/p/DY9QYjpod5T/embed/captioned/" scrolling="no" frameborder="0" allowtransparency="true" loading="lazy" allow="encrypted-media; clipboard-write; web-share; picture-in-picture"></iframe>
-        <div class="clinic-card__body">
-          <p class="clinic-card__tag">Diş Kliniği</p>
-          <h3 class="clinic-card__name">Ekiz Clinic</h3>
-          <a href="https://www.instagram.com/p/DY9QYjpod5T/" target="_blank" rel="noopener" class="clinic-card__handle">@ekiz.clinic <span class="clinic-card__handle-arrow">↗</span></a>
-        </div>
-      </article>
-      <article class="clinic-card">
-        <iframe class="clinic-card__embed" title="Instagram içeriği — BTL WORKS portfolyo" src="https://www.instagram.com/p/DQ6x1TGkoYt/embed/captioned/" scrolling="no" frameborder="0" allowtransparency="true" loading="lazy" allow="encrypted-media; clipboard-write; web-share; picture-in-picture"></iframe>
-        <div class="clinic-card__body">
-          <p class="clinic-card__tag">Diş Kliniği</p>
-          <h3 class="clinic-card__name">Ekiz Clinic</h3>
-          <a href="https://www.instagram.com/p/DQ6x1TGkoYt/" target="_blank" rel="noopener" class="clinic-card__handle">@ekiz.clinic <span class="clinic-card__handle-arrow">↗</span></a>
-        </div>
-      </article>
-      <article class="clinic-card">
-        <iframe class="clinic-card__embed" title="Instagram içeriği — BTL WORKS portfolyo" src="https://www.instagram.com/p/DYrc1lyI4Ma/embed/captioned/" scrolling="no" frameborder="0" allowtransparency="true" loading="lazy" allow="encrypted-media; clipboard-write; web-share; picture-in-picture"></iframe>
-        <div class="clinic-card__body">
-          <p class="clinic-card__tag">Diş Kliniği</p>
-          <h3 class="clinic-card__name">Ekiz Clinic</h3>
-          <a href="https://www.instagram.com/p/DYrc1lyI4Ma/" target="_blank" rel="noopener" class="clinic-card__handle">@ekiz.clinic <span class="clinic-card__handle-arrow">↗</span></a>
-        </div>
-      </article>
-      <article class="clinic-card">
-        <iframe class="clinic-card__embed" title="Instagram içeriği — BTL WORKS portfolyo" src="https://www.instagram.com/p/DWqilixjIhe/embed/captioned/" scrolling="no" frameborder="0" allowtransparency="true" loading="lazy" allow="encrypted-media; clipboard-write; web-share; picture-in-picture"></iframe>
-        <div class="clinic-card__body">
-          <p class="clinic-card__tag">Diş Hekimi</p>
-          <h3 class="clinic-card__name">Dr. Ezgi Ayar</h3>
-          <a href="https://www.instagram.com/p/DWqilixjIhe/" target="_blank" rel="noopener" class="clinic-card__handle">@ezgiayar <span class="clinic-card__handle-arrow">↗</span></a>
-        </div>
-      </article>
-      <article class="clinic-card">
-        <iframe class="clinic-card__embed" title="Instagram içeriği — BTL WORKS portfolyo" src="https://www.instagram.com/p/DSmvDIWjBeX/embed/captioned/" scrolling="no" frameborder="0" allowtransparency="true" loading="lazy" allow="encrypted-media; clipboard-write; web-share; picture-in-picture"></iframe>
-        <div class="clinic-card__body">
-          <p class="clinic-card__tag">Diş Hekimi</p>
-          <h3 class="clinic-card__name">Dr. Ezgi Ayar</h3>
-          <a href="https://www.instagram.com/p/DSmvDIWjBeX/" target="_blank" rel="noopener" class="clinic-card__handle">@ezgiayar <span class="clinic-card__handle-arrow">↗</span></a>
         </div>
       </article>
       <article class="clinic-card">
@@ -2316,6 +2322,142 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <p class="clinic-card__tag">Diş Hekimi</p>
           <h3 class="clinic-card__name">Dr. Sezer Işıksaçan</h3>
           <a href="https://www.instagram.com/p/DY6_HrgOh7V/" target="_blank" rel="noopener" class="clinic-card__handle">@dr.sezerisiksacan <span class="clinic-card__handle-arrow">↗</span></a>
+        </div>
+      </article>
+      <article class="clinic-card">
+        <iframe class="clinic-card__embed" title="Instagram içeriği — BTL WORKS portfolyo" src="https://www.instagram.com/p/Dbxzs1as0UM/embed/captioned/" scrolling="no" frameborder="0" allowtransparency="true" loading="lazy" allow="encrypted-media; clipboard-write; web-share; picture-in-picture"></iframe>
+        <div class="clinic-card__body">
+          <p class="clinic-card__tag">Diş Kliniği</p>
+          <h3 class="clinic-card__name">Bergedent International</h3>
+          <a href="https://www.instagram.com/p/Dbxzs1as0UM/" target="_blank" rel="noopener" class="clinic-card__handle">@bergedent <span class="clinic-card__handle-arrow">↗</span></a>
+        </div>
+      </article>
+      <article class="clinic-card">
+        <iframe class="clinic-card__embed" title="Instagram içeriği — BTL WORKS portfolyo" src="https://www.instagram.com/p/Da8I_IMsFwf/embed/captioned/" scrolling="no" frameborder="0" allowtransparency="true" loading="lazy" allow="encrypted-media; clipboard-write; web-share; picture-in-picture"></iframe>
+        <div class="clinic-card__body">
+          <p class="clinic-card__tag">Diş Kliniği</p>
+          <h3 class="clinic-card__name">Bergedent International</h3>
+          <a href="https://www.instagram.com/p/Da8I_IMsFwf/" target="_blank" rel="noopener" class="clinic-card__handle">@bergedent <span class="clinic-card__handle-arrow">↗</span></a>
+        </div>
+      </article>
+      <article class="clinic-card">
+        <iframe class="clinic-card__embed" title="Instagram içeriği — BTL WORKS portfolyo" src="https://www.instagram.com/p/DbVreY_DGZe/embed/captioned/" scrolling="no" frameborder="0" allowtransparency="true" loading="lazy" allow="encrypted-media; clipboard-write; web-share; picture-in-picture"></iframe>
+        <div class="clinic-card__body">
+          <p class="clinic-card__tag">Diş Kliniği</p>
+          <h3 class="clinic-card__name">Bergedent International</h3>
+          <a href="https://www.instagram.com/p/DbVreY_DGZe/" target="_blank" rel="noopener" class="clinic-card__handle">@bergedent <span class="clinic-card__handle-arrow">↗</span></a>
+        </div>
+      </article>
+      <article class="clinic-card">
+        <iframe class="clinic-card__embed" title="Instagram içeriği — BTL WORKS portfolyo" src="https://www.instagram.com/p/DbyFjRKN06p/embed/captioned/" scrolling="no" frameborder="0" allowtransparency="true" loading="lazy" allow="encrypted-media; clipboard-write; web-share; picture-in-picture"></iframe>
+        <div class="clinic-card__body">
+          <p class="clinic-card__tag">Diş Hekimi</p>
+          <h3 class="clinic-card__name">Dt. Nurşah Minarecioğlu</h3>
+          <a href="https://www.instagram.com/p/DbyFjRKN06p/" target="_blank" rel="noopener" class="clinic-card__handle">@dt.nursahminarecioglu <span class="clinic-card__handle-arrow">↗</span></a>
+        </div>
+      </article>
+      <article class="clinic-card">
+        <iframe class="clinic-card__embed" title="Instagram içeriği — BTL WORKS portfolyo" src="https://www.instagram.com/p/DbTVKWtMWzr/embed/captioned/" scrolling="no" frameborder="0" allowtransparency="true" loading="lazy" allow="encrypted-media; clipboard-write; web-share; picture-in-picture"></iframe>
+        <div class="clinic-card__body">
+          <p class="clinic-card__tag">Diş Hekimi</p>
+          <h3 class="clinic-card__name">Dr. Melis Yusufhanoğlu</h3>
+          <a href="https://www.instagram.com/p/DbTVKWtMWzr/" target="_blank" rel="noopener" class="clinic-card__handle">@melisyusufhanoglu <span class="clinic-card__handle-arrow">↗</span></a>
+        </div>
+      </article>
+      <article class="clinic-card">
+        <iframe class="clinic-card__embed" title="Instagram içeriği — BTL WORKS portfolyo" src="https://www.instagram.com/p/DbDyltVI2Wt/embed/captioned/" scrolling="no" frameborder="0" allowtransparency="true" loading="lazy" allow="encrypted-media; clipboard-write; web-share; picture-in-picture"></iframe>
+        <div class="clinic-card__body">
+          <p class="clinic-card__tag">Diş Kliniği</p>
+          <h3 class="clinic-card__name">Dentawork</h3>
+          <a href="https://www.instagram.com/p/DbDyltVI2Wt/" target="_blank" rel="noopener" class="clinic-card__handle">@dentaworkclinic <span class="clinic-card__handle-arrow">↗</span></a>
+        </div>
+      </article>
+      <article class="clinic-card">
+        <iframe class="clinic-card__embed" title="Instagram içeriği — BTL WORKS portfolyo" src="https://www.instagram.com/p/Dau8LM6sk5q/embed/captioned/" scrolling="no" frameborder="0" allowtransparency="true" loading="lazy" allow="encrypted-media; clipboard-write; web-share; picture-in-picture"></iframe>
+        <div class="clinic-card__body">
+          <p class="clinic-card__tag">Diş Kliniği</p>
+          <h3 class="clinic-card__name">Dentawork</h3>
+          <a href="https://www.instagram.com/p/Dau8LM6sk5q/" target="_blank" rel="noopener" class="clinic-card__handle">@dentaworkclinic <span class="clinic-card__handle-arrow">↗</span></a>
+        </div>
+      </article>
+      <article class="clinic-card">
+        <iframe class="clinic-card__embed" title="Instagram içeriği — BTL WORKS portfolyo" src="https://www.instagram.com/p/DaX4Amis6ac/embed/captioned/" scrolling="no" frameborder="0" allowtransparency="true" loading="lazy" allow="encrypted-media; clipboard-write; web-share; picture-in-picture"></iframe>
+        <div class="clinic-card__body">
+          <p class="clinic-card__tag">Diş Kliniği</p>
+          <h3 class="clinic-card__name">Dentawork</h3>
+          <a href="https://www.instagram.com/p/DaX4Amis6ac/" target="_blank" rel="noopener" class="clinic-card__handle">@dentaworkclinic <span class="clinic-card__handle-arrow">↗</span></a>
+        </div>
+      </article>
+      <article class="clinic-card">
+        <iframe class="clinic-card__embed" title="Instagram içeriği — BTL WORKS portfolyo" src="https://www.instagram.com/p/DbAu90lADYL/embed/captioned/" scrolling="no" frameborder="0" allowtransparency="true" loading="lazy" allow="encrypted-media; clipboard-write; web-share; picture-in-picture"></iframe>
+        <div class="clinic-card__body">
+          <p class="clinic-card__tag">Diş Hekimi</p>
+          <h3 class="clinic-card__name">Dt. Alp Erdem</h3>
+          <a href="https://www.instagram.com/p/DbAu90lADYL/" target="_blank" rel="noopener" class="clinic-card__handle">@dtalperdem <span class="clinic-card__handle-arrow">↗</span></a>
+        </div>
+      </article>
+      <article class="clinic-card">
+        <iframe class="clinic-card__embed" title="Instagram içeriği — BTL WORKS portfolyo" src="https://www.instagram.com/p/DafYxBKggcX/embed/captioned/" scrolling="no" frameborder="0" allowtransparency="true" loading="lazy" allow="encrypted-media; clipboard-write; web-share; picture-in-picture"></iframe>
+        <div class="clinic-card__body">
+          <p class="clinic-card__tag">Diş Hekimi</p>
+          <h3 class="clinic-card__name">Dt. Alp Erdem</h3>
+          <a href="https://www.instagram.com/p/DafYxBKggcX/" target="_blank" rel="noopener" class="clinic-card__handle">@dtalperdem <span class="clinic-card__handle-arrow">↗</span></a>
+        </div>
+      </article>
+      <article class="clinic-card">
+        <iframe class="clinic-card__embed" title="Instagram içeriği — BTL WORKS portfolyo" src="https://www.instagram.com/p/DZFQUpRAnzL/embed/captioned/" scrolling="no" frameborder="0" allowtransparency="true" loading="lazy" allow="encrypted-media; clipboard-write; web-share; picture-in-picture"></iframe>
+        <div class="clinic-card__body">
+          <p class="clinic-card__tag">Diş Hekimi</p>
+          <h3 class="clinic-card__name">Dt. Alp Erdem</h3>
+          <a href="https://www.instagram.com/p/DZFQUpRAnzL/" target="_blank" rel="noopener" class="clinic-card__handle">@dtalperdem <span class="clinic-card__handle-arrow">↗</span></a>
+        </div>
+      </article>
+      <article class="clinic-card">
+        <iframe class="clinic-card__embed" title="Instagram içeriği — BTL WORKS portfolyo" src="https://www.instagram.com/p/DblZAc5P9GF/embed/captioned/" scrolling="no" frameborder="0" allowtransparency="true" loading="lazy" allow="encrypted-media; clipboard-write; web-share; picture-in-picture"></iframe>
+        <div class="clinic-card__body">
+          <p class="clinic-card__tag">Diş Hekimi</p>
+          <h3 class="clinic-card__name">Dr. Nevzat Sezer Işıksaçan</h3>
+          <a href="https://www.instagram.com/p/DblZAc5P9GF/" target="_blank" rel="noopener" class="clinic-card__handle">@drnsezerisiksacan <span class="clinic-card__handle-arrow">↗</span></a>
+        </div>
+      </article>
+      <article class="clinic-card">
+        <iframe class="clinic-card__embed" title="Instagram içeriği — BTL WORKS portfolyo" src="https://www.instagram.com/p/DbYqnpklx3j/embed/captioned/" scrolling="no" frameborder="0" allowtransparency="true" loading="lazy" allow="encrypted-media; clipboard-write; web-share; picture-in-picture"></iframe>
+        <div class="clinic-card__body">
+          <p class="clinic-card__tag">Diş Hekimi</p>
+          <h3 class="clinic-card__name">Dr. Nevzat Sezer Işıksaçan</h3>
+          <a href="https://www.instagram.com/p/DbYqnpklx3j/" target="_blank" rel="noopener" class="clinic-card__handle">@drnsezerisiksacan <span class="clinic-card__handle-arrow">↗</span></a>
+        </div>
+      </article>
+      <article class="clinic-card">
+        <iframe class="clinic-card__embed" title="Instagram içeriği — BTL WORKS portfolyo" src="https://www.instagram.com/p/Dax5GdkoSzu/embed/captioned/" scrolling="no" frameborder="0" allowtransparency="true" loading="lazy" allow="encrypted-media; clipboard-write; web-share; picture-in-picture"></iframe>
+        <div class="clinic-card__body">
+          <p class="clinic-card__tag">Diş Hekimi</p>
+          <h3 class="clinic-card__name">Dr. Nevzat Sezer Işıksaçan</h3>
+          <a href="https://www.instagram.com/p/Dax5GdkoSzu/" target="_blank" rel="noopener" class="clinic-card__handle">@drnsezerisiksacan <span class="clinic-card__handle-arrow">↗</span></a>
+        </div>
+      </article>
+      <article class="clinic-card">
+        <iframe class="clinic-card__embed" title="Instagram içeriği — BTL WORKS portfolyo" src="https://www.instagram.com/p/Da8BeoniYXq/embed/captioned/" scrolling="no" frameborder="0" allowtransparency="true" loading="lazy" allow="encrypted-media; clipboard-write; web-share; picture-in-picture"></iframe>
+        <div class="clinic-card__body">
+          <p class="clinic-card__tag">Diş Kliniği</p>
+          <h3 class="clinic-card__name">Dent Visit</h3>
+          <a href="https://www.instagram.com/p/Da8BeoniYXq/" target="_blank" rel="noopener" class="clinic-card__handle">@dentvisit <span class="clinic-card__handle-arrow">↗</span></a>
+        </div>
+      </article>
+      <article class="clinic-card">
+        <iframe class="clinic-card__embed" title="Instagram içeriği — BTL WORKS portfolyo" src="https://www.instagram.com/p/DaX1slzim41/embed/captioned/" scrolling="no" frameborder="0" allowtransparency="true" loading="lazy" allow="encrypted-media; clipboard-write; web-share; picture-in-picture"></iframe>
+        <div class="clinic-card__body">
+          <p class="clinic-card__tag">Diş Kliniği</p>
+          <h3 class="clinic-card__name">Dent Visit</h3>
+          <a href="https://www.instagram.com/p/DaX1slzim41/" target="_blank" rel="noopener" class="clinic-card__handle">@dentvisit <span class="clinic-card__handle-arrow">↗</span></a>
+        </div>
+      </article>
+      <article class="clinic-card">
+        <iframe class="clinic-card__embed" title="Instagram içeriği — BTL WORKS portfolyo" src="https://www.instagram.com/p/DaNjvfuCGBa/embed/captioned/" scrolling="no" frameborder="0" allowtransparency="true" loading="lazy" allow="encrypted-media; clipboard-write; web-share; picture-in-picture"></iframe>
+        <div class="clinic-card__body">
+          <p class="clinic-card__tag">Diş Kliniği</p>
+          <h3 class="clinic-card__name">Dent Visit</h3>
+          <a href="https://www.instagram.com/p/DaNjvfuCGBa/" target="_blank" rel="noopener" class="clinic-card__handle">@dentvisit <span class="clinic-card__handle-arrow">↗</span></a>
         </div>
       </article>
     </div>
@@ -2466,8 +2608,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="clients__preview-head">
         <span class="clients__preview-avatar" id="clients-preview-avatar">E</span>
         <div class="clients__preview-meta">
-          <span class="clients__preview-name" id="clients-preview-name">Ekiz Clinic</span>
-          <span class="clients__preview-handle" id="clients-preview-handle">@ekizclinic</span>
+          <span class="clients__preview-name" id="clients-preview-name">Dentawork</span>
+          <span class="clients__preview-handle" id="clients-preview-handle">@dentawork_</span>
         </div>
       </div>
       <a href="#" target="_blank" rel="noopener" class="clients__preview-cta" id="clients-preview-cta">Instagram'da görüntüle</a>
@@ -2703,140 +2845,76 @@ if (window.location.search.includes('nl=ok')) {
     }
   });
 
-  // Clinic carousel — infinite scroll (auto + drag + wheel)
+  // Clinic carousel — Dentawork tarzı absolute fan, manuel prev/next
   const clinicsTrack = document.getElementById('clinics-track');
   const clinicsMarquee = clinicsTrack ? clinicsTrack.parentElement : null;
   if (clinicsTrack && clinicsMarquee) {
-    // Reveal cards immediately
-    Array.from(clinicsTrack.children).forEach(card => {
-      // reveal class cleanup removed
-      card.classList.add('is-visible');
-    });
+    const cards = Array.from(clinicsTrack.children);
+    const N = cards.length;
+    let currentIdx = 0;
 
-    // Triple-clone pattern: [N before] [N original] [N after] for bidirectional infinite loop
-    const originals = Array.from(clinicsTrack.children);
-    const N = originals.length;
-    // Insert N clones BEFORE originals (in original order)
-    for (let i = N - 1; i >= 0; i--) {
-      const c = originals[i].cloneNode(true);
-      c.setAttribute('aria-hidden', 'true');
-      clinicsTrack.insertBefore(c, clinicsTrack.firstChild);
-    }
-    // Append N clones AFTER originals
-    originals.forEach(card => {
-      const c = card.cloneNode(true);
-      c.setAttribute('aria-hidden', 'true');
-      clinicsTrack.appendChild(c);
-    });
-
-    let setWidth = 0;
-    function measure() {
-      // Sum width of one set of N cards + gaps
-      setWidth = 0;
-      for (let i = N; i < 2 * N; i++) {
-        const card = clinicsTrack.children[i];
-        setWidth += card.offsetWidth + 24; // gap
-      }
-    }
-    requestAnimationFrame(() => {
-      measure();
-      // Start at middle (original cards visible from the left)
-      clinicsMarquee.scrollLeft = setWidth;
-    });
-    window.addEventListener('resize', measure);
-    // Re-measure after iframes load (Instagram embeds take time)
-    setTimeout(() => { measure(); if (setWidth > 0) clinicsMarquee.scrollLeft = setWidth; }, 1500);
-    setTimeout(() => { measure(); if (setWidth > 0 && clinicsMarquee.scrollLeft < setWidth * 0.4) clinicsMarquee.scrollLeft = setWidth; }, 3500);
-    window.addEventListener('load', () => { setTimeout(() => { measure(); if (setWidth > 0) clinicsMarquee.scrollLeft = setWidth; }, 500); });
-
-    let userInteracting = false;
-    function pauseAutoScroll() { /* no-op: hover/touch handles pause */ }
-
-    // Hover pause: mouse over → dur, mouse çekildiğinde → devam
-    const carouselWrap = clinicsMarquee.parentElement;
-    if (carouselWrap) {
-      carouselWrap.addEventListener('mouseenter', () => { userInteracting = true; });
-      carouselWrap.addEventListener('mouseleave', () => { userInteracting = false; });
-      carouselWrap.addEventListener('touchstart', () => { userInteracting = true; }, { passive: true });
-      carouselWrap.addEventListener('touchend', () => { userInteracting = false; }, { passive: true });
-      carouselWrap.addEventListener('touchcancel', () => { userInteracting = false; }, { passive: true });
-    }
-
-    function teleport() {
-      if (!setWidth) return;
-      const sl = clinicsMarquee.scrollLeft;
-      if (sl < setWidth * 0.5) {
-        clinicsMarquee.scrollLeft = sl + setWidth;
-      } else if (sl > setWidth * 1.5) {
-        clinicsMarquee.scrollLeft = sl - setWidth;
-      }
-    }
-
-    // Sub-pixel safe auto-scroll — accumulate floats, set integers
-    let scrollAccum = 0;
-    let lastTs = 0;
-    const SCROLL_SPEED = 36; // pixels per second
-    function autoScrollLoop(ts) {
-      if (!lastTs) lastTs = ts || 0;
-      const dt = ts ? (ts - lastTs) / 1000 : 0.016;
-      lastTs = ts || 0;
-      if (!userInteracting) {
-        scrollAccum += SCROLL_SPEED * dt;
-        if (scrollAccum >= 1) {
-          const whole = Math.floor(scrollAccum);
-          clinicsMarquee.scrollLeft = clinicsMarquee.scrollLeft + whole;
-          scrollAccum -= whole;
+    // Pozisyonları güncelle: her karta data-pos ver (-2, -1, 0, 1, 2 veya out-of-range)
+    function updatePositions() {
+      for (let i = 0; i < N; i++) {
+        let offset = i - currentIdx;
+        // Dairesel offset: -N/2 ile N/2 arasında sar
+        if (offset > N / 2) offset -= N;
+        if (offset < -N / 2) offset += N;
+        if (offset >= -2 && offset <= 2) {
+          cards[i].setAttribute('data-pos', offset);
+          cards[i].removeAttribute('aria-hidden');
+        } else {
+          cards[i].removeAttribute('data-pos');
+          cards[i].setAttribute('aria-hidden', 'true');
         }
       }
-      teleport();
-      requestAnimationFrame(autoScrollLoop);
     }
-    requestAnimationFrame(autoScrollLoop);
 
-    // Drag-to-scroll
-    let isDown = false, startX = 0, startScroll = 0;
-    clinicsMarquee.addEventListener('pointerdown', (e) => {
-      if (e.target.tagName === 'IFRAME') return;
-      isDown = true;
-      startX = e.pageX;
-      startScroll = clinicsMarquee.scrollLeft;
-      clinicsMarquee.classList.add('is-grabbing');
-      pauseAutoScroll();
-    });
-    clinicsMarquee.addEventListener('pointermove', (e) => {
-      if (!isDown) return;
-      e.preventDefault();
-      clinicsMarquee.scrollLeft = startScroll - (e.pageX - startX) * 1.4;
-      pauseAutoScroll();
-    });
-    function endDrag() {
-      isDown = false;
-      clinicsMarquee.classList.remove('is-grabbing');
-    }
-    clinicsMarquee.addEventListener('pointerup', endDrag);
-    clinicsMarquee.addEventListener('pointerleave', endDrag);
-    clinicsMarquee.addEventListener('pointercancel', endDrag);
+    function goNext() { currentIdx = (currentIdx + 1) % N; updatePositions(); }
+    function goPrev() { currentIdx = (currentIdx - 1 + N) % N; updatePositions(); }
 
-    // Wheel + touch + native scroll pauses auto
-    clinicsMarquee.addEventListener('wheel', pauseAutoScroll, { passive: true });
-    clinicsMarquee.addEventListener('touchstart', pauseAutoScroll, { passive: true });
-    clinicsMarquee.addEventListener('scroll', () => {
-      if (!isDown && !userInteracting) {
-        // Auto-scroll triggered this — don't pause
-      }
-    }, { passive: true });
+    // İlk render
+    updatePositions();
 
     // Prev / Next arrows
     const prevBtn = document.getElementById('clinics-prev');
     const nextBtn = document.getElementById('clinics-next');
-    function scrollByCard(direction) {
-      const card = clinicsTrack.children[0];
-      const step = (card ? card.offsetWidth + 24 : 380);
-      pauseAutoScroll();
-      clinicsMarquee.scrollBy({ left: direction * step, behavior: 'smooth' });
-    }
-    if (prevBtn) prevBtn.addEventListener('click', () => scrollByCard(-1));
-    if (nextBtn) nextBtn.addEventListener('click', () => scrollByCard(1));
+    if (prevBtn) prevBtn.addEventListener('click', goPrev);
+    if (nextBtn) nextBtn.addEventListener('click', goNext);
+
+    // Yan karta tıklarsan onu ortala
+    cards.forEach((card, idx) => {
+      card.addEventListener('click', (e) => {
+        // Ortadaki karta tıklama = post URL'ine gitsin (default)
+        if (idx === currentIdx) return;
+        // Iframe/link tıklamasını engelleme — sadece kartın kendi boşluğuna tıklama
+        if (e.target.tagName === 'A' || e.target.tagName === 'IFRAME') return;
+        e.preventDefault();
+        currentIdx = idx;
+        updatePositions();
+      });
+    });
+
+    // Klavye desteği (sol/sağ ok)
+    document.addEventListener('keydown', (e) => {
+      // Portfolyo bölümü görünürken çalışsın
+      const rect = clinicsMarquee.getBoundingClientRect();
+      if (rect.bottom < 0 || rect.top > window.innerHeight) return;
+      if (e.key === 'ArrowLeft') goPrev();
+      if (e.key === 'ArrowRight') goNext();
+    });
+
+    // Dokunmatik kaydırma (swipe)
+    let touchStartX = 0;
+    clinicsMarquee.addEventListener('touchstart', (e) => {
+      touchStartX = e.touches[0].clientX;
+    }, { passive: true });
+    clinicsMarquee.addEventListener('touchend', (e) => {
+      const diff = e.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(diff) > 50) {
+        if (diff > 0) goPrev(); else goNext();
+      }
+    }, { passive: true });
   }
 
   // Hero spotlight — follows mouse cursor only inside hero, returns to default on leave
@@ -2881,15 +2959,17 @@ if (window.location.search.includes('nl=ok')) {
   const clientsPreview = document.getElementById('clients-preview');
   if (clientsTrack && clientsMarqueeBox && clientsPreview) {
     const CLIENTS = [
-      { name: 'Ekiz Clinic',              handle: 'ekizclinic' },
       { name: 'Özel Dental Center',       handle: 'ozeldentalcenter' },
       { name: 'Denta Work',               handle: 'dentaworkclinic' },
       { name: 'Dent Visit',               handle: 'dentvisit' },
       { name: 'Bergedent',                handle: 'bergedent' },
-      { name: 'Dr. N. Sezer Işıksaçan',   handle: 'drnsezerisiksacan' },
-      { name: 'Dr. Ezgi Ayar',            handle: 'ezgiayar' },
+      { name: 'Bergedent International',  handle: 'bergedentinternational' },
+      { name: 'Ekiz Klinik',              handle: 'ekiz.clinic' },
+      { name: 'Dt. Nurşah Minarecioğlu', handle: 'dt.nursahminarecioglu' },
+      { name: 'Dr. Nevzat Sezer Işıksaçan', handle: 'drnsezerisiksacan' },
       { name: 'Dr. Işıl Kendirli',        handle: 'isilkendirli' },
       { name: 'Dr. Melis Yusufhanoğlu',   handle: 'melisyusufhanoglu' },
+      { name: 'Dr. Ezgi Ayar',            handle: 'ezgiayar' },
       { name: 'Dr. Alp Erdem',            handle: 'dtalperdem' },
       { name: 'Dr. Ecem Başer',           handle: 'dr.ecem.ortho' }
     ];
@@ -2909,8 +2989,7 @@ if (window.location.search.includes('nl=ok')) {
       return li;
     }
 
-    // Render twice for seamless loop (track translates from -50% to 0)
-    CLIENTS.forEach(c => clientsTrack.appendChild(buildItem(c)));
+    // Statik — tek render (animasyon yok)
     CLIENTS.forEach(c => clientsTrack.appendChild(buildItem(c)));
 
     const previewName   = document.getElementById('clients-preview-name');

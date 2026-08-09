@@ -1,1 +1,0 @@
-# bdcollective.github.io

@@ -46,6 +46,31 @@
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap"></noscript>
 <link rel="stylesheet" href="../sub.css" />
 
+<style>
+  .blog-article { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+  .blog-article h2 { font-size: clamp(24px, 2.6vw, 34px); font-weight: 700; letter-spacing: -0.025em; line-height: 1.18; margin: 56px 0 18px; color: var(--black); }
+  .blog-article h3 { font-size: clamp(19px, 1.5vw, 22px); font-weight: 600; letter-spacing: -0.015em; margin: 32px 0 12px; color: var(--black); }
+  .blog-article p { font-size: 18px; line-height: 1.75; color: rgba(10,10,10,0.82); margin-bottom: 20px; }
+  .blog-article p em { font-style: italic; color: var(--coral); font-weight: 500; }
+  .blog-article strong { color: var(--black); font-weight: 600; }
+  .blog-article ul, .blog-article ol { margin: 0 0 26px 24px; }
+  .blog-article li { font-size: 18px; line-height: 1.7; color: rgba(10,10,10,0.82); margin-bottom: 10px; }
+  .blog-article a { color: var(--coral); text-decoration: underline; text-underline-offset: 2px; }
+  .blog-article blockquote { border-left: 4px solid var(--coral); padding: 18px 0 18px 28px; margin: 32px 0; font-size: 22px; line-height: 1.5; font-weight: 500; color: var(--black); font-style: italic; letter-spacing: -0.01em; }
+  .blog-meta { display: flex; gap: 18px; flex-wrap: wrap; margin: 24px 0 40px; padding: 16px 0; border-top: 1px solid rgba(10,10,10,0.10); border-bottom: 1px solid rgba(10,10,10,0.10); font-size: 13px; color: var(--ink-soft); font-weight: 500; }
+  .blog-toc { background: var(--paper); border-radius: 16px; padding: 28px 30px; margin: 40px 0; }
+  .blog-toc h3 { margin: 0 0 12px; font-size: 13px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-soft); }
+  .blog-toc ol { margin: 0; padding-left: 22px; }
+  .blog-toc li { font-size: 15px; line-height: 1.7; margin-bottom: 5px; }
+  .blog-toc a { color: var(--black); text-decoration: none; }
+  .blog-toc a:hover { color: var(--coral); }
+  .cta-box { background: var(--black); color: var(--white); border-radius: 24px; padding: 48px 36px; margin: 56px 0 24px; text-align: center; }
+  .cta-box h3 { font-size: clamp(22px, 2.4vw, 32px); color: var(--white); margin-bottom: 14px; letter-spacing: -0.025em; }
+  .cta-box p { color: rgba(255,255,255,0.78); margin-bottom: 22px; font-size: 16px; }
+  .cta-box a { display: inline-flex; align-items: center; gap: 10px; padding: 14px 24px; background: var(--coral); color: var(--white); border-radius: 999px; font-size: 15px; font-weight: 600; text-decoration: none; }
+  .cta-box a:hover { background: var(--coral-dark); }
+</style>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -552,10 +577,10 @@
     <li><a href="/doktor-icin-chatgpt-icerik-uretimi-2026/">Doktor İçin ChatGPT İçerik Üretimi 2026 — Marka Sesi Disiplini</a></li>
   </ul>
 
-  <div class="cta-box" style="background:var(--paper);padding:44px 32px;border-radius:16px;margin:60px 0 0;text-align:center;">
-    <h3 style="font-size:28px;margin:0 0 12px;">Kliniğinizin reklamlarını yönetmeliğe uyumlu kurmak ister misiniz?</h3>
-    <p style="margin:0 0 24px;color:var(--ink-soft);max-width:640px;margin-left:auto;margin-right:auto;">BTL WORKS yalnız sağlık markası için çalışan butik bir stüdyodur. Mevzuat omurgada, marka sesi tek elden. Kısa bir sohbet için:</p>
-    <a href="/#iletisim" style="display:inline-block;background:var(--coral);color:#fff;padding:16px 32px;border-radius:999px;text-decoration:none;font-weight:600;">İletişime geç →</a>
+  <div class="cta-box">
+    <h3>Kliniğinizin reklamlarını yönetmeliğe uyumlu kurmak ister misiniz?</h3>
+    <p>BTL WORKS yalnız sağlık markası için çalışan butik bir stüdyodur. Mevzuat omurgada, marka sesi tek elden.</p>
+    <a href="/#iletisim">İletişime geç →</a>
   </div>
 
 </article>

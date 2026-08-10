@@ -1322,6 +1322,8 @@ if(document.readyState==='complete'){setTimeout(loadGA,1500);}else{window.addEve
     perspective: 1600px;
     perspective-origin: center center;
     height: 720px;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0, black 6%, black 94%, transparent 100%);
+            mask-image: linear-gradient(90deg, transparent 0, black 6%, black 94%, transparent 100%);
   }
   @media (max-width: 768px) {
     .clinics__marquee { height: 620px; }
@@ -1390,46 +1392,16 @@ if(document.readyState==='complete'){setTimeout(loadGA,1500);}else{window.addEve
     pointer-events: none;
     z-index: 0;
   }
-  /* Pozisyon sınıfları — data-pos özniteliği ile eşleşir */
+  /* Merkez karta ekstra gölge (JS transform üzerine) */
   .clinic-card[data-pos="0"] {
-    transform: translate3d(0, 0, 0) scale(1) rotateY(0deg);
-    opacity: 1;
-    z-index: 10;
-    pointer-events: auto;
     box-shadow: 0 30px 70px -20px rgba(0,0,0,0.35);
   }
-  .clinic-card[data-pos="-1"] {
-    transform: translate3d(-280px, 0, -80px) scale(0.88) rotateY(22deg);
-    opacity: 0.95;
-    z-index: 6;
-    pointer-events: auto;
-    box-shadow: 0 20px 40px -14px rgba(0,0,0,0.22);
-  }
+  .clinic-card[data-pos="-1"],
   .clinic-card[data-pos="1"] {
-    transform: translate3d(280px, 0, -80px) scale(0.88) rotateY(-22deg);
-    opacity: 0.95;
-    z-index: 6;
-    pointer-events: auto;
     box-shadow: 0 20px 40px -14px rgba(0,0,0,0.22);
-  }
-  .clinic-card[data-pos="-2"] {
-    transform: translate3d(-500px, 0, -180px) scale(0.72) rotateY(32deg);
-    opacity: 0.7;
-    z-index: 3;
-    pointer-events: auto;
-  }
-  .clinic-card[data-pos="2"] {
-    transform: translate3d(500px, 0, -180px) scale(0.72) rotateY(-32deg);
-    opacity: 0.7;
-    z-index: 3;
-    pointer-events: auto;
   }
   @media (max-width: 768px) {
     .clinic-card { width: 300px; margin: -300px 0 0 -150px; }
-    .clinic-card[data-pos="-1"] { transform: translate3d(-180px, 0, -80px) scale(0.85) rotateY(20deg); }
-    .clinic-card[data-pos="1"] { transform: translate3d(180px, 0, -80px) scale(0.85) rotateY(-20deg); }
-    .clinic-card[data-pos="-2"] { transform: translate3d(-320px, 0, -180px) scale(0.65) rotateY(30deg); }
-    .clinic-card[data-pos="2"] { transform: translate3d(320px, 0, -180px) scale(0.65) rotateY(-30deg); }
   }
   @media (prefers-reduced-motion: reduce) {
     .clinic-card { transition: none; }
@@ -2853,22 +2825,57 @@ if (window.location.search.includes('nl=ok')) {
     const N = cards.length;
     let currentIdx = 0;
 
-    // Pozisyonları güncelle: her karta data-pos ver (-2, -1, 0, 1, 2 veya out-of-range)
+    // Pozisyonları güncelle — sürekli formül, sonsuz derinlik hissi
+    const isMobile = () => window.matchMedia('(max-width: 768px)').matches;
     function updatePositions() {
+      const mobile = isMobile();
+      const STEP_X = mobile ? 170 : 240;   // her offset başına yatay kayma
+      const STEP_Z = 90;                    // her offset başına arkaya derinlik
+      const SCALE_STEP = 0.11;              // her offset başına küçülme
+      const ROT_STEP = 11;                  // her offset başına derece
+      const OPACITY_STEP = 0.16;            // her offset başına saydamlaşma
+      const MIN_SCALE = 0.28;
+      const MIN_OPACITY = 0.12;
+      const MAX_VISIBLE = 6;                // ±6 offset'e kadar göster, ötesi gizli
+
       for (let i = 0; i < N; i++) {
         let offset = i - currentIdx;
-        // Dairesel offset: -N/2 ile N/2 arasında sar
         if (offset > N / 2) offset -= N;
         if (offset < -N / 2) offset += N;
-        if (offset >= -2 && offset <= 2) {
-          cards[i].setAttribute('data-pos', offset);
-          cards[i].removeAttribute('aria-hidden');
-        } else {
-          cards[i].removeAttribute('data-pos');
+
+        const abs = Math.abs(offset);
+        const sign = offset < 0 ? -1 : 1;
+
+        if (abs > MAX_VISIBLE) {
+          // Çok uzak — gizle
+          cards[i].style.transform = 'translate3d(0, 0, -900px) scale(0)';
+          cards[i].style.opacity = '0';
+          cards[i].style.zIndex = '0';
+          cards[i].style.pointerEvents = 'none';
           cards[i].setAttribute('aria-hidden', 'true');
+          cards[i].removeAttribute('data-pos');
+          continue;
         }
+
+        // Sürekli formül
+        const translateX = sign * abs * STEP_X;
+        const translateZ = -abs * STEP_Z;
+        const scale = Math.max(1 - abs * SCALE_STEP, MIN_SCALE);
+        const rotateY = -sign * abs * ROT_STEP;
+        const opacity = Math.max(1 - abs * OPACITY_STEP, MIN_OPACITY);
+        const zIndex = 20 - abs;
+
+        cards[i].style.transform = `translate3d(${translateX}px, 0, ${translateZ}px) scale(${scale.toFixed(3)}) rotateY(${rotateY}deg)`;
+        cards[i].style.opacity = opacity.toFixed(3);
+        cards[i].style.zIndex = zIndex;
+        cards[i].style.pointerEvents = 'auto';
+        cards[i].setAttribute('data-pos', offset);
+        cards[i].removeAttribute('aria-hidden');
       }
     }
+
+    // Ekran boyutu değişince pozisyonları yeniden hesapla (mobil → desktop)
+    window.addEventListener('resize', () => updatePositions());
 
     function goNext() { currentIdx = (currentIdx + 1) % N; updatePositions(); }
     function goPrev() { currentIdx = (currentIdx - 1 + N) % N; updatePositions(); }

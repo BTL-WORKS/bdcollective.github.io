@@ -3,17 +3,17 @@
 # =====================================================
 
 backend:
-  name: git-gateway
+  name: github
+  repo: BTL-WORKS/bdcollective.github.io
   branch: main
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
   commit_messages:
     create: 'admin: yeni {{collection}} — {{slug}}'
     update: 'admin: {{collection}} güncellendi — {{slug}}'
     delete: 'admin: {{collection}} silindi — {{slug}}'
     uploadMedia: 'admin: görsel yüklendi — {{path}}'
     deleteMedia: 'admin: görsel silindi — {{path}}'
-
-# Yerelde test için (opsiyonel)
-local_backend: true
 
 # Görsel yükleme klasörü
 media_folder: "static/img/uploads"

@@ -1,0 +1,55 @@
+# =====================================================
+# BTL WORKS — Netlify Konfigürasyonu
+# =====================================================
+
+[build]
+  publish = "."
+  command = ""
+
+# Admin sayfası SEO'dan hariç tutulur
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"
+
+# CSS/JS önbelleği
+[[headers]]
+  for = "/sub.css"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+
+# Görseller uzun cache
+[[headers]]
+  for = "/favicon*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "/static/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+# Güvenlik
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Redirect'ler (eski .html URL'leri)
+[[redirects]]
+  from = "/felsefe.html"
+  to = "/felsefe/"
+  status = 301
+
+[[redirects]]
+  from = "/icerik.html"
+  to = "/icerik/"
+  status = 301
+
+# Katalog redirect kalıbı — .html olan tüm eski URL'ler folder'a
+[[redirects]]
+  from = "/:page.html"
+  to = "/:page/"
+  status = 301

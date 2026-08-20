@@ -1,0 +1,120 @@
+# =====================================================
+# BTL WORKS — Decap CMS Konfigürasyonu
+# =====================================================
+
+backend:
+  name: git-gateway
+  branch: main
+  commit_messages:
+    create: 'admin: yeni {{collection}} — {{slug}}'
+    update: 'admin: {{collection}} güncellendi — {{slug}}'
+    delete: 'admin: {{collection}} silindi — {{slug}}'
+    uploadMedia: 'admin: görsel yüklendi — {{path}}'
+    deleteMedia: 'admin: görsel silindi — {{path}}'
+
+# Yerelde test için (opsiyonel)
+local_backend: true
+
+# Görsel yükleme klasörü
+media_folder: "static/img/uploads"
+public_folder: "/static/img/uploads"
+
+# Türkçe arayüz
+locale: 'tr'
+
+# Site linki (admin panelde "Siteyi Aç" butonu için)
+site_url: https://btlworx.com
+display_url: https://btlworx.com
+logo_url: https://btlworx.com/favicon-512.png
+
+# =====================================================
+# Editlenebilir içerik türleri
+# =====================================================
+collections:
+
+  # -----------------------------------------
+  # 1) BLOG YAZILARI
+  # -----------------------------------------
+  - name: "blog"
+    label: "Blog Yazıları"
+    label_singular: "Blog Yazısı"
+    folder: "_posts"
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}} — {{date | date('DD.MM.YYYY')}}"
+    sortable_fields: ['date', 'title']
+    view_filters:
+      - label: "Bu yıl"
+        field: date
+        pattern: '2026'
+    fields:
+      - {label: "Başlık", name: "title", widget: "string", hint: "SEO için 60 karakter altında tutun"}
+      - {label: "Yayın Tarihi", name: "date", widget: "datetime", default: ""}
+      - {label: "Yazar", name: "author", widget: "string", default: "Yunus Badeci"}
+      - {label: "Kategori", name: "category", widget: "select", options: ["Mevzuat", "SEO", "Sosyal Medya", "Reklam", "İçerik", "Genel"], default: "Genel"}
+      - {label: "Özet", name: "excerpt", widget: "text", hint: "150-200 karakter — arama sonuçlarında görünür"}
+      - {label: "Kapak Görseli", name: "cover", widget: "image", required: false}
+      - {label: "Öne Çıkan mı?", name: "featured", widget: "boolean", default: false, required: false}
+      - {label: "İçerik", name: "body", widget: "markdown"}
+      - label: "SEO Ayarları"
+        name: "seo"
+        widget: "object"
+        collapsed: true
+        required: false
+        fields:
+          - {label: "Meta Description", name: "meta_description", widget: "string", required: false, hint: "150-160 karakter"}
+          - {label: "Anahtar Kelimeler", name: "keywords", widget: "string", required: false, hint: "virgülle ayır"}
+
+  # -----------------------------------------
+  # 2) PORTFOLYO KARTLARI
+  # -----------------------------------------
+  - name: "portfolyo"
+    label: "Portfolyo Kartları"
+    label_singular: "Portfolyo Kartı"
+    folder: "_portfolyo"
+    create: true
+    slug: "{{slug}}"
+    summary: "{{clinic_name}} — {{tag}}"
+    fields:
+      - {label: "Klinik/Hekim Adı", name: "clinic_name", widget: "string"}
+      - {label: "Instagram Handle", name: "handle", widget: "string", hint: "@ olmadan yaz — örn: dentaworkclinic"}
+      - {label: "Segment", name: "tag", widget: "select", options: ["Diş Kliniği", "Diş Hekimi", "Estetik Klinik", "Sağlık Markası", "Klinik"], default: "Klinik"}
+      - {label: "Instagram Post Kodu", name: "post_code", widget: "string", hint: "Sadece kodu — örn: DauXaC3gBHO (URL'nin /p/ sonrası kısım)"}
+      - {label: "Aktif mi?", name: "active", widget: "boolean", default: true}
+
+  # -----------------------------------------
+  # 3) KLİNİKLER LİSTESİ
+  # -----------------------------------------
+  - name: "klinikler"
+    label: "Klinikler & Hekimler"
+    label_singular: "Klinik / Hekim"
+    folder: "_klinikler"
+    create: true
+    slug: "{{slug}}"
+    summary: "{{name}}"
+    fields:
+      - {label: "İsim", name: "name", widget: "string"}
+      - {label: "Instagram Handle", name: "handle", widget: "string"}
+      - {label: "Sıra", name: "order", widget: "number", default: 100, hint: "Küçük sayı = üstte görünür"}
+      - {label: "Aktif mi?", name: "active", widget: "boolean", default: true}
+
+  # -----------------------------------------
+  # 4) ANA SAYFA METİNLERİ (Tekil dosya)
+  # -----------------------------------------
+  - name: "settings"
+    label: "Site Ayarları"
+    files:
+      - name: "home"
+        label: "Ana Sayfa"
+        file: "_data/home.md"
+        fields:
+          - {label: "Hero Başlık", name: "hero_title", widget: "string"}
+          - {label: "Hero Alt Başlık", name: "hero_subtitle", widget: "text"}
+          - {label: "İletişim Bölümü Metni", name: "contact_intro", widget: "text"}
+      - name: "kontakt"
+        label: "İletişim Bilgileri"
+        file: "_data/contact.md"
+        fields:
+          - {label: "E-posta", name: "email", widget: "string", default: "info@btlworx.com"}
+          - {label: "WhatsApp", name: "whatsapp", widget: "string", default: "+90 538 059 92 32"}
+          - {label: "Ofis Adresi", name: "office", widget: "text"}

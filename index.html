@@ -1683,7 +1683,7 @@ if(document.readyState==='complete'){setTimeout(loadGA,1500);}else{window.addEve
     padding-top: 40px;
     margin-top: 0;
   }
-  /* Hero'daki Tenity-style perdenin AYNI deseni ve pozisyonu — sağ 62% */
+  /* Hero'daki Tenity-style perdenin AYNI deseni + AYNI shimmer — kesintisiz */
   .clients--top.stage::before {
     inset: auto;
     top: 0; right: 0; bottom: 0;
@@ -1700,23 +1700,26 @@ if(document.readyState==='complete'){setTimeout(loadGA,1500);}else{window.addEve
     opacity: 1;
     -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.30) 8%, black 22%, black 100%);
     mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.30) 8%, black 22%, black 100%);
+    animation: curtain-shimmer 22s ease-in-out infinite;
   }
-  /* Işık üstten dökülüyor — hero'nun devamı gibi */
+  /* Işık hero'dan devam eder — CSS var ile mouse takibi */
   .clients--top.stage::after {
     inset: auto;
     top: 0; right: 0; bottom: 0;
     width: 62%;
     background:
-      radial-gradient(ellipse 60% 90% at 52% -20%,
+      radial-gradient(ellipse 55% 75% at var(--glow-x, 52%) var(--glow-y, -20%),
         rgba(255, 110, 110, 0.45) 0%,
         rgba(210, 60, 80, 0.24) 30%,
         transparent 65%),
-      radial-gradient(ellipse 30% 55% at 78% -10%,
-        rgba(255, 140, 100, 0.18) 0%,
-        transparent 55%);
+      radial-gradient(ellipse 38% 58% at var(--glow-x, 52%) var(--glow-y, -20%),
+        rgba(255, 140, 100, 0.28) 0%, transparent 55%),
+      radial-gradient(ellipse 28% 48% at var(--glow-x, 52%) var(--glow-y, -20%),
+        rgba(255, 200, 140, 0.16) 0%, transparent 60%);
     filter: blur(3px);
     animation: none;
     mix-blend-mode: screen;
+    transition: none;
   }
   .clients__title {
     font-size: clamp(26px, 3.4vw, 44px);
@@ -3066,17 +3069,62 @@ if (window.location.search.includes('nl=ok')) {
     function kick() {
       if (!rafActive) { rafActive = true; requestAnimationFrame(animate); }
     }
+    // Klinikler bölümü için glow — hero'dan devam eden ışık (iki bölüm birlikte)
+    const clients = document.querySelector('.clients--top');
+    let cCurX = 52, cCurY = -20, cTargetX = 52, cTargetY = -20;
+    let cRaf = false;
+    function animateC() {
+      const dx = cTargetX - cCurX, dy = cTargetY - cCurY;
+      cCurX += dx * 0.10;
+      cCurY += dy * 0.10;
+      if (clients) {
+        clients.style.setProperty('--glow-x', cCurX.toFixed(2) + '%');
+        clients.style.setProperty('--glow-y', cCurY.toFixed(2) + '%');
+      }
+      if (Math.abs(dx) > 0.15 || Math.abs(dy) > 0.15) {
+        requestAnimationFrame(animateC);
+      } else { cRaf = false; }
+    }
+    function kickC() { if (!cRaf) { cRaf = true; requestAnimationFrame(animateC); } }
+
+    // Hero mouse — hero'nun glow'u + clients'a "aşağıya taşan" glow gönder
     hero.addEventListener('mousemove', (e) => {
       const rect = hero.getBoundingClientRect();
       targetX = ((e.clientX - rect.left) / rect.width) * 100;
       targetY = ((e.clientY - rect.top) / rect.height) * 100;
       kick();
+      // Clients glow — mouse hero'daysa clients'a taşan efekt (üstten iner)
+      if (clients) {
+        cTargetX = targetX;
+        // Hero'nun altına doğru inildikçe clients glow yukarıdan içeri girer
+        cTargetY = Math.max(-30, (targetY - 100) * 0.35);
+        kickC();
+      }
     });
     hero.addEventListener('mouseleave', () => {
       targetX = DEFAULT_X;
       targetY = DEFAULT_Y;
       kick();
     });
+
+    // Clients mouse — clients glow + hero'ya "yukarıya taşan" glow gönder
+    if (clients) {
+      clients.addEventListener('mousemove', (e) => {
+        const rect = clients.getBoundingClientRect();
+        cTargetX = ((e.clientX - rect.left) / rect.width) * 100;
+        cTargetY = ((e.clientY - rect.top) / rect.height) * 100;
+        kickC();
+        // Hero glow — mouse clients'daysa hero'ya taşan efekt (alttan çıkar)
+        targetX = cTargetX;
+        targetY = Math.min(130, 100 + (cTargetY * 0.35));
+        kick();
+      });
+      clients.addEventListener('mouseleave', () => {
+        cTargetX = 52;
+        cTargetY = -20;
+        kickC();
+      });
+    }
   })();
 
   // Clients marquee — populate + duplicate for seamless loop + IG preview on hover

@@ -1676,6 +1676,15 @@ if(document.readyState==='complete'){setTimeout(loadGA,1500);}else{window.addEve
     position: relative;
     overflow: hidden;
   }
+  /* Hero altındaki üst konum — perde efekti (hero'dan devam) */
+  .clients--top {
+    border-top: none;
+    background: var(--black);
+  }
+  .clients--top.stage::before {
+    /* perde şeritleri hero'dan devam eder */
+    opacity: 0.88;
+  }
   .clients__title {
     font-size: clamp(26px, 3.4vw, 44px);
     font-weight: 700;
@@ -2209,7 +2218,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </header>
 
 <!-- ============ CLIENTS / TRUSTED BY (hero altı, portfolyodan önce) ============ -->
-<section class="clients clients--top" aria-label="Çalıştığımız klinikler ve hekimler">
+<section class="clients clients--top stage stage--glow-red" aria-label="Çalıştığımız klinikler ve hekimler">
   <div class="wrap">
     <p class="eyebrow" style="text-align:center;">İş birliği</p>
     <h2 class="clients__title" style="text-align:center;">Birlikte çalıştığımız <span class="pill"></span> <em>klinikler ve hekimler.</em></h2>

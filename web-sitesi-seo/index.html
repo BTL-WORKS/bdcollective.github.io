@@ -2280,9 +2280,8 @@ if(document.readyState==='complete'){setTimeout(loadGA,1500);}else{window.addEve
 
 
 <!-- ============ PLACEHOLDER HERO ============ -->
-<main class="stage stage--glow-red hero placeholder-page" style="min-height:100vh; display:flex; align-items:center; justify-content:center; padding:140px 32px 100px; text-align:center;">
+<main id="placeholder-stage" class="stage stage--glow-red hero placeholder-page" style="min-height:100vh; display:flex; align-items:center; justify-content:center; padding:140px 32px 100px; text-align:center;">
   <div style="max-width:720px; position:relative; z-index:2;">
-    <span style="display:inline-block; padding:6px 14px; border:1px solid var(--coral); border-radius:999px; font-size:12px; font-weight:600; letter-spacing:0.08em; color:var(--coral); text-transform:uppercase; margin-bottom:28px;">Hizmet</span>
     <h1 style="font-family:'Fraunces',Georgia,serif; font-size:clamp(36px,5vw,64px); font-weight:500; line-height:1.1; letter-spacing:-0.02em; color:var(--white); margin:0 0 28px;">Web Sitesi &amp; SEO</h1>
     <p style="font-size:20px; line-height:1.55; color:rgba(255,255,255,0.75); margin:0 0 48px;">
       Sayfamız şu anda güncelleme aşamasındadır. Detaylı içerik yakında yayında olacak. Ziyaretiniz için teşekkür ederiz.
@@ -2341,5 +2340,32 @@ if(document.readyState==='complete'){setTimeout(loadGA,1500);}else{window.addEve
     </div>
   </div>
 </footer>
+
+<script>
+  // Placeholder sayfa spotlight — mouse takipli glow
+  (function initSpotlight() {
+    const stage = document.getElementById('placeholder-stage');
+    if (!stage || window.matchMedia('(hover: none)').matches) return;
+    const DX = 75, DY = 40;
+    let cx = DX, cy = DY, tx = DX, ty = DY;
+    let raf = false;
+    function animate() {
+      cx += (tx - cx) * 0.10;
+      cy += (ty - cy) * 0.10;
+      stage.style.setProperty('--glow-x', cx.toFixed(2) + '%');
+      stage.style.setProperty('--glow-y', cy.toFixed(2) + '%');
+      if (Math.abs(tx-cx) > 0.15 || Math.abs(ty-cy) > 0.15) requestAnimationFrame(animate);
+      else raf = false;
+    }
+    function kick() { if (!raf) { raf = true; requestAnimationFrame(animate); } }
+    stage.addEventListener('mousemove', (e) => {
+      const rect = stage.getBoundingClientRect();
+      tx = ((e.clientX - rect.left) / rect.width) * 100;
+      ty = ((e.clientY - rect.top) / rect.height) * 100;
+      kick();
+    });
+    stage.addEventListener('mouseleave', () => { tx = DX; ty = DY; kick(); });
+  })();
+</script>
 </body>
 </html>

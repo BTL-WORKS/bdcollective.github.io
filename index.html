@@ -1720,6 +1720,9 @@ if(document.readyState==='complete'){setTimeout(loadGA,1500);}else{window.addEve
     animation: none;
     mix-blend-mode: screen;
     transition: none;
+    /* Üst kenarda glow fade — hero ile birleşim noktasında keskin çizgi olmasın */
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.4) 12%, black 30%, black 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.4) 12%, black 30%, black 100%);
   }
   .clients__title {
     font-size: clamp(26px, 3.4vw, 44px);

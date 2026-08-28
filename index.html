@@ -655,6 +655,15 @@ if(document.readyState==='complete'){setTimeout(loadGA,1500);}else{window.addEve
     pointer-events: none;
     transition: opacity 220ms, transform 220ms;
   }
+  /* Görünmez köprü — toggle ile menu arasındaki 14px boşluğu doldur ki mouse hover kaybolmasın */
+  .nav__dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -18px;
+    left: 0;
+    right: 0;
+    height: 18px;
+  }
   .nav__dropdown:hover .nav__dropdown-menu,
   .nav__dropdown:focus-within .nav__dropdown-menu {
     opacity: 1;
@@ -2231,6 +2240,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="/sureklilik/" target="_blank" rel="noopener" role="menuitem">Süreklilik</a>
         <span class="nav__dropdown-divider"></span>
         <a href="#yontem" class="nav__dropdown-overview" role="menuitem">Tüm yöntem</a>
+      </div>
+    </div>
+    <div class="nav__dropdown">
+      <a href="/hizmetler/" class="nav__dropdown-toggle">Hizmetler</a>
+      <div class="nav__dropdown-menu" role="menu">
+        <a href="/icerik-pazarlama-ajansi/" target="_blank" rel="noopener" role="menuitem">İçerik Stüdyosu</a>
+        <a href="/sosyal-medya-ajansi/" target="_blank" rel="noopener" role="menuitem">Sosyal Medya Yönetimi</a>
+        <a href="/doktor-google-ads-yonetimi/" target="_blank" rel="noopener" role="menuitem">Google &amp; Meta Ads</a>
+        <a href="/dijital-seo-ajansi/" target="_blank" rel="noopener" role="menuitem">Web Sitesi &amp; SEO</a>
+        <span class="nav__dropdown-divider"></span>
+        <a href="/hizmetler/" class="nav__dropdown-overview" role="menuitem">Tüm hizmetler</a>
       </div>
     </div>
     <button class="nav__search-btn" id="navSearchBtn" type="button" aria-label="Site içinde ara" title="Ara">

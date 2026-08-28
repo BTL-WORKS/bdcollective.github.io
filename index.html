@@ -1676,14 +1676,19 @@ if(document.readyState==='complete'){setTimeout(loadGA,1500);}else{window.addEve
     position: relative;
     overflow: hidden;
   }
-  /* Hero altındaki üst konum — perde efekti (hero'dan devam) */
+  /* Hero altındaki üst konum — perde efekti (üst wrapper'dan devam) */
   .clients--top {
     border-top: none;
-    background: var(--black);
+    background: transparent;
+    padding-top: 20px;
   }
-  .clients--top.stage::before {
-    /* perde şeritleri hero'dan devam eder */
-    opacity: 0.88;
+  /* Mouse takipli glow — .stage'in radial gradientini CSS var ile kontrol */
+  .stage--interactive::after {
+    background:
+      radial-gradient(ellipse 60% 70% at var(--glow-x, 75%) var(--glow-y, 30%), var(--glow, rgba(255, 90, 100, 0.55)) 0%, transparent 60%),
+      radial-gradient(ellipse 40% 55% at calc(var(--glow-x, 75%) + 8%) calc(var(--glow-y, 30%) + 20%), var(--glow-2, rgba(255, 140, 100, 0.30)) 0%, transparent 55%),
+      radial-gradient(ellipse 28% 45% at calc(var(--glow-x, 75%) - 12%) calc(var(--glow-y, 30%) - 8%), var(--glow-3, rgba(255, 200, 140, 0.18)) 0%, transparent 60%) !important;
+    transition: background 300ms ease-out;
   }
   .clients__title {
     font-size: clamp(26px, 3.4vw, 44px);
@@ -2195,8 +2200,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </nav>
 
+<!-- ============ HERO + CLIENTS wrapper (paylaşımlı perde efekti) ============ -->
+<div class="stage stage--glow-red stage--interactive" id="hero-stage">
 <!-- ============ HERO ============ -->
-<header class="stage stage--glow-red hero" id="top">
+<header class="hero" id="top">
   <div class="hero__grid">
     <div>
       <h1 class="hero__title">
@@ -2218,7 +2225,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </header>
 
 <!-- ============ CLIENTS / TRUSTED BY (hero altı, portfolyodan önce) ============ -->
-<section class="clients clients--top stage stage--glow-red" aria-label="Çalıştığımız klinikler ve hekimler">
+<section class="clients clients--top" aria-label="Çalıştığımız klinikler ve hekimler">
   <div class="wrap">
     <p class="eyebrow" style="text-align:center;">İş birliği</p>
     <h2 class="clients__title" style="text-align:center;">Birlikte çalıştığımız <span class="pill"></span> <em>klinikler ve hekimler.</em></h2>
@@ -2241,6 +2248,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </section>
+</div><!-- /stage wrapper -->
 
 <!-- ============ CLINICS WITH IG EMBEDS ============ -->
 <section class="clinics" id="portfolyo">
@@ -3285,6 +3293,38 @@ document.addEventListener('keydown', e => {
 });
 input.addEventListener('input', e => render(e.target.value));
 })();
+</script>
+
+<script>
+  // Hero + Klinikler paylaşımlı stage — glow mouse'u takip eder
+  (function () {
+    var stage = document.getElementById('hero-stage');
+    if (!stage) return;
+    var rafId = null;
+    var lastX = 75, lastY = 30;
+    function onMove(e) {
+      if (rafId) return;
+      rafId = requestAnimationFrame(function () {
+        var rect = stage.getBoundingClientRect();
+        var x = ((e.clientX - rect.left) / rect.width) * 100;
+        var y = ((e.clientY - rect.top) / rect.height) * 100;
+        x = Math.max(5, Math.min(95, x));
+        y = Math.max(5, Math.min(95, y));
+        lastX = lastX + (x - lastX) * 0.35;
+        lastY = lastY + (y - lastY) * 0.35;
+        stage.style.setProperty('--glow-x', lastX.toFixed(1) + '%');
+        stage.style.setProperty('--glow-y', lastY.toFixed(1) + '%');
+        rafId = null;
+      });
+    }
+    stage.addEventListener('mousemove', onMove, { passive: true });
+    // Mobilde: touchmove
+    stage.addEventListener('touchmove', function (e) {
+      if (e.touches && e.touches[0]) {
+        onMove({ clientX: e.touches[0].clientX, clientY: e.touches[0].clientY });
+      }
+    }, { passive: true });
+  })();
 </script>
 
 </body>

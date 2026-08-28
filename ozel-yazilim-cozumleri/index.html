@@ -2217,6 +2217,15 @@ if(document.readyState==='complete'){setTimeout(loadGA,1500);}else{window.addEve
 
 <!-- Netlify Identity Widget (admin login) -->
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+<style>
+  /* Placeholder sayfası — footer'ın üst padding'ini azalt, hero ile arasındaki siyah boşluk yok olsun */
+  .placeholder-page + .footer,
+  body > .footer {
+    padding-top: 40px !important;
+    border-top: none !important;
+  }
+</style>
 </head>
 <body>
 

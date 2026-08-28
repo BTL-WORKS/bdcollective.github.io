@@ -1700,23 +1700,8 @@ if(document.readyState==='complete'){setTimeout(loadGA,1500);}else{window.addEve
         #1a0610 53px,
         #06010a 64px);
     opacity: 1;
-    /* Sol kenardan çok yumuşak degrade — belirgin çizgi olmasın */
-    -webkit-mask-image: linear-gradient(90deg,
-      transparent 0%,
-      transparent 6%,
-      rgba(0,0,0,0.10) 18%,
-      rgba(0,0,0,0.40) 30%,
-      rgba(0,0,0,0.75) 45%,
-      black 60%,
-      black 100%);
-    mask-image: linear-gradient(90deg,
-      transparent 0%,
-      transparent 6%,
-      rgba(0,0,0,0.10) 18%,
-      rgba(0,0,0,0.40) 30%,
-      rgba(0,0,0,0.75) 45%,
-      black 60%,
-      black 100%);
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.30) 8%, black 22%, black 100%);
+    mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.30) 8%, black 22%, black 100%);
     animation: curtain-shimmer 22s ease-in-out infinite;
     pointer-events: none;
     z-index: 0;
@@ -1740,21 +1725,9 @@ if(document.readyState==='complete'){setTimeout(loadGA,1500);}else{window.addEve
     mix-blend-mode: screen;
     pointer-events: none;
     z-index: 1;
-    /* Işığın da sol kenarı yumuşak degrade — çizgi göstermesin */
-    -webkit-mask-image: linear-gradient(90deg,
-      transparent 0%,
-      transparent 8%,
-      rgba(0,0,0,0.20) 22%,
-      rgba(0,0,0,0.60) 40%,
-      black 60%,
-      black 100%);
-    mask-image: linear-gradient(90deg,
-      transparent 0%,
-      transparent 8%,
-      rgba(0,0,0,0.20) 22%,
-      rgba(0,0,0,0.60) 40%,
-      black 60%,
-      black 100%);
+    /* Işığın sol kenarında hafif fade — sadece keskin çizgi olmasın (perde boyutu değişmez) */
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.30) 8%, black 22%, black 100%);
+    mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.30) 8%, black 22%, black 100%);
   }
   /* Wrapper içindeki hero ve clients transparent olmalı ki perde arkadan görünsün */
   .hero-stage-wrapper > * {

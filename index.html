@@ -1676,16 +1676,18 @@ if(document.readyState==='complete'){setTimeout(loadGA,1500);}else{window.addEve
     position: relative;
     overflow: hidden;
   }
-  /* Klinikler bölümü hero'nun perdesinin devamı gibi görünsün */
-  .clients--top {
-    border-top: none;
+  /* ============ HERO + CLIENTS PAYLASIMLI STAGE WRAPPER ============
+     Hero ve klinikler tek bir kapsayıcı içinde. Perde ve ışık kesintisiz. */
+  .hero-stage-wrapper {
+    position: relative;
     background: var(--black);
-    padding-top: 40px;
-    margin-top: 0;
+    overflow: hidden;
+    isolation: isolate;
   }
-  /* Hero'daki Tenity-style perdenin AYNI deseni + AYNI shimmer — kesintisiz */
-  .clients--top.stage::before {
-    inset: auto;
+  /* Tek büyük perde — hero + klinikler boyunca kesintisiz */
+  .hero-stage-wrapper::before {
+    content: '';
+    position: absolute;
     top: 0; right: 0; bottom: 0;
     width: 62%;
     background:
@@ -1701,29 +1703,41 @@ if(document.readyState==='complete'){setTimeout(loadGA,1500);}else{window.addEve
     -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.30) 8%, black 22%, black 100%);
     mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.30) 8%, black 22%, black 100%);
     animation: curtain-shimmer 22s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 0;
   }
-  /* Işık hero'dan devam eder — CSS var ile mouse takibi + sınırda sabit yumuşak glow */
-  .clients--top.stage::after {
-    inset: auto;
+  /* Tek mouse takipli ışık — hero + klinikler boyunca */
+  .hero-stage-wrapper::after {
+    content: '';
+    position: absolute;
     top: 0; right: 0; bottom: 0;
     width: 62%;
     background:
-      /* Mouse takipli glow — normal davranış */
-      radial-gradient(ellipse 55% 75% at var(--glow-x, 52%) var(--glow-y, -10%),
-        rgba(255, 110, 110, 0.45) 0%,
-        rgba(210, 60, 80, 0.24) 30%,
+      radial-gradient(ellipse 55% 55% at var(--glow-x, 75%) var(--glow-y, 30%),
+        rgba(255, 110, 110, 0.55) 0%,
+        rgba(210, 60, 80, 0.32) 30%,
         transparent 65%),
-      radial-gradient(ellipse 38% 58% at var(--glow-x, 52%) var(--glow-y, -10%),
-        rgba(255, 140, 100, 0.28) 0%, transparent 55%),
-      /* Sınır ışığı — hero ile clients birleşiminde sabit yumuşak parlaklık */
-      radial-gradient(ellipse 90% 40% at 52% 0%,
-        rgba(255, 110, 110, 0.30) 0%,
-        rgba(210, 60, 80, 0.14) 30%,
-        transparent 60%);
+      radial-gradient(ellipse 38% 42% at var(--glow-x, 75%) var(--glow-y, 30%),
+        rgba(255, 140, 100, 0.32) 0%, transparent 55%),
+      radial-gradient(ellipse 28% 32% at var(--glow-x, 75%) var(--glow-y, 30%),
+        rgba(255, 200, 140, 0.20) 0%, transparent 60%);
     filter: blur(3px);
-    animation: none;
     mix-blend-mode: screen;
-    transition: none;
+    pointer-events: none;
+    z-index: 1;
+  }
+  /* Wrapper içindeki hero ve clients transparent olmalı ki perde arkadan görünsün */
+  .hero-stage-wrapper > * {
+    position: relative;
+    z-index: 2;
+  }
+  .hero--in-wrapper {
+    background: transparent !important;
+  }
+  .clients--in-wrapper {
+    background: transparent;
+    border-top: none;
+    padding-top: 40px;
   }
   .clients__title {
     font-size: clamp(26px, 3.4vw, 44px);
@@ -2235,8 +2249,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </nav>
 
+<!-- ============ HERO + CLIENTS wrapper (paylaşımlı perde ve ışık) ============ -->
+<div class="hero-stage-wrapper" id="hero-clients-stage">
 <!-- ============ HERO ============ -->
-<header class="stage stage--glow-red hero" id="top">
+<header class="hero hero--in-wrapper" id="top">
   <div class="hero__grid">
     <div>
       <h1 class="hero__title">
@@ -2258,7 +2274,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </header>
 
 <!-- ============ CLIENTS / TRUSTED BY (hero altı, portfolyodan önce) ============ -->
-<section class="clients clients--top stage stage--glow-red" aria-label="Çalıştığımız klinikler ve hekimler">
+<section class="clients clients--top clients--in-wrapper" aria-label="Çalıştığımız klinikler ve hekimler">
   <div class="wrap">
     <p class="eyebrow" style="text-align:center;">İş birliği</p>
     <h2 class="clients__title" style="text-align:center;">Birlikte çalıştığımız <span class="pill"></span> <em>klinikler ve hekimler.</em></h2>
@@ -2281,6 +2297,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </section>
+</div><!-- /hero-clients wrapper -->
 
 <!-- ============ CLINICS WITH IG EMBEDS ============ -->
 <section class="clinics" id="portfolyo">
@@ -3050,11 +3067,11 @@ if (window.location.search.includes('nl=ok')) {
     }, { passive: true });
   }
 
-  // Hero spotlight — follows mouse cursor only inside hero, returns to default on leave
+  // Hero + Klinikler paylaşımlı stage — tek ışık, mouse takipli
   (function initHeroSpotlight() {
-    const hero = document.getElementById('top');
-    if (!hero || window.matchMedia('(hover: none)').matches) return;
-    const DEFAULT_X = 75, DEFAULT_Y = 40;
+    const stage = document.getElementById('hero-clients-stage');
+    if (!stage || window.matchMedia('(hover: none)').matches) return;
+    const DEFAULT_X = 75, DEFAULT_Y = 30;
     let curX = DEFAULT_X, curY = DEFAULT_Y;
     let targetX = DEFAULT_X, targetY = DEFAULT_Y;
     let rafActive = false;
@@ -3062,8 +3079,8 @@ if (window.location.search.includes('nl=ok')) {
       const dx = targetX - curX, dy = targetY - curY;
       curX += dx * 0.10;
       curY += dy * 0.10;
-      hero.style.setProperty('--glow-x', curX.toFixed(2) + '%');
-      hero.style.setProperty('--glow-y', curY.toFixed(2) + '%');
+      stage.style.setProperty('--glow-x', curX.toFixed(2) + '%');
+      stage.style.setProperty('--glow-y', curY.toFixed(2) + '%');
       if (Math.abs(dx) > 0.15 || Math.abs(dy) > 0.15) {
         requestAnimationFrame(animate);
       } else {
@@ -3073,62 +3090,17 @@ if (window.location.search.includes('nl=ok')) {
     function kick() {
       if (!rafActive) { rafActive = true; requestAnimationFrame(animate); }
     }
-    // Klinikler bölümü için glow — hero'dan devam eden ışık (iki bölüm birlikte)
-    const clients = document.querySelector('.clients--top');
-    let cCurX = 52, cCurY = -20, cTargetX = 52, cTargetY = -20;
-    let cRaf = false;
-    function animateC() {
-      const dx = cTargetX - cCurX, dy = cTargetY - cCurY;
-      cCurX += dx * 0.10;
-      cCurY += dy * 0.10;
-      if (clients) {
-        clients.style.setProperty('--glow-x', cCurX.toFixed(2) + '%');
-        clients.style.setProperty('--glow-y', cCurY.toFixed(2) + '%');
-      }
-      if (Math.abs(dx) > 0.15 || Math.abs(dy) > 0.15) {
-        requestAnimationFrame(animateC);
-      } else { cRaf = false; }
-    }
-    function kickC() { if (!cRaf) { cRaf = true; requestAnimationFrame(animateC); } }
-
-    // Hero mouse — hero'nun glow'u + clients'a "aşağıya taşan" glow gönder
-    hero.addEventListener('mousemove', (e) => {
-      const rect = hero.getBoundingClientRect();
+    stage.addEventListener('mousemove', (e) => {
+      const rect = stage.getBoundingClientRect();
       targetX = ((e.clientX - rect.left) / rect.width) * 100;
       targetY = ((e.clientY - rect.top) / rect.height) * 100;
       kick();
-      // Clients glow — mouse hero'daysa clients'a taşan efekt (üstten iner)
-      if (clients) {
-        cTargetX = targetX;
-        // Hero'nun altına doğru inildikçe clients glow yukarıdan içeri girer
-        cTargetY = Math.max(-30, (targetY - 100) * 0.35);
-        kickC();
-      }
     });
-    hero.addEventListener('mouseleave', () => {
+    stage.addEventListener('mouseleave', () => {
       targetX = DEFAULT_X;
       targetY = DEFAULT_Y;
       kick();
     });
-
-    // Clients mouse — clients glow + hero'ya "yukarıya taşan" glow gönder
-    if (clients) {
-      clients.addEventListener('mousemove', (e) => {
-        const rect = clients.getBoundingClientRect();
-        cTargetX = ((e.clientX - rect.left) / rect.width) * 100;
-        cTargetY = ((e.clientY - rect.top) / rect.height) * 100;
-        kickC();
-        // Hero glow — mouse clients'daysa hero'ya taşan efekt (alttan çıkar)
-        targetX = cTargetX;
-        targetY = Math.min(130, 100 + (cTargetY * 0.35));
-        kick();
-      });
-      clients.addEventListener('mouseleave', () => {
-        cTargetX = 52;
-        cTargetY = -20;
-        kickC();
-      });
-    }
   })();
 
   // Clients marquee — populate + duplicate for seamless loop + IG preview on hover

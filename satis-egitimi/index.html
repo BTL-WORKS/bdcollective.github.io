@@ -2219,11 +2219,12 @@ if(document.readyState==='complete'){setTimeout(loadGA,1500);}else{window.addEve
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
 <style>
-  /* Placeholder sayfası — footer'ın üst padding'ini azalt, hero ile arasındaki siyah boşluk yok olsun */
+  /* Placeholder sayfası — footer padding-top sıfır, boşluk yok */
   .placeholder-page + .footer,
   body > .footer {
-    padding-top: 40px !important;
+    padding-top: 0 !important;
     border-top: none !important;
+    margin-top: -1px !important;
   }
 </style>
 </head>

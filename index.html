@@ -1676,18 +1676,47 @@ if(document.readyState==='complete'){setTimeout(loadGA,1500);}else{window.addEve
     position: relative;
     overflow: hidden;
   }
-  /* Hero + Klinikler paylaşımlı stage wrapper — tek büyük perde */
-  .hero-clients-stage {
-    /* .stage sınıfı zaten curtain + glow'u uyguluyor */
-    /* İçindeki hero ve clients tamamen transparent olmalı ki wrapper effect görünsün */
-  }
-  .hero-clients-stage > .hero {
-    background: transparent !important;
-  }
+  /* Klinikler bölümü hero'nun perdesinin devamı gibi görünsün */
   .clients--top {
     border-top: none;
-    background: transparent;
+    background: var(--black);
     padding-top: 40px;
+    margin-top: 0;
+  }
+  /* Hero'daki Tenity-style perdenin AYNI deseni ve pozisyonu — sağ 62% */
+  .clients--top.stage::before {
+    inset: auto;
+    top: 0; right: 0; bottom: 0;
+    width: 62%;
+    background:
+      repeating-linear-gradient(90deg,
+        #06010a 0px,
+        #1a0610 11px,
+        #3d1020 23px,
+        #5c1828 32px,
+        #3d1020 41px,
+        #1a0610 53px,
+        #06010a 64px);
+    opacity: 1;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.30) 8%, black 22%, black 100%);
+    mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.30) 8%, black 22%, black 100%);
+  }
+  /* Işık üstten dökülüyor — hero'nun devamı gibi */
+  .clients--top.stage::after {
+    inset: auto;
+    top: 0; right: 0; bottom: 0;
+    width: 62%;
+    background:
+      radial-gradient(ellipse 60% 90% at 52% -20%,
+        rgba(255, 110, 110, 0.45) 0%,
+        rgba(210, 60, 80, 0.24) 30%,
+        transparent 65%),
+      radial-gradient(ellipse 30% 55% at 78% -10%,
+        rgba(255, 140, 100, 0.18) 0%,
+        transparent 55%);
+    filter: blur(3px);
+    animation: none;
+    mix-blend-mode: screen;
   }
   .clients__title {
     font-size: clamp(26px, 3.4vw, 44px);
@@ -2199,10 +2228,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </nav>
 
-<!-- ============ HERO + CLIENTS wrapper (paylaşımlı perde) ============ -->
-<div class="stage stage--glow-red hero-clients-stage">
 <!-- ============ HERO ============ -->
-<header class="hero" id="top">
+<header class="stage stage--glow-red hero" id="top">
   <div class="hero__grid">
     <div>
       <h1 class="hero__title">
@@ -2224,7 +2251,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </header>
 
 <!-- ============ CLIENTS / TRUSTED BY (hero altı, portfolyodan önce) ============ -->
-<section class="clients clients--top" aria-label="Çalıştığımız klinikler ve hekimler">
+<section class="clients clients--top stage stage--glow-red" aria-label="Çalıştığımız klinikler ve hekimler">
   <div class="wrap">
     <p class="eyebrow" style="text-align:center;">İş birliği</p>
     <h2 class="clients__title" style="text-align:center;">Birlikte çalıştığımız <span class="pill"></span> <em>klinikler ve hekimler.</em></h2>
@@ -2247,7 +2274,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </section>
-</div><!-- /hero-clients wrapper -->
 
 <!-- ============ CLINICS WITH IG EMBEDS ============ -->
 <section class="clinics" id="portfolyo">

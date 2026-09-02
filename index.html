@@ -3249,7 +3249,28 @@ if (window.location.search.includes('nl=ok')) {
       // Kayıt CRM'e de düşer. Yönlendirmeyi CRM cevap verene kadar
       // bekletiyoruz — Safari sayfa değişirken isteği iptal ediyor.
       // CRM yanıt vermezse 2.5 saniyede yine devam eder.
+      //
+      // TEŞHİS MODU: adrese ?crmtest=1 eklenirse WhatsApp açılmaz,
+      // yönlendirme olmaz; CRM'in cevabı ekranda gösterilir.
       const q = new URLSearchParams(location.search);
+      const teshis = q.get('crmtest') === '1';
+
+      function teshisYaz(metin, renk) {
+        let kutu = document.getElementById('crm-teshis');
+        if (!kutu) {
+          kutu = document.createElement('div');
+          kutu.id = 'crm-teshis';
+          kutu.style.cssText = 'margin-top:16px;padding:14px 16px;border-radius:8px;font:14px/1.5 -apple-system,sans-serif;white-space:pre-wrap;word-break:break-word';
+          contactForm.appendChild(kutu);
+        }
+        kutu.style.background = renk === 'ok' ? '#E8F5EE' : '#FDEAE7';
+        kutu.style.color = renk === 'ok' ? '#1F7A4D' : '#B0392B';
+        kutu.style.border = '1px solid ' + (renk === 'ok' ? '#1F7A4D33' : '#B0392B33');
+        kutu.textContent = metin;
+      }
+
+      if (teshis) teshisYaz('CRM\'e gönderiliyor…', 'ok');
+
       const crmIstegi = fetch('https://btl-clinic-boilerplate.vercel.app/api/formlar/gonder', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -3264,9 +3285,37 @@ if (window.location.search.includes('nl=ok')) {
           utmCampaign: q.get('utm_campaign') || '',
           pageUrl: location.href
         })
-      }).catch(() => {});
+      })
+        .then(function (r) {
+          return r.text().then(function (t) {
+            if (teshis) {
+              teshisYaz(
+                r.ok
+                  ? 'BAŞARILI\n\nDurum: ' + r.status + '\nCevap: ' + t
+                  : 'SUNUCU REDDETTİ\n\nDurum: ' + r.status + '\nCevap: ' + t,
+                r.ok ? 'ok' : 'hata'
+              );
+            }
+          });
+        })
+        .catch(function (err) {
+          if (teshis) {
+            teshisYaz(
+              'İSTEK GÖNDERİLEMEDİ\n\nHata: ' + (err && err.name) + '\n' +
+              (err && err.message) + '\n\n' +
+              'Bu genellikle su anlama gelir:\n' +
+              '• Tarayici eklentisi/icerik engelleyici istegi kesti\n' +
+              '• Ag baglantisi koptu\n' +
+              '• CORS engeli',
+              'hata'
+            );
+          }
+        });
 
       const crmZamanAsimi = new Promise(r => setTimeout(r, 2500));
+
+      // Teşhis modunda WhatsApp açılmaz, sayfa değişmez
+      if (teshis) return;
 
       // Open WhatsApp in new tab
       window.open(waUrl, '_blank');

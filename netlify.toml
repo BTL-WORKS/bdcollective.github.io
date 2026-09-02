@@ -12,11 +12,13 @@
   [headers.values]
     X-Robots-Tag = "noindex"
 
-# CSS/JS önbelleği
+# CSS/JS — her seferinde tazelik kontrolü (ETag ile 304 döner)
+# Dosya adında sürüm damgası olmadığı için uzun cache tehlikeli:
+# stil değişikliği ziyaretçiye saatlerce ulaşmaz.
 [[headers]]
   for = "/sub.css"
   [headers.values]
-    Cache-Control = "public, max-age=3600"
+    Cache-Control = "public, max-age=0, must-revalidate"
 
 # Görseller uzun cache
 [[headers]]

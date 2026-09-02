@@ -6,7 +6,13 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: geolocation=(), microphone=(), camera=()
   Strict-Transport-Security: max-age=31536000; includeSubDomains
-  Cache-Control: public, max-age=3600, must-revalidate
+  Cache-Control: public, max-age=0, must-revalidate
+
+# NEDEN max-age=0: HTML 1 saat önbellekteyken siteyi güncellersek
+# ziyaretçi eski sayfayı çalıştırır. 2 Eylül 2026'da iletişim formu
+# CRM'e bağlandı ama önbellekteki eski sayfa CRM çağrısı içermediği
+# için formlar sessizce kayboldu. max-age=0 + ETag: tarayıcı her
+# seferinde sorar, değişmemişse 304 döner (indirme yok, gecikme yok).
 
 # Statik varlıklar (görseller, fontlar) için uzun cache
 /*.jpg

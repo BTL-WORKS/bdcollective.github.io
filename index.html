@@ -3212,8 +3212,37 @@ if (window.location.search.includes('nl=ok')) {
   // Contact form — WhatsApp redirect + Netlify Forms backup
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
+    // Çift gönderim kilidi — kullanıcı butona üst üste basarsa
+    // CRM'de aynı kişiden birden fazla kart açılmamalı.
+    // (Sunucu da ayrıca engeller; bu ilk savunma hattı.)
+    let gonderiliyor = false;
+
     contactForm.addEventListener('submit', function(e) {
       e.preventDefault();
+
+      if (gonderiliyor) return;
+      gonderiliyor = true;
+
+      const gonderButonu = contactForm.querySelector('button[type="submit"]');
+      const butonMetni = gonderButonu ? gonderButonu.innerHTML : '';
+      if (gonderButonu) {
+        gonderButonu.disabled = true;
+        gonderButonu.style.opacity = '0.6';
+        gonderButonu.style.pointerEvents = 'none';
+        gonderButonu.innerHTML = 'Gönderiliyor…';
+      }
+
+      // Bir şeyler ters giderse buton sonsuza kadar kilitli kalmasın.
+      const kilidiAc = function () {
+        gonderiliyor = false;
+        if (gonderButonu) {
+          gonderButonu.disabled = false;
+          gonderButonu.style.opacity = '';
+          gonderButonu.style.pointerEvents = '';
+          gonderButonu.innerHTML = butonMetni;
+        }
+      };
+      setTimeout(kilidiAc, 8000);
 
       const ad = document.getElementById('adi').value.trim();
       const soyad = document.getElementById('soyadi').value.trim();
@@ -3315,7 +3344,7 @@ if (window.location.search.includes('nl=ok')) {
       const crmZamanAsimi = new Promise(r => setTimeout(r, 2500));
 
       // Teşhis modunda WhatsApp açılmaz, sayfa değişmez
-      if (teshis) return;
+      if (teshis) { setTimeout(kilidiAc, 1500); return; }
 
       // Open WhatsApp in new tab
       window.open(waUrl, '_blank');

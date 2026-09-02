@@ -2763,49 +2763,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <button type="submit" class="form__submit">Gönder <span class="form__submit-arrow">→</span></button>
       </form>
-
-      <!-- ============================================================
-           KLİNİK OS — CRM BAĞLANTISI
-           Form gönderildiğinde kayıt aynı anda CRM'e de düşer.
-           Formspree akışına DOKUNMAZ; e-posta bildirimi eskisi gibi gelir.
-           CRM'e ulaşamazsa form yine normal çalışır.
-           ============================================================ -->
-      <script>
-      (function () {
-        var CRM_URL = "https://btl-clinic-boilerplate.vercel.app/api/formlar/gonder";
-        var form = document.getElementById("contact-form");
-        if (!form) return;
-
-        var q = new URLSearchParams(location.search);
-
-        form.addEventListener("submit", function () {
-          try {
-            var ad = [form.adi.value, form.soyadi.value]
-              .map(function (x) { return (x || "").trim(); })
-              .filter(Boolean)
-              .join(" ");
-
-            // keepalive: Formspree sayfayı değiştirse bile istek tamamlanır
-            fetch(CRM_URL, {
-              method: "POST",
-              keepalive: true,
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({
-                fullName: ad,
-                phone: form.telefon.value,
-                email: form.eposta.value,
-                message: form.mesaj ? form.mesaj.value : "",
-                website: form._gotcha ? form._gotcha.value : "",
-                utmSource: q.get("utm_source") || "",
-                utmMedium: q.get("utm_medium") || "",
-                utmCampaign: q.get("utm_campaign") || "",
-                pageUrl: location.href
-              })
-            }).catch(function () { /* CRM erişilemezse formu engelleme */ });
-          } catch (e) { /* hiçbir hata formu durdurmasın */ }
-        });
-      })();
-      </script>
   </div>
 </section>
 
@@ -3288,13 +3245,36 @@ if (window.location.search.includes('nl=ok')) {
         body: formData
       }).catch(() => {});
 
+      // ── KLİNİK OS CRM ────────────────────────────────────────
+      // Kayıt CRM'e de düşer. Yönlendirmeyi CRM cevap verene kadar
+      // bekletiyoruz — Safari sayfa değişirken isteği iptal ediyor.
+      // CRM yanıt vermezse 2.5 saniyede yine devam eder.
+      const q = new URLSearchParams(location.search);
+      const crmIstegi = fetch('https://btl-clinic-boilerplate.vercel.app/api/formlar/gonder', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          fullName: [ad, soyad].filter(Boolean).join(' '),
+          phone: telefon,
+          email: eposta,
+          message: mesaj,
+          website: contactForm._gotcha ? contactForm._gotcha.value : '',
+          utmSource: q.get('utm_source') || '',
+          utmMedium: q.get('utm_medium') || '',
+          utmCampaign: q.get('utm_campaign') || '',
+          pageUrl: location.href
+        })
+      }).catch(() => {});
+
+      const crmZamanAsimi = new Promise(r => setTimeout(r, 2500));
+
       // Open WhatsApp in new tab
       window.open(waUrl, '_blank');
 
-      // Redirect current page to thank you
-      setTimeout(function() {
+      // Redirect current page to thank you — CRM kaydı tamamlandıktan sonra
+      Promise.race([crmIstegi, crmZamanAsimi]).then(function () {
         window.location.href = 'tesekkurler.html';
-      }, 400);
+      });
     });
   }
 </script>

@@ -49,9 +49,3 @@
   from = "/icerik.html"
   to = "/icerik/"
   status = 301
-
-# Katalog redirect kalıbı — .html olan tüm eski URL'ler folder'a
-[[redirects]]
-  from = "/:page.html"
-  to = "/:page/"
-  status = 301

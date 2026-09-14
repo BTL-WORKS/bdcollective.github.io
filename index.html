@@ -3300,7 +3300,7 @@ if (window.location.search.includes('nl=ok')) {
 
       if (teshis) teshisYaz('CRM\'e gönderiliyor…', 'ok');
 
-      const crmIstegi = fetch('https://btl-clinic-boilerplate.vercel.app/api/formlar/gonder', {
+      const crmIstegi = fetch('https://app.monostron.com/api/formlar/gonder', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

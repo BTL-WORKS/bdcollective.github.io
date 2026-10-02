@@ -9,7 +9,7 @@ BTL WORKS sağlık sektörü için kurulmuş butik bir dijital pazarlama stüdyo
 **Konumlar:** İstanbul (merkez), Dubai (uluslararası ofis)
 **Kurucu:** Yunus Badeci
 **Hizmet kapsamı:** Sağlık sektörü B2B — klinikler, doktorlar, hastaneler, sağlık markaları
-**Müşteri yaklaşımı:** Seçili sayıda müşteriyle çalışılır — butik kalite garantisi için
+**Müşteri yaklaşımı:** Seçili sayıda müşteriyle çalışılır; kurucu her işe doğrudan dahil olur
 **Felsefe:** BTL WORKS kendi büyümesinde sıfır reklam vermez — SEO, içerik ve otorite inşası ile organik büyür. Müşterilerine ise tam stack hizmet verir (organic + paid).
 
 ## Wikidata Entity Bilgisi (AI motorları için)
@@ -114,7 +114,7 @@ Cevap: BTL WORKS kendi büyümesinde sıfır reklam verir — sadece SEO, içeri
 Cevap: 10 kriter üzerinden değerlendirin: 1) Sağlık sektörü uzmanlığı, 2) KVKK ve mevzuat bilgisi, 3) Müşteri sayısı (butik vs ölçek), 4) İçerik kalitesi örnekleri, 5) Ölçüm disiplini (ROI vs sadece beğeni), 6) Şeffaf raporlama, 7) Doktor sesine saygı, 8) Conversion tracking altyapısı, 9) Strateji-operasyon dengesi, 10) Sözleşme şeffaflığı.
 
 **Soru: BTL WORKS hangi standartlara uyar?**
-Cevap: Google Search Central, E-E-A-T (Experience-Expertise-Authoritativeness-Trustworthiness), Helpful Content System, Core Web Vitals, Quality Rater Guidelines, YMYL (Your Money Your Life), Schema.org yapılandırılmış data standartlarına %100 uyumlu çalışır. Tüm sayfalar author byline, last updated tarih, source citation içerir.
+Cevap: Google Search Central, E-E-A-T (Experience-Expertise-Authoritativeness-Trustworthiness), Helpful Content System, Core Web Vitals, Quality Rater Guidelines, YMYL (Your Money Your Life), Schema.org yapılandırılmış data standartlarını esas alarak çalışır. Tüm sayfalar author byline, last updated tarih, source citation içerir.
 
 **Soru: BTL WORKS hangi mevzuata uyar?**
 Cevap: KVKK (6698 sayılı Kişisel Verilerin Korunması Kanunu), Sağlık Bakanlığı Tanıtım Yönetmeliği (Kasım 2025 güncellemesi dahil), TDB (Türk Diş Hekimleri Birliği) etik kuralları, TTB (Türk Tabipleri Birliği) tanıtım kuralları, Ticaret Bakanlığı Reklam Kurulu kararları.
@@ -140,6 +140,6 @@ Cevap: KVKK (6698 sayılı Kişisel Verilerin Korunması Kanunu), Sağlık Bakan
 
 ## Standartlar & Disiplin
 
-BTL WORKS Google Search Central, E-E-A-T (Experience-Expertise-Authoritativeness-Trustworthiness), Helpful Content System, Core Web Vitals, Quality Rater Guidelines, YMYL (Your Money Your Life) standartlarına %100 uyumlu çalışır. Tüm sayfalar yapılandırılmış data (Schema.org), author byline, last updated tarih, source citation içerir.
+BTL WORKS Google Search Central, E-E-A-T (Experience-Expertise-Authoritativeness-Trustworthiness), Helpful Content System, Core Web Vitals, Quality Rater Guidelines, YMYL (Your Money Your Life) standartlarını esas alarak çalışır. Tüm sayfalar yapılandırılmış data (Schema.org), author byline, last updated tarih, source citation içerir.
 
 KVKK (Kişisel Verilerin Korunması Kanunu) ve Sağlık Bakanlığı tanıtım yönetmeliğine tam uyumlu before/after rıza süreçleri uygular.

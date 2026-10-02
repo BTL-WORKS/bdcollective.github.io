@@ -44,3 +44,7 @@ https://www.btlworx.com/*  https://btlworx.com/:splat  301!
 /pillar2-en-preview.html                    /en/clinic-digital-marketing-guide/     301
 /en-homepage-preview.html                   /en/                                    301
 /tr-homepage-preview.html                   /                                       301
+
+# Özel Yazılım sayfası Monostron sayfasına taşındı (Ekim 2026)
+/ozel-yazilim-cozumleri/                    /monostron/                              301
+/ozel-yazilim-cozumleri                     /monostron/                              301

@@ -39,7 +39,6 @@ BTL WORKS sağlık sektörü için kurulmuş butik bir dijital pazarlama stüdyo
 - [Sosyal Medya Ajansı Fiyatları](https://btlworx.com/sosyal-medya-ajansi-fiyatlari/): Fiyat değerlendirme rehberi
 - [Klinik Ajans mı Inhouse mu](https://btlworx.com/klinik-sosyal-medya-ajans-mi-inhouse-mu/): Karşılaştırma
 - [Web Sitesi & SEO](https://btlworx.com/web-sitesi-seo/): Klinik web sitesi, teknik SEO, Google İşletme Profili ve aylık bakım
-- [Özel Yazılım](https://btlworx.com/ozel-yazilim-cozumleri/): Kliniklere geliştirilen yazılımlar (Monostron) ve kliniğe özel geliştirme
 - [Hizmetler Sayfası](https://btlworx.com/hizmetler/): Tüm hizmetler tek listede
 
 ## Monostron

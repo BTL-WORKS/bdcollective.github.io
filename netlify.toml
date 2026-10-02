@@ -40,6 +40,12 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
 
 # Redirect'ler (eski .html URL'leri)
+# Özel Yazılım sayfası Monostron sayfasına taşındı (Ekim 2026)
+[[redirects]]
+  from = "/ozel-yazilim-cozumleri/*"
+  to = "/monostron/"
+  status = 301
+
 [[redirects]]
   from = "/felsefe.html"
   to = "/felsefe/"

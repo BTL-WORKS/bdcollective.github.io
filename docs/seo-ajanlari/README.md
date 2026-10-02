@@ -9,6 +9,8 @@ Bir içerik bu ikisinden birine **hizmet etmiyorsa yazılmaz.** Ölçüt: "bu so
 
 Üslup: BTL WORKS işini iyi yapar ama bunu **söylemez, gösterir.** "En iyi biz yaparız", "lider", "bir numara" türü cümle yoktur. Kalite; sorunun doğru anlaşılmasında, derin ve doğru cevapta, çalışma biçiminin açık anlatılmasında görünür. Okur, bir klinik sahibinin yaşadığı sorunu ("mesajlara geç dönüyoruz", "Instagram'dan randevu gelmiyor", "sitemiz Google'da yok") tanıyan birinin sesini duymalı.
 
+**Satış dili, teknik anlatım değil.** Müşteriye ne kazandırdığımızı yazarız, nasıl yaptığımızı değil. Veritabanı, şifreleme, sunucu konumu, yedekleme, model eğitimi, yetki/onay mekanizmaları gibi iç ve teknik ayrıntılar sayfaya girmez; gerekiyorsa tek cümlelik fayda olarak geçer ("KVKK'ya uygun", "verileriniz yalnız sizin"). Her cümle için ölçüt: klinik sahibini bize yazmaya yaklaştırıyor mu?
+
 Her sayfanın sonunda doğal bir sonraki adım olur: iletişim (btlworx.com/#iletisim) ya da Monostron için monostron.com. Zorla satış dili yok.
 
 ---

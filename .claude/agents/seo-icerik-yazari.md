@@ -22,8 +22,9 @@ Her sayfa **yeni müşteri kazanmak** için yazılır: okur klinik sahibi, dokto
 ## Bir sayfa nasıl yazılır
 - **Şablon:** `dis-klinigi-seo-rehberi-2026/index.html` yapısını kopyala (head, ahrefs/GTM betiği, nav, page-header, makale gövdesi, ilgili rehber kartları, footer, `/sub.css`). Yeni CSS icat etme; tasarım dili coral `#E94B3C`, ink `#1A1A1A`, cream `#F5F1EC`, editorial ton.
 - **URL:** `/anahtar-kelime-odakli-kisa-ad/index.html`, sondaki eğik çizgiyle. Mevcut klasör adlarıyla çakışmasın.
+- **Görünür tarih ve yazar satırı yok.** "Son güncelleme", "Yayınlanma", "Yazar: Yunus Badeci" gibi satırlar hiçbir sayfaya eklenmez; bu bilgiler yalnız JSON-LD'de durur.
 - **Head:** title ≤ 65 karakter, meta description ≤ 160, canonical, og/twitter, `datePublished`/`dateModified` bugünün tarihi. Üç JSON-LD: Article (author = Yunus Badeci `@id` kalıbı mevcut sayfadaki gibi), BreadcrumbList, FAQPage.
-- **Yapay zeka alıntılanabilirliği:** H1 altında 40-60 kelimelik doğrudan cevap paragrafı; her H2 bir soruyu cevaplar ve ilk cümlesi tek başına anlaşılır; en az bir karşılaştırma tablosu veya numaralı adım listesi; 5-8 soruluk görünür SSS (JSON-LD ile birebir aynı metin); "Son güncelleme" tarihi görünür; yazar kimliği; ölçülebilir ve kaynaklı bilgi. Kaynak gösterirken yalnız gerçekten okuduğun URL'yi ver.
+- **Yapay zeka alıntılanabilirliği:** H1 altında 40-60 kelimelik doğrudan cevap paragrafı; her H2 bir soruyu cevaplar ve ilk cümlesi tek başına anlaşılır; en az bir karşılaştırma tablosu veya numaralı adım listesi; 5-8 soruluk görünür SSS (JSON-LD ile birebir aynı metin); ölçülebilir ve kaynaklı bilgi. Kaynak gösterirken yalnız gerçekten okuduğun URL'yi ver.
 - **Uzunluk:** dolgu yok. Konu 900 kelimede bitiyorsa 900 kelime. Amaç uzunluk değil, soruyu en iyi cevaplayan sayfa olmak.
 - **İç bağlantı:** yeni sayfadan en az 3 ilgili sayfaya; ilgili 2-3 mevcut sayfadan yeni sayfaya bağlantı ekle (küçük, doğal bir cümleyle).
 - **Dil:** kurumsal Türkçe, editorial magazin tonu, AI klişesi yok ("dijital çağda", "günümüzde", "unutmayın ki" vb. kullanma). "Müşteri" de (hasta değil, B2B).
@@ -33,7 +34,7 @@ Her sayfa **yeni müşteri kazanmak** için yazılır: okur klinik sahibi, dokto
 - `llms.txt`: ilgili bölüme tek satırlık bağlantı ve açıklama.
 - `feed.xml`: yeni `<item>` (en üste, RFC 822 tarih, +0300).
 - `search/search-index.json`: mevcut kayıt biçimiyle yeni kayıt (önce biçimi oku).
-- Önceki sayfaları güncellerken `dateModified` ve görünür güncelleme tarihini değiştir; yalnız gerçekten içerik değiştiyse.
+- Önceki sayfaları güncellerken yalnız şemadaki `dateModified`'ı değiştir (sayfada görünür tarih/yazar satırı YAZILMAZ — Yunus kararı); yalnız gerçekten içerik değiştiyse.
 
 ## Monostron (öncelikli ürün — iyi pazarla)
 Monostron, BTL WORKS ekibinin geliştirdiği, **yalnız sağlık sektörüne özel CRM**'dir (https://monostron.com). Genel CRM değil; klinik, doktor ve sağlık markaları için hasta ilişkileri, mesajlaşma ve satış takibi. Yunus bunu güçlü pazarlamak istiyor. Bu yüzden:

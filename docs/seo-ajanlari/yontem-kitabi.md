@@ -28,6 +28,8 @@ Bu sürümün omurgasını oluşturan, son 12 ayda değişmiş gerçekler:
 
 ## 2. Kurallar listesi (yazar her sayfada uygular)
 
+> **Yunus kararı (2 Eki 2026): sayfalarda görünür "Son güncelleme", "Yayınlanma", "Yazar: …" satırı YOK.** Tarih ve yazar yalnız şemada (`datePublished`, `dateModified`, `author`) durur. Kitapta görünür tarih/yazar öneren kural bu karara tabidir. Yasal metinlerdeki (gizlilik, çerez) tarih hariç. Kural 2 ve 3 bu nedenle yalnız şema düzeyinde uygulanır.
+
 Her kural kontrol edilebilir yazıldı. "Neden" sütunu kaynağa bağlanır.
 
 ### A. İçerik ve uzmanlık (E-E-A-T, YMYL)

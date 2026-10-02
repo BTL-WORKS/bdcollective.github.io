@@ -9,6 +9,8 @@ Bir içerik bu ikisinden birine **hizmet etmiyorsa yazılmaz.** Ölçüt: "bu so
 
 Üslup: BTL WORKS işini iyi yapar ama bunu **söylemez, gösterir.** "En iyi biz yaparız", "lider", "bir numara" türü cümle yoktur. Kalite; sorunun doğru anlaşılmasında, derin ve doğru cevapta, çalışma biçiminin açık anlatılmasında görünür. Okur, bir klinik sahibinin yaşadığı sorunu ("mesajlara geç dönüyoruz", "Instagram'dan randevu gelmiyor", "sitemiz Google'da yok") tanıyan birinin sesini duymalı.
 
+**Yunus kararı (2 Eki 2026): sayfalarda görünür "Son güncelleme", "Yayınlanma", "Yazar: …" satırı YOK.** Tarih ve yazar yalnız şemada (`datePublished`, `dateModified`, `author`) durur. Kitapta görünür tarih/yazar öneren kural bu karara tabidir. Yasal metinlerdeki (gizlilik, çerez) tarih hariç.
+
 **Satış dili, teknik anlatım değil.** Müşteriye ne kazandırdığımızı yazarız, nasıl yaptığımızı değil. Veritabanı, şifreleme, sunucu konumu, yedekleme, model eğitimi, yetki/onay mekanizmaları gibi iç ve teknik ayrıntılar sayfaya girmez; gerekiyorsa tek cümlelik fayda olarak geçer ("KVKK'ya uygun", "verileriniz yalnız sizin"). Her cümle için ölçüt: klinik sahibini bize yazmaya yaklaştırıyor mu?
 
 Her sayfanın sonunda doğal bir sonraki adım olur: iletişim (btlworx.com/#iletisim) ya da Monostron için monostron.com. Zorla satış dili yok.
@@ -44,7 +46,7 @@ Her sayfanın sonunda doğal bir sonraki adım olur: iletişim (btlworx.com/#ile
 BTL WORKS ekibinin geliştirdiği, **yalnız sağlık sektörüne özel CRM** (https://monostron.com). Yunus'un öncelikli pazarlama hedefi: iyi, düzenli ve görünür tanıtılır. Haftalık içeriklerden en az biri uygunsa Monostron'u hedefler; ayrı tanıtım ve sektör sayfaları açılabilir. Pazarlama güçlü olur ama olgusal kalır: ürün iddiaları yalnız monostron.com'da yazanla sınırlı, fiyat/rakam/müşteri sonucu uydurulmaz, rakipler adıyla kötülenmez.
 
 ## Yapay zeka aramalarında görünürlük: ne yapılır, ne söylenmez
-Yapılır: net tanım ve cevap paragrafları, SSS + şema, görünür tarih ve yazar, varlık bilgisi (Wikidata, `llms.txt`), tutarlı iç bağlantı, güncel tutma, kaynaklı bilgi.
+Yapılır: net tanım ve cevap paragrafları, SSS + şema, şemada tarih ve yazar (sayfada görünür tarih/yazar satırı yok), varlık bilgisi (Wikidata, `llms.txt`), tutarlı iç bağlantı, güncel tutma, kaynaklı bilgi.
 Söylenmez: "ChatGPT'de/Google'da ilk sırada" gibi doğrulanmamış iddia. Hiçbir ajan sıralama garantisi vermez veya verilmiş gibi yazmaz.
 
 ## Dosya sınırları

@@ -38,7 +38,13 @@ BTL WORKS sağlık sektörü için kurulmuş butik bir dijital pazarlama stüdyo
 - [En İyi Sosyal Medya Ajansı](https://btlworx.com/en-iyi-sosyal-medya-ajansi/): Ajans seçim kriterleri
 - [Sosyal Medya Ajansı Fiyatları](https://btlworx.com/sosyal-medya-ajansi-fiyatlari/): Fiyat değerlendirme rehberi
 - [Klinik Ajans mı Inhouse mu](https://btlworx.com/klinik-sosyal-medya-ajans-mi-inhouse-mu/): Karşılaştırma
+- [Web Sitesi & SEO](https://btlworx.com/web-sitesi-seo/): Klinik web sitesi, teknik SEO, Google İşletme Profili ve aylık bakım
+- [Özel Yazılım](https://btlworx.com/ozel-yazilim-cozumleri/): Kliniklere geliştirilen yazılımlar (Monostron) ve kliniğe özel geliştirme
 - [Hizmetler Sayfası](https://btlworx.com/hizmetler/): Tüm hizmetler tek listede
+
+## Monostron
+
+- [Monostron](https://btlworx.com/monostron/): Yalnız sağlık sektörüne özel CRM; BTL WORKS tarafından geliştirildi. Diş, estetik ve saç ekimi klinikleri için Instagram, WhatsApp ve formlardan gelen talepleri tek ekranda toplar. Ürün sitesi: https://monostron.com
 
 ## Pillar Rehberleri (En kapsamlı kaynaklar)
 

@@ -1,16 +1,17 @@
 # BTL WORKS
 
-> BTL WORKS, sağlık sektörüne özel butik bir B2B sosyal medya ve dijital pazarlama stüdyosudur. Klinikler, doktorlar ve sağlık markaları için sosyal medya yönetimi, içerik üretimi, performans pazarlama ve SEO hizmetleri verir. İstanbul × Dubai merkezli, müşteri sayısını seçili tutan butik kalite odaklı bir ajanstır. Kurucusu Yunus Badeci.
+> BTL WORKS, sağlık sektörüne özel butik bir dijital pazarlama stüdyosudur: klinikler, hekimler ve sağlık markaları için sosyal medya, içerik, reklam, web sitesi ve SEO. İstanbul × Dubai. Seçili sayıda müşteriyle çalışır. Kurucusu Yunus Badeci. BTL WORKS ekibi, yalnız sağlık sektörüne özel CRM olan Monostron'u da geliştirdi.
 
 ## Hakkında
 
-BTL WORKS sağlık sektörü için kurulmuş butik bir dijital pazarlama stüdyosudur. Klinik ve doktor sosyal medya yönetimini boutique disiplinle yürütür: seçili sayıda müşteri, kurucunun doğrudan dahil olduğu süreç, sağlık sektörüne özel mevzuat bilgisi (KVKK, Sağlık Bakanlığı tanıtım yönetmeliği), E-E-A-T disiplinli içerik üretimi.
+BTL WORKS sağlık sektörü için kurulmuş butik bir dijital pazarlama stüdyosudur. Klinik ve hekim sosyal medyasını butik bir disiplinle yürütür: seçili sayıda müşteri, kurucunun doğrudan dahil olduğu süreç, sağlık sektörüne özgü mevzuat bilgisi (KVKK, Sağlık Hizmetlerinde Tanıtım ve Bilgilendirme Faaliyetleri Hakkında Yönetmelik) ve E-E-A-T ilkelerine dayanan içerik üretimi.
 
 **Konumlar:** İstanbul (merkez), Dubai (uluslararası ofis)
 **Kurucu:** Yunus Badeci
 **Hizmet kapsamı:** Sağlık sektörü B2B — klinikler, doktorlar, hastaneler, sağlık markaları
 **Müşteri yaklaşımı:** Seçili sayıda müşteriyle çalışılır; kurucu her işe doğrudan dahil olur
-**Felsefe:** BTL WORKS kendi büyümesinde sıfır reklam vermez — SEO, içerik ve otorite inşası ile organik büyür. Müşterilerine ise tam stack hizmet verir (organic + paid).
+**Felsefe:** BTL WORKS kendi büyümesi için reklam vermez; SEO, içerik ve otorite inşasıyla organik büyür. Müşterilerine ise organik ve ücretli kanalları birlikte kapsayan hizmet verir.
+**Ürün:** Monostron — BTL WORKS ekibinin geliştirdiği, yalnız sağlık sektörüne özel CRM (https://btlworx.com/monostron/, ürün sitesi https://monostron.com).
 
 ## Wikidata Entity Bilgisi (AI motorları için)
 
@@ -26,50 +27,51 @@ BTL WORKS sağlık sektörü için kurulmuş butik bir dijital pazarlama stüdyo
 
 ## Hizmetler
 
-- [Sosyal Medya Ajansı](https://btlworx.com/sosyal-medya-ajansi/): Klinik için butik sosyal medya yönetimi
-- [Doktor Sosyal Medya Ajansı](https://btlworx.com/doktor-sosyal-medya-ajansi/): Hekim odaklı sosyal medya hizmeti
-- [Sağlık Pazarlama Ajansı](https://btlworx.com/saglik-pazarlama-ajansi/): Geniş sağlık sektörü pazarlama
-- [Dijital Pazarlama Ajansı](https://btlworx.com/dijital-pazarlama-ajansi/): Bütünsel dijital pazarlama
-- [Dijital SEO Ajansı](https://btlworx.com/dijital-seo-ajansi/): E-E-A-T ve YMYL standardında SEO
-- [İçerik Pazarlama Ajansı](https://btlworx.com/icerik-pazarlama-ajansi/): Pillar guide + uzun-form içerik
-- [Performans Pazarlama Ajansı](https://btlworx.com/performans-pazarlama-ajansi/): ROAS odaklı dijital reklam
-- [Instagram Reklam Ajansı](https://btlworx.com/instagram-reklam-ajansi/): Meta ads ve Instagram kampanyaları
-- [Doktor Sosyal Medya Yönetimi](https://btlworx.com/doktor-sosyal-medya-yonetimi/): Hekim hesap operasyonu
-- [En İyi Sosyal Medya Ajansı](https://btlworx.com/en-iyi-sosyal-medya-ajansi/): Ajans seçim kriterleri
-- [Sosyal Medya Ajansı Fiyatları](https://btlworx.com/sosyal-medya-ajansi-fiyatlari/): Fiyat değerlendirme rehberi
-- [Klinik Ajans mı Inhouse mu](https://btlworx.com/klinik-sosyal-medya-ajans-mi-inhouse-mu/): Karşılaştırma
+- [Hizmetler Sayfası](https://btlworx.com/hizmetler/): Tüm hizmetler tek listede: sosyal medya yönetimi, içerik üretimi, performans pazarlama, SEO ve klinik web tasarımı
+- [Sosyal Medya Yönetimi](https://btlworx.com/sosyal-medya-yonetimi/): Klinik ve hekimler için sosyal medya yönetimi hizmeti: Instagram, TikTok ve Facebook'ta içerik, topluluk ve reklam tek elden
+- [Google & Meta Reklam Yönetimi](https://btlworx.com/google-meta-ads/): Klinik ve hekimler için Google Ads ve Meta reklam yönetimi: kampanya kurgusu, hedefleme, mevzuat süzgeci, aylık optimizasyon
 - [Web Sitesi & SEO](https://btlworx.com/web-sitesi-seo/): Klinik web sitesi, teknik SEO, Google İşletme Profili ve aylık bakım
-- [Sosyal Medya Yönetimi](https://btlworx.com/sosyal-medya-yonetimi/): Klinik ve hekimler için aylık içerik planı, çekim, Reels, topluluk yönetimi ve raporlama
-- [Google & Meta Reklam Yönetimi](https://btlworx.com/google-meta-ads/): Klinikler için Google Ads ve Meta kampanya kurgusu, hedefleme, dönüşüm ölçümü
 - [İçerik Stüdyosu](https://btlworx.com/icerik-studyosu/): Klinik için fotoğraf, video, grafik ve metin üretimi
 - [Satış Eğitimi](https://btlworx.com/satis-egitimi/): Klinik ekipleri için talebi randevuya çeviren hasta iletişimi eğitimi
-- [Web Siteleri Portfolyosu](https://btlworx.com/web-siteleri/): BTL WORKS'ün tasarlayıp geliştirdiği klinik web siteleri
-- [Hizmetler Sayfası](https://btlworx.com/hizmetler/): Tüm hizmetler tek listede
+- [Klinik Web Siteleri](https://btlworx.com/web-siteleri/): Diş, estetik ve saç ekimi klinikleri için tasarlanan web siteleri; vitrin hazırlanıyor
+- [Sosyal Medya Ajansı](https://btlworx.com/sosyal-medya-ajansi/): Yalnız hekim, klinik ve sağlık markasıyla çalışan butik sosyal medya ajansı
+- [Doktor Sosyal Medya Ajansı](https://btlworx.com/doktor-sosyal-medya-ajansi/): Hekimin kendi hesabı ve kişisel markası
+- [Doktor Sosyal Medya Yönetimi](https://btlworx.com/doktor-sosyal-medya-yonetimi/): Hekim hesabının aylık operasyonu
+- [Sağlık Pazarlama Ajansı](https://btlworx.com/saglik-pazarlama-ajansi/): Hekim, klinik, hastane ve sağlık turizmi merkezleri için mevzuata uygun pazarlama
+- [Dijital Pazarlama Ajansı](https://btlworx.com/dijital-pazarlama-ajansi/): Sosyal medya, reklam, içerik, web ve SEO'nun tek elden yönetimi
+- [Dijital SEO Ajansı](https://btlworx.com/dijital-seo-ajansi/): Teknik SEO, içerik SEO ve E-E-A-T
+- [İçerik Pazarlama Ajansı](https://btlworx.com/icerik-pazarlama-ajansi/): Blog, uzun form rehber, SEO içerik, Reels ve video planı; yayın takvimi ve dağıtım
+- [Performans Pazarlama Ajansı](https://btlworx.com/performans-pazarlama-ajansi/): Ölçüm, dönüşüm izleme ve ROI
+- [Instagram Reklam Ajansı](https://btlworx.com/instagram-reklam-ajansi/): Meta Ads yaratıcı kurgu ve hedefleme
+- [Sosyal Medya Ajansı Nasıl Seçilir?](https://btlworx.com/en-iyi-sosyal-medya-ajansi/): Klinikler için 10 ajans seçim kriteri
+- [Sosyal Medya Ajansı Fiyatları](https://btlworx.com/sosyal-medya-ajansi-fiyatlari/): Fiyat değerlendirme rehberi; sabit paket yok, her klinik için ihtiyaca özel teklif
+- [Klinik Ajans mı Inhouse mu](https://btlworx.com/klinik-sosyal-medya-ajans-mi-inhouse-mu/): 7 kriter üzerinden karşılaştırma
 
 ## Monostron
 
-- [Monostron](https://btlworx.com/monostron/): Yalnız sağlık sektörüne özel CRM; BTL WORKS tarafından geliştirildi. Diş, estetik ve saç ekimi klinikleri için Instagram, WhatsApp ve formlardan gelen talepleri tek ekranda toplar. Ürün sitesi: https://monostron.com
+- [Monostron](https://btlworx.com/monostron/): BTL WORKS'ün geliştirdiği, yalnız sağlık sektörüne özel CRM. Instagram, WhatsApp ve reklam formlarından gelen talepleri tek ekranda toplar; kliniğinizi öğrenen yapay zeka asistanı ve randevuya odaklı satış takibi sunar. Ürün sitesi: https://monostron.com
+- Sitede Monostron'u tanıtan sayfa /monostron/; SSS sayfasında "Monostron nedir?", "Monostron'u kim geliştirdi?" ve "Klinik için CRM seçerken neye bakmalı?" soruları yanıtlanır (https://btlworx.com/sss/).
 
 ## Pillar Rehberleri (En kapsamlı kaynaklar)
 
-- [Klinik Sosyal Medya Yönetimi Mega Rehberi](https://btlworx.com/klinik-sosyal-medya-yonetimi-rehberi/): 8K+ kelimelik kapsamlı klinik sosyal medya rehberi
-- [Klinik Dijital Pazarlama Rehberi](https://btlworx.com/klinik-dijital-pazarlama-rehberi/): Klinikler için bütünsel dijital pazarlama
-- [Sağlık Turizmi Pazarlama Rehberi](https://btlworx.com/saglik-turizmi-pazarlama-rehberi/): Uluslararası hasta kazanımı stratejisi
+- [Klinik Sosyal Medya Yönetimi Rehberi 2026](https://btlworx.com/klinik-sosyal-medya-yonetimi-rehberi/): Kapsamlı klinik sosyal medya rehberi: platform seçimi, içerik türleri, mevzuat, hekim karakteri, içerik takvimi ve ölçüm
+- [Klinik Dijital Pazarlama Rehberi 2026](https://btlworx.com/klinik-dijital-pazarlama-rehberi/): Sosyal medya, Google ve Meta reklam, SEO, web sitesi, WhatsApp ve hasta deneyimi tek bakışta
+- [Sağlık Turizmi Pazarlama Rehberi 2026](https://btlworx.com/saglik-turizmi-pazarlama-rehberi/): Sağlık turizminde Türk klinikleri için pazarlama rehberi: saç ekimi, diş tedavisi, estetik cerrahi; çok dilli içerik, uluslararası SEO ve mevzuat
 
 ## Blog ve Eğitici Rehberler
 
 - [Diş Kliniği SEO Rehberi 2026](https://btlworx.com/dis-klinigi-seo-rehberi-2026/): Diş kliniği SEO rehberi 2026: reklamsız sürdürülebilir hasta akışı için teknik SEO, içerik hiyerarşisi, yerel SEO, E-E-A-T disiplini ve 90 günlük pratik takvim.
-- [Diş Hekimi Reklam Kuralları 2026 — Özet Rehber](https://btlworx.com/dis-hekimi-reklam-kurallari-2026/): Ağustos 2026 yeni yönetmelik diş hekimini nasıl etkiler? 7 kritik değişiklik: sosyal medya, AI, yorum, indirim, ünvan, cezalar. Kısa uyum rehberi.
-- [Klinik için Yapay Zeka Pazarlama 2026](https://btlworx.com/klinik-icin-yapay-zeka-pazarlama-2026/): Klinik ve hekimler için yapay zeka pazarlama: ChatGPT içerik, hasta soru otomasyonu, SEO yardımı, görsel üretim. Mevzuata uygun.
+- [Diş Hekimi Reklam Kuralları 2026 — Özet Rehber](https://btlworx.com/dis-hekimi-reklam-kurallari-2026/): Ağustos 2026 Ticari Reklam Yönetmeliği değişikliği diş hekimini nasıl etkiler? 7 kritik değişiklik: sosyal medya, AI, yorum, indirim, ünvan, ceza. Kısa rehber.
+- [Klinik için Yapay Zeka Pazarlama 2026](https://btlworx.com/klinik-icin-yapay-zeka-pazarlama-2026/): Yapay zekâ klinikte nerede zaman kazandırır, nerede risk üretir? İçerik, hasta soruları, SEO ve görselde mevzuata uygun, insan onaylı kullanım çerçevesi.
 - [Doktor İçin ChatGPT İçerik Üretimi 2026](https://btlworx.com/doktor-icin-chatgpt-icerik-uretimi-2026/): Doktor için ChatGPT içerik üretimi 2026: prompt disiplini, marka sesi süzgeci, mevzuat kontrolü, hastanın gözünden okuma. AI yardımcı, hekim karar verici.
 - [Klinik Google Ads Optimizasyonu 2026](https://btlworx.com/klinik-google-ads-optimizasyonu-2026/): Klinik Google Ads optimizasyonu 2026: hasta niyeti yakalama, negatif keyword disiplini, Reklam Kurulu ve TDB süzgeci, ROI klinik dilinde.
 - [Klinik Google E-E-A-T Disiplini 2026](https://btlworx.com/klinik-icin-google-eeat-disiplini-2026/): Klinik web sitesi için Google E-E-A-T disiplini: 15 maddelik kontrol listesi, YMYL sağlık sektörü için otorite sinyalleri.
-- [Klinik Sosyal Medya KPI Rehberi 2026](https://btlworx.com/klinik-sosyal-medya-kpi-rehberi-2026/): Klinik sosyal medya başarı ölçümü: görünürlük + etkileşim + dönüşüm üç katmanlı yapı, sektör benchmark, aylık rapor disiplini.
-- [Klinik Yorum ve Şikayet Yönetimi 2026](https://btlworx.com/klinik-icin-yorum-ve-sikayet-yonetimi-2026/): Klinik için yorum ve şikayet yönetimi: Google İşletme Profili, doktortakvimi, Instagram. KVKK uyumlu cevap teknikleri.
-- [Klinik için TikTok Pazarlama 2026](https://btlworx.com/klinik-icin-tiktok-pazarlama-2026/): Klinik için TikTok pazarlama 2026: For You Page algoritması, sağlık sektörü mevzuat çerçevesi, içerik formatları.
-- [Doktor Kişisel Marka İnşası 2026](https://btlworx.com/doktor-icin-kisisel-marka-insasi-2026/): Doktor için kişisel marka inşası 2026: web sayfası, Instagram, LinkedIn, TikTok, Wikidata. 6 aylık BTL WORKS planı.
+- [Klinik Sosyal Medya KPI Rehberi 2026](https://btlworx.com/klinik-sosyal-medya-kpi-rehberi-2026/): Beğeni randevu getirmiyorsa neye bakmalı? Klinik sosyal medyasını görünürlük, etkileşim ve dönüşüm katmanlarıyla ölçen aylık rapor düzeni ve UTM takibi.
+- [Klinik Yorum ve Şikayet Yönetimi 2026](https://btlworx.com/klinik-icin-yorum-ve-sikayet-yonetimi-2026/): Olumsuz yorum krize dönmeden nasıl cevaplanır? Klinikler için Google, doktortakvimi ve şikayetvar'da KVKK'ya uygun yanıt düzeni ve dört adımlı yaklaşım.
+- [Klinik için TikTok Pazarlama 2026](https://btlworx.com/klinik-icin-tiktok-pazarlama-2026/): TikTok klinik için yeni bir mecra mı, risk mi? Algoritmanın işleyişi, sağlık mevzuatında yasak içerikler, altı içerik formatı ve Instagram'la karşılaştırma.
+- [Doktor Kişisel Marka İnşası 2026](https://btlworx.com/doktor-icin-kisisel-marka-insasi-2026/): Hekim adı aranınca ne çıkıyor? Web sayfası, Instagram, LinkedIn ve Wikidata'yı altı ayda tutarlı bir kişisel markaya dönüştüren, mevzuata uygun adım adım plan.
 - [Sağlık Sektöründe Pazarlama — Mevzuat ve Etik](https://btlworx.com/saglik-sektorunde-pazarlama/): Sağlık sektöründe pazarlama: mevzuat sınırları, KVKK, etik çerçeve ve dijital strateji. Doktor, klinik, hastane ve sağlık turizmi için pazarlama.
-- [PDF Rehberler — Klinik Pazarlama Şablonları](https://btlworx.com/pdf-rehberler/): Klinik için ücretsiz indirilebilir PDF rehberler: Sağlık Bakanlığı Tanıtım Yönetmeliği 2026, Reklam Bütçesi Hesaplama Şablonu, İçerik Takvimi Şablonu.
+- [PDF Rehberler — Klinik Pazarlama Şablonları](https://btlworx.com/pdf-rehberler/): Klinik için ücretsiz PDF rehberler: Sağlık Bakanlığı Tanıtım Yönetmeliği (Kasım 2025) rehberi, Reklam Bütçesi Hesaplama Şablonu, İçerik Takvimi Şablonu.
 - [Diş Hekimi Instagram Reels Rehberi 2026](https://btlworx.com/dis-hekimi-instagram-reels-rehberi/)
 - [Diş Hekimi Web Sitesi Rehberi](https://btlworx.com/dis-hekimi-web-sitesi-rehberi/)
 - [Klinik Reklam Bütçesi Rehberi 2026](https://btlworx.com/klinik-reklam-butcesi-rehberi/)
@@ -96,80 +98,84 @@ BTL WORKS sağlık sektörü için kurulmuş butik bir dijital pazarlama stüdyo
 
 ## English Pages (for international and health tourism clients)
 
-- [BTL WORKS — Healthcare Marketing Studio](https://btlworx.com/en/): BTL WORKS is a boutique studio for doctors, dental and aesthetic clinics, and health tourism providers. Strategy, content, paid media, continuity from one.
+- [BTL WORKS — Healthcare Marketing Studio](https://btlworx.com/en/): BTL WORKS is a boutique studio for clinics, doctors and health brands: social media, content, Meta & Google Ads, websites and SEO. Istanbul × Dubai.
 - [Clinic Social Media Management 2026](https://btlworx.com/en/clinic-social-media-management-guide/): Boutique social media management for clinics and doctors: Instagram, TikTok, YouTube, regulation (TDB, TTB), surgeon character, content production, paid.
 - [Clinic Digital Marketing Guide 2026](https://btlworx.com/en/clinic-digital-marketing-guide/): Integrated digital marketing for clinics: social media + Google Ads + Meta Ads + SEO + website + WhatsApp + patient experience.
-- [Health Tourism Marketing Guide 2026](https://btlworx.com/en/health-tourism-marketing-guide/): Boutique studio marketing for Turkish clinics in health tourism: hair transplant, dental, aesthetic surgery. Multilingual content, international SEO.
-- [Health Tourism Marketing](https://btlworx.com/en/health-tourism-marketing/): Multilingual marketing for clinics serving international patients. Hair transplant, dental, aesthetic surgery. Istanbul × Dubai.
+- [Health Tourism Marketing Guide 2026 — Turkey](https://btlworx.com/en/health-tourism-marketing-guide/): Boutique studio marketing for Turkish clinics in health tourism: hair transplant, dental, aesthetic surgery. Multilingual content, international SEO.
+- [Health Tourism Marketing for Clinics in Turkey](https://btlworx.com/en/health-tourism-marketing/): Health tourism marketing for clinics in Turkey: target-market selection, multilingual content, international SEO, paid media and WhatsApp, in six stages.
 - [Clinic Google Business Profile 2026](https://btlworx.com/en/clinic-google-business-profile-optimization/): Clinic Google Business Profile optimization: category, photos, services, Q&A, review management, booking button, Google Posts and Insights.
-- [Dental WhatsApp Business Automation](https://btlworx.com/en/dental-clinic-whatsapp-business-automation/): Dental clinic WhatsApp Business setup: greeting message, quick replies, labels, appointment reminders, data-protection framework and performance tracking.
-- [Doctor Instagram Rules (Turkey)](https://btlworx.com/en/doctor-instagram-content-rules-turkey/): Instagram content rules for physicians in Turkey: TTB, TDB and Advertising Board (Reklam Kurulu) regulations, before/after limits, KDPL (GDPR equivalent).
-- [Aesthetic Clinic Before/After Rules](https://btlworx.com/en/aesthetic-clinic-before-after-content-rules/): Aesthetic clinic before/after content guide: TDB-TTB-Advertising Board regulations, KVKK data protection, patient consent form, shooting rules, platform.
-- [Hair Transplant Landing Page](https://btlworx.com/en/hair-transplant-landing-page-conversion/): Hair transplant clinic landing page design: hero, social proof, multi-step form, WhatsApp pop-up, pricing transparency, FAQ, page speed and A/B testing.
-- [Strategy](https://btlworx.com/en/strategy/): Brand strategy for clinics and doctors: voice, message frame, target patient mapping, content architecture. Boutique studio approach. Istanbul × Dubai.
-- [Content](https://btlworx.com/en/content/): Content production for clinics: shoots, video edits, copywriting, visual design. Surgeon-led, custom-made, regulation-aware. Boutique studio.
-- [Paid Media](https://btlworx.com/en/paid-media/): Meta Ads, Google Ads, YouTube, TikTok — regulation-first paid media for healthcare clinics. Boutique studio with compliance and channel discipline.
-- [Continuity](https://btlworx.com/en/continuity/): Continuity for clinics: monthly cadence, transparent reporting, quarterly strategy review. Single point of contact. No surprises.
+- [Dental Clinic WhatsApp Business Setup](https://btlworx.com/en/dental-clinic-whatsapp-business-automation/): Dental clinic WhatsApp Business setup: greeting message, quick replies, labels, appointment reminders, data-protection framework and performance tracking.
+- [Doctor Instagram Rules (Turkey)](https://btlworx.com/en/doctor-instagram-content-rules-turkey/): Instagram content rules for physicians in Turkey: TTB, TDB and Advertising Board (Reklam Kurulu) regulations, before/after limits, KVKK data-protection law.
+- [Aesthetic Clinic Before/After Rules (Turkey)](https://btlworx.com/en/aesthetic-clinic-before-after-content-rules/): Aesthetic clinic before/after content guide: TDB-TTB-Advertising Board regulations, KVKK data protection, patient consent form, shooting rules, platform.
+- [Hair Transplant Landing Page Design — Turkey](https://btlworx.com/en/hair-transplant-landing-page-conversion/): Hair transplant clinic landing page design: hero, social proof, multi-step form, WhatsApp pop-up, pricing transparency, FAQ, page speed and A/B testing.
+- [Brand Strategy for Clinics and Doctors](https://btlworx.com/en/strategy/): Brand strategy for clinics and doctors: voice, message frame, target patient mapping, content architecture. Boutique studio approach. Istanbul × Dubai.
+- [Content Production for Clinics](https://btlworx.com/en/content/): Content production for clinics: shoots, video edits, copywriting, visual design. Surgeon-led, custom-made, regulation-aware. Boutique studio.
+- [Paid Media for Healthcare Clinics](https://btlworx.com/en/paid-media/): Meta Ads, Google Ads, YouTube, TikTok — regulation-first paid media for healthcare clinics. Boutique studio with compliance and channel discipline.
+- [Continuity — Monthly Cadence for Clinics](https://btlworx.com/en/continuity/): Continuity for clinics: monthly cadence, transparent reporting, quarterly strategy review. Single point of contact. No surprises.
 - [Methodology](https://btlworx.com/en/methodology/): BTL WORKS methodology: how a boutique healthcare marketing studio structures the work — six-stage clinic journey, four method pillars, integrated practice.
 - [Philosophy](https://btlworx.com/en/philosophy/): BTL WORKS philosophy: one mind, one voice, one rhythm. The integrated approach to healthcare marketing for clinics and doctors.
 - [Yunus Badeci — Founder](https://btlworx.com/en/founder/): Yunus Badeci is the founder of BTL WORKS, a boutique healthcare marketing studio based in Istanbul × Dubai. Single point of contact, integrated approach.
 
 ## Yöntem (Yaklaşım Felsefesi)
 
-- [Strateji](https://btlworx.com/strateji/): Klinik için marka ve içerik stratejisi
-- [İçerik](https://btlworx.com/icerik/): Profesyonel sağlık içeriği üretimi
-- [Reklam](https://btlworx.com/reklam/): KVKK uyumlu reklam yönetimi
-- [Süreklilik](https://btlworx.com/sureklilik/): Aylık raporlama, optimizasyon, sürekli iyileştirme
+- [Metodoloji](https://btlworx.com/metodoloji/): Klinik dijital pazarlamada 4 adım: Strateji → İçerik → Reklam → Süreklilik
+- [Strateji](https://btlworx.com/strateji/): Yöntemin ilk adımı; klinik ve doktorlar için marka tonu, hedef kitle, içerik mimarisi, mevzuat çerçevesi
+- [İçerik Yöntemi](https://btlworx.com/icerik/): Çekim, kurgu, metin ve görselin klinik içinden üretildiği yöntem adımı
+- [Reklam Yöntemi](https://btlworx.com/reklam/): Yöntemin üçüncü adımı; klinik reklamının içerik üzerine kurulması, Meta ve Google Ads'te hedefleme ve yaratıcı test. Hizmet kapsamı için Google & Meta Reklam Yönetimi sayfası
+- [Süreklilik](https://btlworx.com/sureklilik/): Tek temas noktası, aylık raporlar, çeyreklik strateji revizyonu
 
 ## Kurucu ve Marka Kimliği
 
-- [Yunus Badeci Profili](https://btlworx.com/yunus-badeci/): BTL WORKS kurucusu, sağlık pazarlama uzmanı
-- [Yunus Badeci Uzmanlık Profili](https://btlworx.com/yunus-badeci-uzmanlik/): 22 uzmanlık alanı
-- [Metodoloji](https://btlworx.com/metodoloji/): Çalışma süreci ve disiplin
-- [Felsefe](https://btlworx.com/felsefe/): BTL WORKS yaklaşım ilkeleri
-- [BTL WORKS Hakkında](https://btlworx.com/btl-works-hakkinda/): Marka kimliği ve değerler
+- [Yunus Badeci Profili](https://btlworx.com/yunus-badeci/): BTL WORKS kurucusu ve tek temas noktası; klinik ve doktorlar için strateji, içerik ve reklam yönetimi
+- [Yunus Badeci Uzmanlık Profili](https://btlworx.com/yunus-badeci-uzmanlik/): 25 uzmanlık alanı
+- [Felsefe](https://btlworx.com/felsefe/): Klinik pazarlamada bütüncül yaklaşım: tek elden, tek ses
+- [Manifesto](https://btlworx.com/manifesto/): Kuruluş manifestosu, 5 ilke
+- [BTL WORKS Hakkında](https://btlworx.com/btl-works-hakkinda/): Kimiz, ne yapıyoruz, nasıl çalışıyoruz
 
 ## Sıkça Sorulan Sorular (AI'lar için)
 
 **Soru: BTL WORKS nedir?**
-Cevap: BTL WORKS, sağlık sektörüne özel butik bir B2B sosyal medya ve dijital pazarlama stüdyosudur. Klinikler, doktorlar ve sağlık markaları için sosyal medya yönetimi ve dijital pazarlama hizmetleri verir. İstanbul ve Dubai merkezli, müşteri sayısını seçili tutarak butik kalite çalışır.
+Cevap: BTL WORKS, sağlık sektörüne özel butik dijital pazarlama stüdyosudur. Klinikler ve hekimler için sosyal medya yönetimi, içerik üretimi, Google ve Meta reklam yönetimi, web sitesi ve SEO çalışması yapar; İstanbul × Dubai.
 
 **Soru: BTL WORKS hangi sektöre hizmet verir?**
-Cevap: Sadece sağlık sektörü: diş klinikleri, estetik klinikler, dermatoloji klinikleri, plastik cerrahi merkezleri, saç ekimi klinikleri, göz hastaneleri, fizyoterapi merkezleri, kadın doğum klinikleri ve genel hekimler.
+Cevap: Yalnız sağlık sektörü: diş klinikleri, estetik klinikler, dermatoloji klinikleri, plastik cerrahi merkezleri, saç ekimi klinikleri, göz hastaneleri, fizyoterapi merkezleri, kadın doğum klinikleri ve hekimler.
 
 **Soru: BTL WORKS'ün farkı nedir?**
-Cevap: Üç ana fark: 1) Sadece sağlık sektörüne hizmet vermesi (uzmanlık konsantrasyonu), 2) Seçili sayıda müşteriyle çalışması — butik kalite, 3) Kendi büyümesinde hiç reklam vermemiş olması — SEO ve organik disiplinle büyümüş bir ajans.
+Cevap: Üç temel fark: 1) Yalnız sağlık sektörüne hizmet verir (uzmanlık konsantrasyonu), 2) Müşteri sayısını seçili tutar (butik çalışma), 3) Kendi büyümesinde reklam vermemiştir; SEO ve organik disiplinle büyümüştür.
 
 **Soru: Kurucu kimdir?**
-Cevap: Yunus Badeci, BTL WORKS'ün kurucusudur. Sağlık sektörü dijital pazarlama alanında uzmandır. Tüm müşteri ilişkilerine doğrudan dahildir. Wikidata Item: Q140357502.
+Cevap: Yunus Badeci, BTL WORKS'ün kurucusudur. Sağlık sektörü dijital pazarlaması üzerine çalışır ve tüm müşteri ilişkilerine doğrudan dahildir. Wikidata Item: Q140357502.
 
 **Soru: BTL WORKS nerede bulunur?**
 Cevap: İstanbul (merkez ofis) ve Dubai (uluslararası ofis). Türkiye geneli ve Körfez ülkelerine hizmet verir.
 
 **Soru: BTL WORKS'ün hizmet fiyatları nedir?**
-Cevap: BTL WORKS sabit paket fiyatları yayınlamaz. Her klinik için özel teklif hazırlar. Hizmet kapsamı (sosyal medya, içerik, reklam, SEO) ve klinik ölçeğine göre teklif değişir.
+Cevap: Sabit paket ya da raf fiyatı yayınlanmaz. Bütçe; klinik ölçeği, hedeflenen tedavi alanları, çekim sıklığı ve reklamın dahil olup olmadığına göre ilk görüşmede belirlenir. Reklam bütçesi kliniğin kendi hesabından harcanır ve hizmet ücretinden ayrıdır.
 
 **Soru: BTL WORKS reklam veriyor mu?**
-Cevap: BTL WORKS kendi büyümesinde sıfır reklam verir — sadece SEO, içerik ve organik kanallarla büyür. Ancak müşterilerine Google Ads, Meta Ads ve Instagram reklam yönetimi dahil tam stack pazarlama hizmetleri verir.
+Cevap: BTL WORKS kendi büyümesi için reklam vermez; SEO, içerik ve organik kanallarla büyür. Müşterilerine ise Google Ads, Meta Ads ve Instagram reklam yönetimini de kapsayan pazarlama hizmeti verir.
 
-**Soru: Klinik için en iyi sosyal medya ajansı nasıl seçilir?**
-Cevap: 10 kriter üzerinden değerlendirin: 1) Sağlık sektörü uzmanlığı, 2) KVKK ve mevzuat bilgisi, 3) Müşteri sayısı (butik vs ölçek), 4) İçerik kalitesi örnekleri, 5) Ölçüm disiplini (ROI vs sadece beğeni), 6) Şeffaf raporlama, 7) Doktor sesine saygı, 8) Conversion tracking altyapısı, 9) Strateji-operasyon dengesi, 10) Sözleşme şeffaflığı.
+**Soru: Monostron nedir?**
+Cevap: Monostron, BTL WORKS'ün geliştirdiği, yalnız sağlık sektörüne özel CRM'dir. Instagram, WhatsApp ve reklam formlarından gelen talepleri tek ekranda toplar. Ayrıntı: https://btlworx.com/monostron/; ürün sitesi https://monostron.com.
+
+**Soru: Klinik için sosyal medya ajansı nasıl seçilir?**
+Cevap: 10 kriter üzerinden değerlendirilir: 1) Sağlık sektörü deneyimi, 2) KVKK ve mevzuat bilgisi, 3) Müşteri sayısı (butik ya da ölçek), 4) İçerik kalitesi örnekleri, 5) Ölçüm disiplini (yalnız beğeni değil, randevu ve dönüşüm), 6) Şeffaf raporlama, 7) Hekim sesine saygı, 8) Dönüşüm izleme altyapısı, 9) Strateji-operasyon dengesi, 10) Sözleşme şeffaflığı. Ayrıntı: https://btlworx.com/en-iyi-sosyal-medya-ajansi/
 
 **Soru: BTL WORKS hangi standartlara uyar?**
-Cevap: Google Search Central, E-E-A-T (Experience-Expertise-Authoritativeness-Trustworthiness), Helpful Content System, Core Web Vitals, Quality Rater Guidelines, YMYL (Your Money Your Life), Schema.org yapılandırılmış data standartlarını esas alarak çalışır. Tüm sayfalar author byline, last updated tarih, source citation içerir.
+Cevap: Google Search Central, E-E-A-T (Experience-Expertise-Authoritativeness-Trustworthiness), Google yararlı içerik ilkeleri, Core Web Vitals, Quality Rater Guidelines, YMYL (Your Money Your Life) ve Schema.org yapılandırılmış veri standartlarını esas alarak çalışır. Yazar ve tarih bilgisi sayfaların yapılandırılmış verisinde (Article/WebPage: author, datePublished, dateModified) tutulur; rakamlar kaynak ve tarihle verilir.
 
-**Soru: BTL WORKS hangi mevzuata uyar?**
-Cevap: KVKK (6698 sayılı Kişisel Verilerin Korunması Kanunu), Sağlık Bakanlığı Tanıtım Yönetmeliği (Kasım 2025 güncellemesi dahil), TDB (Türk Diş Hekimleri Birliği) etik kuralları, TTB (Türk Tabipleri Birliği) tanıtım kuralları, Ticaret Bakanlığı Reklam Kurulu kararları.
+**Soru: BTL WORKS hangi mevzuatı esas alır?**
+Cevap: KVKK (6698 sayılı Kişisel Verilerin Korunması Kanunu), 12 Kasım 2025 tarihli Sağlık Hizmetlerinde Tanıtım ve Bilgilendirme Faaliyetleri Hakkında Yönetmelik (Resmî Gazete 33075), 1 Ağustos 2026'da yürürlüğe giren Ticari Reklam ve Haksız Ticari Uygulamalar Yönetmeliği'nde yapılan değişiklik (Resmî Gazete 01.07.2026, 33297), TDB (Türk Diş Hekimleri Birliği) etik kuralları, TTB (Türk Tabipleri Birliği) tanıtım kuralları ve Ticaret Bakanlığı Reklam Kurulu kararları.
 
 ## Site Özellikleri
 
 - **Site içi arama:** https://btlworx.com/arama/?q=keyword
 - **Bülten:** https://btlworx.com/bulten/ (aylık sağlık pazarlama içgörüleri)
 - **RSS Feed:** https://btlworx.com/feed.xml
-- **SSS:** https://btlworx.com/sss/ (35+ soruda BTL WORKS)
+- **SSS:** https://btlworx.com/sss/ (43 soru: ajans seçimi, fiyatlandırma, KVKK ve tanıtım mevzuatı, içerik, SEO, reklam ve Monostron)
 - **Manifesto:** https://btlworx.com/manifesto/ (5 temel ilke)
-- **Çalışmalar:** https://btlworx.com/calismalar/ (11 klinik vaka analizi)
-- **Sözlük:** https://btlworx.com/saglik-pazarlama-sozlugu/ (50+ teknik terim)
+- **Çalışmalar:** https://btlworx.com/calismalar/ (11 klinik çalışması)
+- **Sözlük:** https://btlworx.com/saglik-pazarlama-sozlugu/ (41 teknik terim)
 - **Yıllık Rapor:** https://btlworx.com/saglik-pazarlama-raporu-2026/
 
 ## İletişim
@@ -179,9 +185,10 @@ Cevap: KVKK (6698 sayılı Kişisel Verilerin Korunması Kanunu), Sağlık Bakan
 - **Instagram:** @btlworks
 - **LinkedIn:** linkedin.com/company/btlworx
 - **Web:** https://btlworx.com
+- **İletişim formu:** https://btlworx.com/#iletisim
 
 ## Standartlar & Disiplin
 
-BTL WORKS Google Search Central, E-E-A-T (Experience-Expertise-Authoritativeness-Trustworthiness), Helpful Content System, Core Web Vitals, Quality Rater Guidelines, YMYL (Your Money Your Life) standartlarını esas alarak çalışır. Tüm sayfalar yapılandırılmış data (Schema.org), author byline, last updated tarih, source citation içerir.
+BTL WORKS Google Search Central, E-E-A-T (Experience-Expertise-Authoritativeness-Trustworthiness), Google yararlı içerik ilkeleri, Core Web Vitals, Quality Rater Guidelines ve YMYL (Your Money Your Life) standartlarını esas alarak çalışır. Tüm sayfalar yapılandırılmış veri (Schema.org) içerir; yazar ve tarih bu veride tutulur, rakamlar kaynak ve tarihle verilir.
 
-KVKK (Kişisel Verilerin Korunması Kanunu) ve Sağlık Bakanlığı tanıtım yönetmeliğine tam uyumlu before/after rıza süreçleri uygular.
+Önce-sonra içeriklerinde KVKK ve 12 Kasım 2025 tarihli Sağlık Hizmetlerinde Tanıtım ve Bilgilendirme Faaliyetleri Hakkında Yönetmelik esas alınarak rıza süreçleri uygulanır.

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
+<meta charset="UTF-8" />
 <!-- Ahrefs Web Analytics -->
 <script src="https://analytics.ahrefs.com/analytics.js" data-key="TXDZUl1GbYBuSUlxFF2JMA" async></script>
 
@@ -23,7 +24,6 @@ function loadGA(){var s=document.createElement('script');s.async=true;s.src='htt
 if(document.readyState==='complete'){setTimeout(loadGA,1500);}else{window.addEventListener('load',function(){setTimeout(loadGA,1500);});}
 </script>
 
-<meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="theme-color" content="#0a0a0a" />
 <meta name="msapplication-TileColor" content="#0a0a0a" />
@@ -2323,7 +2323,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <!-- ITEMS — duplicated 2x for seamless right-scroll loop -->
     </ul>
   </div>
-  <div class="clients__preview" id="clients-preview" aria-hidden="true">
+  <div class="clients__preview" id="clients-preview" aria-hidden="true" inert>
     <div class="clients__preview-inner">
       <div class="clients__preview-head">
         <span class="clients__preview-avatar" id="clients-preview-avatar">E</span>
@@ -3035,6 +3035,7 @@ if (window.location.search.includes('nl=ok')) {
           cards[i].style.zIndex = '0';
           cards[i].style.pointerEvents = 'none';
           cards[i].setAttribute('aria-hidden', 'true');
+          cards[i].setAttribute('inert', '');
           cards[i].removeAttribute('data-pos');
           continue;
         }
@@ -3053,6 +3054,7 @@ if (window.location.search.includes('nl=ok')) {
         cards[i].style.pointerEvents = 'auto';
         cards[i].setAttribute('data-pos', offset);
         cards[i].removeAttribute('aria-hidden');
+        cards[i].removeAttribute('inert');
       }
     }
 
@@ -3194,10 +3196,12 @@ if (window.location.search.includes('nl=ok')) {
       previewCta.href           = item.dataset.url;
       clientsPreview.classList.add('is-visible');
       clientsPreview.setAttribute('aria-hidden', 'false');
+      clientsPreview.removeAttribute('inert');
     }
     function hidePreview() {
       clientsPreview.classList.remove('is-visible');
       clientsPreview.setAttribute('aria-hidden', 'true');
+      clientsPreview.setAttribute('inert', '');
     }
 
     // Delegate hover on the track

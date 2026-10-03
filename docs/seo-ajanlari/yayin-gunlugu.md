@@ -2,6 +2,10 @@
 
 Yazar ajan her koşuda en üste ekler: tarih · dal · sayfa URL'si · ana sorgu · durum (incelemede / birleştirildi / canlı).
 
+## 2026-10-03 (ikinci tur) · `claude/btlworx-seo-strategy-q66yfi` · durum: incelemede
+
+8 boyutlu derin denetim: 220 doğrulanmış bulgu, 95 dosya. Ayrıntı ve Yunus'un karar listesi: `denetim-2026-10-03.md` §7-8. Ana sayfa meta, şema kimlikleri, görünür SSS, doğrudan cevap paragrafları, iç bağlantılar, mevzuat adları, yan dosyalar.
+
 ## 2026-10-03 · `claude/btlworx-seo-strategy-q66yfi` · durum: incelemede
 
 Teknik SEO/GEO denetimi ve düzeltmeleri; ayrıntı: `denetim-2026-10-03.md`.

@@ -2,6 +2,21 @@
 
 Yazar ajan her koşuda en üste ekler: tarih · dal · sayfa URL'si · ana sorgu · durum (incelemede / birleştirildi / canlı).
 
+## 2026-10-03 · `claude/btlworx-seo-strategy-q66yfi` · durum: incelemede
+
+Teknik SEO/GEO denetimi ve düzeltmeleri; ayrıntı: `denetim-2026-10-03.md`.
+
+| İş | Dosyalar |
+|---|---|
+| `og-image.jpg` üretildi (eksikti, 8 sayfa bağlanıyordu) | `og-image.jpg` |
+| 5 hizmet sayfasında kopya ana sayfa şeması → Service/CollectionPage + Breadcrumb + FAQ; yanlış hreflang kaldırıldı; 4 sayfaya görünür SSS | `sosyal-medya-yonetimi`, `google-meta-ads`, `icerik-studyosu`, `satis-egitimi`, `web-siteleri` |
+| `/web-sitesi-seo/` kopya bloklar silindi; `/en/privacy/` ve `/gizlilik/` hreflang düzeltildi | ilgili `index.html` |
+| Sitemap +7, llms.txt (+17 TR, +17 EN), feed +10, arama dizini +12, robots.txt yeni AI botları | yan dosyalar |
+| Ana sayfa: ölü Netlify Identity betiği ve çift preconnect kaldırıldı; Person şemasına LinkedIn (7 sayfa) | `index.html` ve yazar sayfaları |
+| IndexNow betiği; yapay zeka görünürlük günlüğü şablonu | `scripts/indexnow-bildir.sh`, `ai-gorunurluk-gunlugu.md` |
+
+Yayın sonrası: `denetim-2026-10-03.md` §4 kontrol listesi; LinkedIn adresi (`linkedin.com/in/yunusbadeci/`) doğrulanmalı.
+
 ## 2026-10-02 · `seo-ajan/2026-10-02` · durum: incelemede
 
 | Sayfa | Ana sorgu | İş | Commit |

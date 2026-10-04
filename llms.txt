@@ -147,7 +147,7 @@ Cevap: Üç temel fark: 1) Yalnız sağlık sektörüne hizmet verir (uzmanlık 
 Cevap: Yunus Badeci, BTL WORKS'ün kurucusudur. Sağlık sektörü dijital pazarlaması üzerine çalışır ve tüm müşteri ilişkilerine doğrudan dahildir. Wikidata Item: Q140357502.
 
 **Soru: BTL WORKS nerede bulunur?**
-Cevap: İstanbul (merkez ofis) ve Dubai (uluslararası ofis). Türkiye geneli ve Körfez ülkelerine hizmet verir.
+Cevap: Merkezi İstanbul'dadır ve her yerde hizmet verir: Türkiye'nin tüm şehirlerinde, Körfez ülkelerinde ve yurt dışındaki kliniklerle.
 
 **Soru: BTL WORKS'ün hizmet fiyatları nedir?**
 Cevap: Sabit paket ya da raf fiyatı yayınlanmaz. Bütçe; klinik ölçeği, hedeflenen tedavi alanları, çekim sıklığı ve reklamın dahil olup olmadığına göre ilk görüşmede belirlenir. Reklam bütçesi kliniğin kendi hesabından harcanır ve hizmet ücretinden ayrıdır.

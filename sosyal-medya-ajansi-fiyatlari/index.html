@@ -131,7 +131,7 @@ if(document.readyState==='complete'){setTimeout(loadGA,1500);}else{window.addEve
       "name": "Aylık ödeme yerine yıllık paket alırsam indirim var mı?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Evet, 6 aylık ya da 12 aylık taahhütlerde %10-15 indirim uygulanır. Bunun mantığı: uzun vadeli iş birliği, ekibin klinik diline alışması, içerik kalitesinin artması demektir. Sağlık sektöründe ROI 90 günden önce ölçülemez; 12 aylık taahhüt hem klinik hem ajans için daha sağlıklı."
+        "text": "Sabit paket ve indirim oranı yayınlamıyoruz; çalışma süresi ve kapsam, ilk görüşmeden sonra kliniğe özel teklifte belirlenir. Sağlık alanında yatırım getirisi 90 günden önce ölçülemez; bu yüzden en az birkaç aylık planlı çalışma hem klinik hem ajans için daha sağlıklıdır."
       }
     },
     {
@@ -192,6 +192,14 @@ if(document.readyState==='complete'){setTimeout(loadGA,1500);}else{window.addEve
   .lang-picker__menu a { display: block; padding: 9px 14px; font-size: 13px; color: var(--black); text-decoration: none; border-radius: 8px; font-weight: 500; }
   .lang-picker__menu a:hover { background: var(--paper); }
   .lang-picker__menu a.is-active { background: var(--black); color: var(--white); }
+</style>
+<style>
+/* Mobil menü: dar ekranda logo, dil seçici ve İletişim görünür; sitenin diğer sayfalarıyla aynı düzen */
+@media (max-width: 640px) {
+  .nav__logo { white-space: nowrap; }
+  .nav__menu { gap: 8px; }
+  .nav__dropdown, .nav__search-btn { display: none; }
+}
 </style>
 </head>
 <body>
@@ -376,7 +384,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </details>
       <details style="background: var(--white); border-radius: 14px; padding: 22px 26px;">
         <summary style="font-size: 17px; font-weight: 600; color: var(--black); cursor: pointer; list-style: none;">Aylık ödeme yerine yıllık paket alırsam indirim var mı?</summary>
-        <p style="margin: 14px 0 0; font-size: 15px; line-height: 1.7; color: var(--ink-soft);">Evet, 6 aylık ya da 12 aylık taahhütlerde %10-15 indirim uygulanır. Bunun mantığı: uzun vadeli iş birliği, ekibin klinik diline alışması, içerik kalitesinin artması demektir. Sağlık sektöründe ROI 90 günden önce ölçülemez; 12 aylık taahhüt hem klinik hem ajans için daha sağlıklı.</p>
+        <p style="margin: 14px 0 0; font-size: 15px; line-height: 1.7; color: var(--ink-soft);">Sabit paket ve indirim oranı yayınlamıyoruz; çalışma süresi ve kapsam, ilk görüşmeden sonra kliniğe özel teklifte belirlenir. Sağlık alanında yatırım getirisi 90 günden önce ölçülemez; bu yüzden en az birkaç aylık planlı çalışma hem klinik hem ajans için daha sağlıklıdır.</p>
       </details>
       <details style="background: var(--white); border-radius: 14px; padding: 22px 26px;">
         <summary style="font-size: 17px; font-weight: 600; color: var(--black); cursor: pointer; list-style: none;">Sözleşme dışı ekstra ücret oluyor mu?</summary>

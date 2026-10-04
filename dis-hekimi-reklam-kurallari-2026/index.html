@@ -175,6 +175,14 @@
   "copyrightHolder": { "@type": "Organization", "name": "BTL WORKS", "url": "https://btlworx.com/" }
 }
 </script>
+<style>
+/* Mobil menü: dar ekranda logo, dil seçici ve İletişim görünür; sitenin diğer sayfalarıyla aynı düzen */
+@media (max-width: 640px) {
+  .nav__logo { white-space: nowrap; }
+  .nav__menu { gap: 8px; }
+  .nav__dropdown, .nav__search-btn { display: none; }
+}
+</style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M6S4RPLF" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

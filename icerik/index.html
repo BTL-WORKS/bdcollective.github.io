@@ -354,6 +354,14 @@ if(document.readyState==='complete'){setTimeout(loadGA,1500);}else{window.addEve
   }
 }
 </script>
+<style>
+/* Mobil menü: dar ekranda logo, dil seçici ve İletişim görünür; sitenin diğer sayfalarıyla aynı düzen */
+@media (max-width: 640px) {
+  .nav__logo { white-space: nowrap; }
+  .nav__menu { gap: 8px; }
+  .nav__dropdown, .nav__search-btn { display: none; }
+}
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->

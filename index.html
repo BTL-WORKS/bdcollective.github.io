@@ -2106,6 +2106,14 @@ if(document.readyState==='complete'){setTimeout(loadGA,1500);}else{window.addEve
 }
 </style>
 
+<style>
+/* Mobil menü: dar ekranda logo, dil seçici ve İletişim görünür; sitenin diğer sayfalarıyla aynı düzen */
+@media (max-width: 640px) {
+  .nav__logo { white-space: nowrap; }
+  .nav__menu { gap: 8px; }
+  .nav__dropdown, .nav__search-btn { display: none; }
+}
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -3075,7 +3083,7 @@ if (window.location.search.includes('nl=ok')) {
       { name: 'Dent Visit',               handle: 'dentvisit' },
       { name: 'Bergedent',                handle: 'bergedent' },
       { name: 'Bergedent International',  handle: 'bergedentinternational' },
-      { name: 'Ekiz Klinik',              handle: 'ekiz.clinic' },
+      { name: 'Ekiz Klinik',              handle: 'ekizclinic' },
       { name: 'Dt. Nurşah Minarecioğlu', handle: 'dt.nursahminarecioglu' },
       { name: 'Dr. Nevzat Sezer Işıksaçan', handle: 'drnsezerisiksacan' },
       { name: 'Dr. Işıl Kendirli',        handle: 'isilkendirli' },

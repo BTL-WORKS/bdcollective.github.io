@@ -43,8 +43,55 @@ Allow: /
 User-agent: Applebot-Extended
 Allow: /
 
+# Anthropic Claude — arama ve kullanıcı tetiklemeli erişim
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+# Perplexity — kullanıcı tetiklemeli erişim
+User-agent: Perplexity-User
+Allow: /
+
+# Meta AI
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: meta-externalfetcher
+Allow: /
+
+# Mistral
+User-agent: MistralAI-User
+Allow: /
+
+# DuckDuckGo AI
+User-agent: DuckAssistBot
+Allow: /
+
+# Amazon (Alexa / Rufus)
+User-agent: Amazonbot
+Allow: /
+
+# Cohere
+User-agent: cohere-ai
+Allow: /
+
+# You.com
+User-agent: YouBot
+Allow: /
+
+# Google Vertex AI
+User-agent: Google-CloudVertexBot
+Allow: /
+
+# Bing / Copilot
+User-agent: bingbot
+Allow: /
+
 # Sitemap konumları
 Sitemap: https://btlworx.com/sitemap.xml
+Sitemap: https://btlworx.com/sitemap-images.xml
 
 # AI ajanları için yapılandırılmış bilgi bankası (yeni standart)
 # https://llmstxt.org
